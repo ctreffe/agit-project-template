@@ -1,0 +1,45 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+
+# Local tool environments
+.venv/
+venv/
+env/
+node_modules/
+
+# Local tool caches
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.npm/
+
+# Local AI/tool workspace artifacts
+.codex-input/
+.codex-cache/
+.codex-tmp/
+.codex-output/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Logs
+*.log
+logs/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local generated or private artifacts
+artifacts/
+deliverables/

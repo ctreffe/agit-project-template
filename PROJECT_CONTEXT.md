@@ -1,0 +1,204 @@
+# PROJECT_CONTEXT.md
+
+# Project Context Template
+
+This document captures the current state of a project created from the AGIT Project Template.
+
+It is the primary handoff document for resuming work after a pause, continuing on another computer or starting a new AI-assisted session.
+
+Replace the placeholders during project setup.
+
+---
+
+# Project
+
+Project name:
+
+```text
+<project name>
+```
+
+Repository:
+
+```text
+<repository URL or local path>
+```
+
+Short description:
+
+```text
+<one or two sentences describing the project>
+```
+
+Project type:
+
+```text
+<general | research | documentation | process | planning | mixed | development-oriented>
+```
+
+Potential transition:
+
+```text
+<whether this project may later adopt the AGIT Dev Template>
+```
+
+---
+
+# Maintainer Project Intent
+
+Maintainer-owned initial context:
+
+```text
+<problem space, operating context, audience or environment>
+```
+
+Desired end state:
+
+```text
+<what the project should enable, produce or make easier when successful>
+```
+
+Boundaries and non-goals:
+
+```text
+<what the project should avoid, postpone or deliberately not cover>
+```
+
+Success criteria:
+
+```text
+<how the maintainer will know the project has succeeded>
+```
+
+---
+
+# Current Status
+
+Current project version or state:
+
+```text
+<version, date, milestone or named state>
+```
+
+Current phase or milestone:
+
+```text
+<current milestone name>
+```
+
+Current focus:
+
+```text
+<what the project is currently working on>
+```
+
+Status:
+
+```text
+<planned | in progress | review | waiting for input | validated | completed | paused | archived>
+```
+
+---
+
+# Working Baseline
+
+Current baseline:
+
+```text
+<local working tree | uploaded materials | public repository | accepted output artifact>
+```
+
+Baseline notes:
+
+```text
+<notes about which repository state, files or materials are authoritative>
+```
+
+---
+
+# Roadmap
+
+- `<next step>` - `<purpose or expected result>`
+- `<later step>` - `<purpose or expected result>`
+
+Roadmap entries should be small enough to review and validate.
+
+---
+
+# Inputs and References
+
+Important input materials:
+
+- `<input file or source>`
+
+Important references:
+
+- `<reference, source or link>`
+
+Source handling notes:
+
+```text
+<privacy, licensing, verification or data-disclosure notes>
+```
+
+---
+
+# Outputs
+
+Current or expected deliverables:
+
+- `<deliverable>`
+
+Output location:
+
+```text
+<output/ path, document path or external location>
+```
+
+---
+
+# Open Questions
+
+- `<open question>`
+
+If there are no open questions, state that explicitly.
+
+---
+
+# Important Decisions
+
+Important decisions already made:
+
+- `<decision>`
+
+Relevant PDRs:
+
+- `<PDR file, if any>`
+
+---
+
+# Relevant Documents
+
+- `README.md` - project overview
+- `CHANGELOG.md` - version or project-state history
+- `ChatGPT.md` - collaboration model
+- `DECISIONS.md` - Project Decision Record guidance
+- `PHILOSOPHY.md` - project philosophy
+- `DOCUMENTATION.md` - documentation standards
+- `REPOSITORY.md` - repository standards
+- `input/` - input materials
+- `references/` - references and sources
+- `notes/` - working notes
+- `output/` - deliverables
+
+Remove or adapt entries that do not apply.
+
+---
+
+# Notes for the Next Session
+
+Use this section to make restarting work easy.
+
+```text
+<what to do next, what not to change yet, what needs review, what is blocked>
+```
