@@ -46,10 +46,13 @@ Review and adapt:
 - `README.md`
 - `PROJECT_CONTEXT.md`
 - `ChatGPT.md`
+- `DECISIONS.md`
 - `PHILOSOPHY.md`
 - `DOCUMENTATION.md`
 - `REPOSITORY.md`
 - `CHANGELOG.md`
+- `VERSION`
+- `LICENSE`
 
 Keep only what is useful for the project.
 

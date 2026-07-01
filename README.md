@@ -81,6 +81,7 @@ The transition should be documented deliberately, preferably with a Project Deci
 - [REPOSITORY.md](REPOSITORY.md) - repository standards
 - [DECISIONS.md](DECISIONS.md) - Project Decision Record guidance
 - [CHANGELOG.md](CHANGELOG.md) - version history
+- [VERSION](VERSION) - current template version metadata
 - [LICENSE](LICENSE) - MIT License
 
 ## License

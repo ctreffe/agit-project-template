@@ -27,6 +27,7 @@ PHILOSOPHY.md
 CHANGELOG.md
 VERSION
 LICENSE
+.gitignore
 DECISIONS.md
 input/
 references/
