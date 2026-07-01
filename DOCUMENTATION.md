@@ -26,6 +26,11 @@ The history of completed project states or template versions.
 
 The collaboration model.
 
+## CODEX.md
+
+Local Codex operating policy for repository access, tool use, Git usage and
+data-disclosure boundaries.
+
 ## PHILOSOPHY.md
 
 The project values and reasoning style.

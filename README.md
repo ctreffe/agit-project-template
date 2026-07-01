@@ -26,6 +26,7 @@ For development-oriented projects with code, scripts, automation, tests, release
 This template provides:
 
 - a collaboration model for human-AI project work
+- local Codex operating rules
 - a project context document for session handoff
 - project setup guidance
 - documentation standards
@@ -87,6 +88,7 @@ The transition should be documented deliberately, preferably with a Project Deci
 - [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) - current project state and handoff point
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) - setup guide for derived projects
 - [ChatGPT.md](ChatGPT.md) - AGIT Collaboration Model
+- [CODEX.md](CODEX.md) - local Codex operating policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) - project philosophy
 - [DOCUMENTATION.md](DOCUMENTATION.md) - documentation standards
 - [REPOSITORY.md](REPOSITORY.md) - repository standards

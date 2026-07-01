@@ -2,7 +2,7 @@
 
 # AGIT Collaboration Model
 
-**Status:** Initial generic model  
+**Status:** Stable generic model
 **Applies to:** AGIT projects  
 **Repository Maintainer:** ctreffe
 
@@ -97,6 +97,41 @@ Plan -> Produce -> Review -> Harmonize -> Record -> Continue
 For repository-based work, these loops may map to commits. For non-code projects, they may map to reviewed document states, decision records or deliverable versions.
 
 A work step should represent one logical change or result.
+
+---
+
+# Git History Authority
+
+The assistant has no default permission to perform Git history actions.
+
+Git history actions include, but are not limited to:
+
+- staging files
+- creating commits
+- amending commits
+- rebasing
+- resetting
+- reverting
+- creating, deleting or switching branches
+- creating or deleting tags
+- pushing or force-pushing
+- pulling or merging
+- changing `.git/` contents directly
+
+The assistant may inspect Git status, diffs and logs when useful. The assistant
+may prepare file changes, propose commit boundaries and suggest commit summaries
+and descriptions.
+
+The assistant must not perform Git history actions unless the maintainer
+explicitly instructs the assistant to perform that specific action.
+
+Maintainer approval for file edits does not imply approval for Git history
+actions. A request to prepare, build, organize or document a change does not
+imply permission to commit it. Approval for one class of Git history action does
+not imply approval for another; local commits, tags and pushes each require
+their own explicit maintainer instruction.
+
+Repository history is maintainer-controlled project memory.
 
 ---
 

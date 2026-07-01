@@ -182,6 +182,7 @@ Relevant PDRs:
 - `README.md` - project overview
 - `CHANGELOG.md` - version or project-state history
 - `ChatGPT.md` - collaboration model
+- `CODEX.md` - local Codex operating policy, if Codex is used
 - `DECISIONS.md` - Project Decision Record guidance
 - `PHILOSOPHY.md` - project philosophy
 - `DOCUMENTATION.md` - documentation standards

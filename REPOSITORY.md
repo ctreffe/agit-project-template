@@ -19,6 +19,7 @@ Important project state, decisions, references and outputs should be captured in
 ```text
 README.md
 ChatGPT.md
+CODEX.md
 PROJECT_CONTEXT.md
 PROJECT_SETUP.md
 DOCUMENTATION.md
@@ -60,6 +61,20 @@ Do not store private, confidential or unlicensed material in versioned folders u
 # Git Workflow
 
 GitHub Desktop is a suitable Git client for the repository maintainer.
+
+The repository maintainer controls Git history.
+
+AI assistants may inspect Git status, diffs and logs when useful. They may
+prepare changes, propose commit boundaries and suggest commit summaries and
+descriptions.
+
+AI assistants must not stage files, create commits, amend commits, rebase,
+reset, revert, create or delete branches, create or delete tags, push, pull,
+merge or otherwise change Git history unless the maintainer explicitly
+instructs the assistant to perform that specific action.
+
+Approval for file edits is not approval for Git history actions. Approval for
+one history action is not approval for another.
 
 Commits should be small enough to review and should represent one logical project step.
 

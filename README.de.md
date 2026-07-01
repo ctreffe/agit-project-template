@@ -26,6 +26,7 @@ Für entwicklungsorientierte Projekte mit Code, Skripten, Automatisierung, Tests
 Dieses Template stellt bereit:
 
 - ein Collaboration Model für Mensch-KI-Projektarbeit
+- lokale Codex-Betriebsregeln
 - ein Projektkontextdokument für Sitzungsübergaben
 - Anleitung zur Projekteinrichtung
 - Dokumentationsstandards
@@ -87,6 +88,7 @@ Der Übergang sollte bewusst dokumentiert werden, vorzugsweise mit einem Project
 - [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) - aktueller Projektstand und Übergabepunkt
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) - Setup-Anleitung für abgeleitete Projekte
 - [ChatGPT.md](ChatGPT.md) - AGIT Collaboration Model
+- [CODEX.md](CODEX.md) - lokale Codex Operating Policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) - Projektphilosophie
 - [DOCUMENTATION.md](DOCUMENTATION.md) - Dokumentationsstandards
 - [REPOSITORY.md](REPOSITORY.md) - Repository-Standards
