@@ -2,6 +2,17 @@
 
 AGIT project template for structured collaboration, project context and documentation.
 
+[Deutsche Dokumentation](README.de.md)
+
+> [!NOTE]
+> **AI Collaboration**
+>
+> This repository maintains the generic AGIT Project Template.
+>
+> The template documents collaboration practices, context handoff, decision records and repository conventions for structured project work.
+>
+> The collaboration model is maintained in [ChatGPT.md](ChatGPT.md).
+
 ## Overview
 
 The AGIT Project Template is a generic starting point for projects that benefit from structured collaboration, clear context, documented decisions and reliable handoff between work sessions.
@@ -82,6 +93,7 @@ The transition should be documented deliberately, preferably with a Project Deci
 - [DECISIONS.md](DECISIONS.md) - Project Decision Record guidance
 - [CHANGELOG.md](CHANGELOG.md) - version history
 - [VERSION](VERSION) - current template version metadata
+- [README.de.md](README.de.md) - German documentation
 - [LICENSE](LICENSE) - MIT License
 
 ## License
