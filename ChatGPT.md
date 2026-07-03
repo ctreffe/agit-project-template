@@ -133,6 +133,8 @@ their own explicit maintainer instruction.
 
 Repository history is maintainer-controlled project memory.
 
+Regular working commits must use Conventional Commit prefixes such as `feat:`, `fix:`, `docs:`, `refactor:`, `test:` or `chore:`. Milestone commits are the exception: they should not use a Conventional Commit prefix and should include the completed version number.
+
 ---
 
 # Decisions and PDRs

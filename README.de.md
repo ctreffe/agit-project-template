@@ -28,7 +28,7 @@ Dieses Template stellt bereit:
 - ein Collaboration Model für Mensch-KI-Projektarbeit
 - lokale Codex-Betriebsregeln
 - ein Projektkontextdokument für Sitzungsübergaben
-- Anleitung zur Projekteinrichtung
+- Anleitung zur Projekteinrichtung und einen reproduzierbaren initialen Prompt
 - Dokumentationsstandards
 - Repository-Standards
 - eine gemeinsame Projektphilosophie
@@ -87,6 +87,7 @@ Der Übergang sollte bewusst dokumentiert werden, vorzugsweise mit einem Project
 
 - [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) - aktueller Projektstand und Übergabepunkt
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) - Setup-Anleitung für abgeleitete Projekte
+- [INITIAL_PROMPT.md](INITIAL_PROMPT.md) - reproduzierbarer erster Prompt für die Projektinitialisierung
 - [ChatGPT.md](ChatGPT.md) - AGIT Collaboration Model
 - [CODEX.md](CODEX.md) - lokale Codex Operating Policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) - Projektphilosophie
@@ -98,6 +99,17 @@ Der Übergang sollte bewusst dokumentiert werden, vorzugsweise mit einem Project
 - [README.md](README.md) - englische Dokumentation
 - [LICENSE](LICENSE) - MIT-Lizenz
 
+
+## Template-spezifische Initialisierungsdokumente
+
+Die folgenden Dokumente unterstützen vor allem die Projekteinrichtung:
+
+- `PROJECT_SETUP.md`
+- `INITIAL_PROMPT.md`
+- `DOCUMENTATION.md`
+- `REPOSITORY.md`
+
+Nach Abschluss der Ersteinrichtung können diese Dokumente aus dem abgeleiteten Projekt entfernt werden, sofern sie dort nicht weiterhin nützlich sind. Sie können auch für Onboarding, Nachvollziehbarkeit oder spätere Re-Initialisierung behalten werden. Beibehaltene Initialisierungsdateien behalten ihre ursprünglichen Namen; ihr Setup-Status kann optional in der Datei selbst oder in `PROJECT_CONTEXT.md` dokumentiert werden.
 ## Lizenz
 
 Dieses Projekt steht unter der MIT-Lizenz.

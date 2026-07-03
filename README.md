@@ -28,7 +28,7 @@ This template provides:
 - a collaboration model for human-AI project work
 - local Codex operating rules
 - a project context document for session handoff
-- project setup guidance
+- project setup guidance and a reproducible initial prompt
 - documentation standards
 - repository standards
 - a shared project philosophy
@@ -87,6 +87,7 @@ The transition should be documented deliberately, preferably with a Project Deci
 
 - [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) - current project state and handoff point
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) - setup guide for derived projects
+- [INITIAL_PROMPT.md](INITIAL_PROMPT.md) - reproducible first prompt for project initialization
 - [ChatGPT.md](ChatGPT.md) - AGIT Collaboration Model
 - [CODEX.md](CODEX.md) - local Codex operating policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) - project philosophy
@@ -97,6 +98,18 @@ The transition should be documented deliberately, preferably with a Project Deci
 - [VERSION](VERSION) - current template version metadata
 - [README.de.md](README.de.md) - German documentation
 - [LICENSE](LICENSE) - MIT License
+
+
+## Template-Only Initialization Documents
+
+The following documents primarily support project initialization:
+
+- `PROJECT_SETUP.md`
+- `INITIAL_PROMPT.md`
+- `DOCUMENTATION.md`
+- `REPOSITORY.md`
+
+After the initial setup is complete, these documents may be removed from the derived project unless they remain useful there. They may also be retained for onboarding, traceability or future re-initialization. If retained, keep their original names and optionally document their setup status inside the file or in `PROJECT_CONTEXT.md`.
 
 ## License
 

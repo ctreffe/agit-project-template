@@ -22,6 +22,7 @@ ChatGPT.md
 CODEX.md
 PROJECT_CONTEXT.md
 PROJECT_SETUP.md
+INITIAL_PROMPT.md
 DOCUMENTATION.md
 REPOSITORY.md
 PHILOSOPHY.md
@@ -77,6 +78,19 @@ Approval for file edits is not approval for Git history actions. Approval for
 one history action is not approval for another.
 
 Commits should be small enough to review and should represent one logical project step.
+
+Regular working commits must use Conventional Commit prefixes such as:
+
+```text
+feat:
+fix:
+docs:
+refactor:
+test:
+chore:
+```
+
+Milestone commits are the exception. A milestone commit should not use a Conventional Commit prefix. It should use a human-readable summary that includes the completed version number.
 
 Each commit should include:
 

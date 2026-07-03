@@ -4,7 +4,7 @@
 
 This document describes how to initialize a new project from the AGIT Project Template.
 
-It is primarily useful during project creation. Derived projects may remove it after setup is complete.
+It is primarily useful during project creation. Derived projects may remove it after setup when it is no longer useful, or retain it for onboarding, traceability or future re-initialization.
 
 ---
 
@@ -35,7 +35,7 @@ Identify the starting point for the project:
 - external references
 - accepted output artifacts
 
-The baseline should be explicit enough that a future session can continue from the repository.
+The baseline should be explicit enough that a future session can continue from the repository. When using AI assistance, begin the first session with `INITIAL_PROMPT.md` when practical.
 
 ---
 
@@ -140,9 +140,24 @@ The chosen scheme should be documented.
 
 ---
 
-# 9. Prepare the First Commit
+# 9. Review Template-Only Initialization Files
+
+The following documents primarily support project initialization and may be removed after setup if they are no longer useful:
+
+- `PROJECT_SETUP.md`
+- `INITIAL_PROMPT.md`
+- `DOCUMENTATION.md`
+- `REPOSITORY.md`
+
+Retain them when they help with onboarding, traceability, future re-initialization or project governance. If retained, do not rename them. Optionally add a short setup status note inside the retained file or record the decision in `PROJECT_CONTEXT.md`.
+
+---
+
+# 10. Prepare the First Commit
 
 The first project-specific commit should describe the initialization.
+
+Regular working commits must use Conventional Commit prefixes such as `feat:`, `fix:`, `docs:`, `refactor:`, `test:` or `chore:`. Milestone commits are the exception: they should be human-readable, omit the prefix and include the completed version number.
 
 Example summary:
 
@@ -161,7 +176,7 @@ the new project. Establish the initial project intent and roadmap.
 
 ---
 
-# 10. Continue the Project
+# 11. Continue the Project
 
 Continue according to `ChatGPT.md`.
 

@@ -49,7 +49,7 @@ The repository maintainer controls Git state through GitHub Desktop unless a
 project explicitly defines a different workflow.
 
 Codex may prepare working tree changes, explain diffs, run checks and propose
-commit metadata.
+commit metadata. Suggested metadata should follow the repository commit rules: Conventional Commit prefixes for regular working commits, and no prefix for milestone commits that include the completed version number.
 
 The maintainer decides what to stage, commit, tag, push or discard.
 

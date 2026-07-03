@@ -194,6 +194,8 @@ Relevant PDRs:
 
 Remove or adapt entries that do not apply.
 
+Template-only initialization files may be removed or retained after setup depending on project needs; retained files should keep their original names.
+
 ---
 
 # Notes for the Next Session
