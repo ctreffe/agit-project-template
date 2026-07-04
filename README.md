@@ -34,6 +34,7 @@ This template provides:
 - a shared project philosophy
 - Project Decision Record guidance for important decisions
 - working folders for inputs, references, notes and outputs
+- source-sensitivity guidance for raw inputs, reviewed derivatives and generated outputs
 - changelog and version metadata
 
 ## Project Flow

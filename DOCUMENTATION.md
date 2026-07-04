@@ -90,6 +90,35 @@ Where relevant, distinguish:
 
 ---
 
+# Source Sensitivity and Reviewed Derivatives
+
+Before an assistant inspects private, unpublished, confidential, licensed or personal raw material, document the source inventory and sensitivity first. Start with file names, file types, maintainer descriptions and intended handling rather than reading raw contents by default.
+
+When raw material is sensitive, prefer reviewed derivatives that expose only the information needed for the project. Examples include anonymized tables, extracted observations, source summaries, redacted excerpts, derived CSV files or generated review artifacts.
+
+Source documentation should make clear:
+
+- which raw materials exist locally
+- which materials are ignored or not versioned
+- which reviewed derivatives may be versioned
+- what still requires maintainer approval before assistant inspection or external sharing
+
+---
+
+# Folder README Files
+
+When a working folder gains project-specific meaning, add or update a short README in that folder. The README should explain the folder role, expected contents, privacy or licensing constraints, and whether files are sources, reviewed derivatives, working notes or generated outputs.
+
+---
+
+# Review Artifacts
+
+For complex milestones, create a concise review or harmonization check when it helps future continuation. A review artifact may record technical checks, content checks, source assumptions, validation results, unresolved risks and maintainer review points.
+
+Review artifacts belong in the place that fits the project, such as `notes/`, `docs/`, `reports/` or a project-specific review folder.
+
+---
+
 # Harmonization
 
 When a change affects multiple documents, update them together.

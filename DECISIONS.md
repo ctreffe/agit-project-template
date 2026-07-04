@@ -17,7 +17,10 @@ Use a PDR when a decision affects:
 - collaboration structure
 - documentation structure
 - source or evidence handling
+- sensitivity classification of raw inputs before assistant inspection
 - privacy or data disclosure boundaries
+- whether raw inputs, reviewed derivatives or generated outputs are versioned
+- scope boundaries between related repositories
 - tool or repository choices
 - review or approval process
 - transition toward a development-oriented project

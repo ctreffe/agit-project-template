@@ -38,8 +38,10 @@ Follow PROJECT_SETUP.md. Ask me for all maintainer-owned information that is
 required before project work should begin, including the problem space,
 operating context, desired end state, intended users, maintainers or audience,
 boundaries, non-goals, first roadmap milestones, validation or review
-expectations, repository metadata, working-folder needs, decision-record needs
+expectations, repository metadata, working-folder needs, source-sensitivity constraints, reviewed-derivative needs, decision-record needs
 and any project-specific collaboration constraints.
+
+Before reading raw private, unpublished, confidential, licensed or personal source materials, first inventory them at the metadata level and ask whether they may be inspected directly or should be represented by reviewed or anonymized derivatives.
 
 Do not invent the project intent, roadmap, decision model, validation status or
 repository direction. You may ask clarifying questions, point out gaps and give

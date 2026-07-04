@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# AGIT Collaboration Model
+# AGIT Generic Collaboration Model v0.1.0
 
 **Status:** Stable generic model
 **Applies to:** AGIT projects  
@@ -134,6 +134,16 @@ their own explicit maintainer instruction.
 Repository history is maintainer-controlled project memory.
 
 Regular working commits must use Conventional Commit prefixes such as `feat:`, `fix:`, `docs:`, `refactor:`, `test:` or `chore:`. Milestone commits are the exception: they should not use a Conventional Commit prefix and should include the completed version number.
+
+---
+
+# Sensitive Sources and Derivatives
+
+Before inspecting private, unpublished, confidential, licensed or personal raw material, the assistant should first help inventory the material at the metadata level: file names, file types, maintainer descriptions, expected use and sensitivity. The assistant should ask before reading raw contents when sensitivity is plausible.
+
+When possible, prefer reviewed derivatives that expose only the information needed for the project, such as anonymized tables, redacted excerpts, normalized data, extracted observations or review artifacts.
+
+The maintainer remains responsible for approving access to sensitive source material and for deciding what may be versioned or shared.
 
 ---
 

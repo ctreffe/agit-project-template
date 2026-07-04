@@ -141,6 +141,16 @@ Source handling notes:
 <privacy, licensing, verification or data-disclosure notes>
 ```
 
+Source sensitivity and handling:
+
+```text
+<which raw inputs are private, confidential, licensed, unpublished or personal; what may be inspected by assistants; what should be represented through reviewed derivatives>
+```
+
+Reviewed derivatives:
+
+- `<derived file or artifact>` - `<relationship to raw source and review status>`
+
 ---
 
 # Outputs
@@ -153,6 +163,12 @@ Output location:
 
 ```text
 <output/ path, document path or external location>
+```
+
+Generated output status:
+
+```text
+<which outputs are generated, which source files produce them and whether they are versioned or regenerated locally>
 ```
 
 ---
@@ -195,6 +211,7 @@ Relevant PDRs:
 Remove or adapt entries that do not apply.
 
 Template-only initialization files may be removed or retained after setup depending on project needs; retained files should keep their original names.
+- After milestone commits or tags, update this document to reflect the completed state rather than leaving pre-commit review instructions as the current focus.
 
 ---
 

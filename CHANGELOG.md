@@ -12,6 +12,10 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Introduce the AGIT Generic Collaboration Model as v0.1.0.
+- Add source-sensitivity, reviewed-derivative and generated-output guidance based on access-plan project retrospection.
+- Add folder README, review artifact and post-milestone context-refresh guidance.
+- Expand PDR candidate guidance for privacy, derivative versioning, output versioning and related-repository scope decisions.
 - Clarify that template-only setup files may be removed or retained after initialization depending on project needs.
 - Clarify that retained initialization files should keep their original names and may document setup status internally or in `PROJECT_CONTEXT.md`.
 - Clarify that regular working commits must use Conventional Commit prefixes while milestone commits should omit prefixes and include the completed version number.

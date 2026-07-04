@@ -37,7 +37,7 @@ notes/
 output/
 ```
 
-Projects may adapt this structure.
+Projects may adapt this structure. When a folder gains project-specific meaning, add a short README that explains its role, expected contents and privacy or artifact handling rules.
 
 ---
 
@@ -56,6 +56,20 @@ Projects may adapt this structure.
 Create `decisions/` when the project has real PDRs to store.
 
 Do not store private, confidential or unlicensed material in versioned folders unless that is an intentional project decision.
+
+---
+
+# Raw Inputs, Reviewed Derivatives and Generated Outputs
+
+Projects should distinguish raw inputs, reviewed derivatives and generated outputs when that distinction matters.
+
+Raw inputs are maintainer-provided or external materials in their original form. They may be private, confidential, licensed, unpublished or personal. Assistants should not inspect such raw materials by default. First document a source inventory and decide whether inspection is appropriate.
+
+Reviewed derivatives are project-specific representations that have been checked for the intended use, such as anonymized tables, extracted observations, redacted excerpts, normalized CSV files, summaries or review workbooks. They are often safer and more useful to version than raw inputs.
+
+Generated outputs are produced from sources, derivatives or scripts. The repository should make clear whether generated outputs are versioned review artifacts or regenerated locally.
+
+`.gitignore` rules and source documentation should be updated together when private local inputs are required.
 
 ---
 

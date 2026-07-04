@@ -37,6 +37,10 @@ Identify the starting point for the project:
 
 The baseline should be explicit enough that a future session can continue from the repository. When using AI assistance, begin the first session with `INITIAL_PROMPT.md` when practical.
 
+Before asking an assistant to inspect input files, classify potential sensitivity. For private, unpublished, confidential, licensed or personal material, start with a source inventory rather than raw content inspection. Decide whether the project needs anonymized or reviewed derivatives before raw inputs are read.
+
+Document source handling in `PROJECT_CONTEXT.md`, a folder README, `input/SOURCES.md` or another project-specific source registry when useful.
+
 ---
 
 # 3. Review Core Documents
@@ -73,6 +77,10 @@ Use them when they help. Remove or adapt them when another structure is clearer.
 Do not store private, confidential or unlicensed material in versioned folders unless the project intentionally tracks it.
 
 Create `decisions/` when the project has real Project Decision Records to store.
+
+For data- or artifact-oriented projects, decide whether the project should distinguish raw inputs, reviewed derivatives and generated outputs. A project may remain based on the generic template while adopting selected development practices for scripts, validation and reproducible rebuild commands.
+
+When a folder such as `input/`, `references/`, `notes/` or `output/` gets a project-specific role, add or update a short README in that folder.
 
 ---
 
@@ -182,7 +190,7 @@ Continue according to `ChatGPT.md`.
 
 Keep `PROJECT_CONTEXT.md` current when:
 
-- a milestone completes
+- a milestone completes, including after a commit or tag has been created
 - the roadmap changes
 - important decisions are made
 - new inputs or references become important

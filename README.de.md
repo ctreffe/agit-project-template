@@ -34,6 +34,7 @@ Dieses Template stellt bereit:
 - eine gemeinsame Projektphilosophie
 - Project Decision Record Guidance für wichtige Entscheidungen
 - Arbeitsordner für Inputs, Referenzen, Notizen und Ergebnisse
+- Guidance zum Umgang mit sensiblen Rohquellen, geprüften Derivaten und generierten Outputs
 - Changelog und Versionsmetadaten
 
 ## Projektablauf
