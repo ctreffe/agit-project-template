@@ -9,7 +9,7 @@ AGIT-Projekt-Template für strukturierte Zusammenarbeit, Projektkontext und Doku
 >
 > Dieses Repository pflegt das generische AGIT Project Template.
 >
-> Das Template dokumentiert KI-gestuetzte Kollaborationspraktiken, Kontextuebergabe, Entscheidungsdokumentation und Repository-Konventionen fuer strukturierte Projektarbeit.
+> Das Template dokumentiert KI-gestützte Kollaborationspraktiken, Kontextübergabe, Entscheidungsdokumentation und Repository-Konventionen für strukturierte Projektarbeit.
 >
 > Das Collaboration Model wird in [ChatGPT.md](ChatGPT.md) gepflegt.
 
@@ -20,6 +20,16 @@ Das AGIT Project Template ist ein generischer Startpunkt für Projekte, die von 
 Es ist bewusst nicht auf Softwareentwicklung beschränkt. Es kann für Recherche, Planung, Dokumentation, Prozessgestaltung, Konzeptarbeit, operative Projekte und andere strukturierte Projektarbeit verwendet werden.
 
 Für entwicklungsorientierte Projekte mit Code, Skripten, Automatisierung, Tests, Releases und technischer Architektur kann das AGIT Dev Template verwendet werden.
+
+## AGIT Templateverse
+
+Die öffentlichen AGIT Templates bilden ein kleines Templateverse: eine Familie zusammenhängender Templates, die ein repository-first, maintainer-geführtes Modell für Human-AI Collaboration teilen und für unterschiedliche Projekttypen spezialisieren.
+
+- [AGIT Project Template](https://github.com/ctreffe/agit-project-template) ist der generische Startpunkt für strukturierte Projektarbeit, Recherche, Planung, Konzeptarbeit, Prozessgestaltung und gemischte Projekte.
+- [AGIT Dev Template](https://github.com/ctreffe/agit-dev-template) ist für entwicklungsorientierte Projekte gedacht, in denen Code, Skripte, Automatisierung, Validierung, Architektur oder Release-Workflows zentral sind.
+- [AGIT Documentation Template](https://github.com/ctreffe/agit-docs-template) ist für technische Dokumentationsprojekte gedacht, etwa Benutzerhandbücher, Admin-Guides, Betriebsanweisungen, Tutorials, Migrationsguides und Dokumentationssites.
+
+Das generische Project Template passt, wenn die Projektform noch offen ist. Ein spezialisiertes Template passt, wenn Entwicklungs- oder Dokumentationspraxis bereits im Zentrum der Arbeit steht.
 
 ## Was das Template bereitstellt
 

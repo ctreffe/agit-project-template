@@ -21,6 +21,16 @@ It is intentionally not limited to software development. It can be used for rese
 
 For development-oriented projects with code, scripts, automation, tests, releases and technical architecture, use or migrate toward the AGIT Dev Template.
 
+## AGIT Templateverse
+
+The public AGIT templates form a small templateverse: a family of related templates that share a repository-first, maintainer-led Human-AI collaboration model while specializing it for different project types.
+
+- [AGIT Project Template](https://github.com/ctreffe/agit-project-template) is the generic starting point for structured project work, research, planning, concept work, process design and mixed projects.
+- [AGIT Dev Template](https://github.com/ctreffe/agit-dev-template) is for development-oriented projects where code, scripts, automation, validation, architecture or release workflows are central.
+- [AGIT Documentation Template](https://github.com/ctreffe/agit-docs-template) is for technical documentation projects such as user guides, admin guides, operating procedures, tutorials, migration guides and documentation sites.
+
+Use the generic project template when the project shape is still open. Use a specialized template when development or documentation practice is already the center of the work.
+
 ## What the Template Provides
 
 This template provides:
