@@ -59,6 +59,20 @@ Review and adapt:
 - `VERSION`
 - `LICENSE`
 
+## Required AI Collaboration Note
+
+Every derived project README should include an AI Collaboration Note near the top of the file, directly below the title and badges or language link area.
+
+The note is a visible disclosure and orientation artifact. It should preserve the purpose, position and level of visibility of the template note while adapting the wording to the derived project.
+
+The derived note should state:
+
+- that the project is developed or maintained through collaboration between the repository maintainer and an AI assistant
+- what the collaboration model documents in that project, such as practices, workflows, handoff rules, decision records or repository conventions
+- that the collaboration model is maintained in `ChatGPT.md`
+
+If `README.de.md` is kept, it should contain a structurally aligned German note.
+
 Keep only what is useful for the project.
 
 ---

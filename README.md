@@ -9,7 +9,7 @@ AGIT project template for structured collaboration, project context and document
 >
 > This repository maintains the generic AGIT Project Template.
 >
-> The template documents collaboration practices, context handoff, decision records and repository conventions for structured project work.
+> The template documents AI-assisted collaboration practices, context handoff, decision records and repository conventions for structured project work.
 >
 > The collaboration model is maintained in [ChatGPT.md](ChatGPT.md).
 

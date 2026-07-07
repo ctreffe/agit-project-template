@@ -12,6 +12,8 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Clarify the AI Collaboration Note with an explicit AI-assisted collaboration sentence.
+- Add setup guidance requiring derived projects to preserve and adapt a visible AI Collaboration Note linked to `ChatGPT.md`.
 - Introduce the AGIT Generic Collaboration Model as v0.1.0.
 - Add source-sensitivity, reviewed-derivative and generated-output guidance based on access-plan project retrospection.
 - Add folder README, review artifact and post-milestone context-refresh guidance.

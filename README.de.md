@@ -9,7 +9,7 @@ AGIT-Projekt-Template für strukturierte Zusammenarbeit, Projektkontext und Doku
 >
 > Dieses Repository pflegt das generische AGIT Project Template.
 >
-> Das Template dokumentiert Kollaborationspraktiken, Kontextübergabe, Entscheidungsdokumentation und Repository-Konventionen für strukturierte Projektarbeit.
+> Das Template dokumentiert KI-gestuetzte Kollaborationspraktiken, Kontextuebergabe, Entscheidungsdokumentation und Repository-Konventionen fuer strukturierte Projektarbeit.
 >
 > Das Collaboration Model wird in [ChatGPT.md](ChatGPT.md) gepflegt.
 
