@@ -61,6 +61,12 @@ AGIT-Projekte sollten mit maintainer-eigenem Intent beginnen:
 8. Betroffene Dokumente vor wichtigen Meilensteinen harmonisieren.
 9. Retrospektiven durchführen, wenn wiederverwendbare Erkenntnisse entstehen.
 
+## Kontrollwörter für Git-History-Aktionen
+
+AI Assistants dürfen Git-History-Aktionen wie Staging, Commit, Tag, Push, Pull, Merge, Rebase, Reset oder Branch-Wechsel nur ausführen, wenn die Maintainer-Anweisung für genau diese Aktion ein anerkanntes Kontrollwort enthält.
+
+Anerkannte Kontrollwörter sind `explicit` und `explicitly` in englischsprachigen Anweisungen sowie die deutsche Wortfamilie `explizit`, einschließlich gebeugter Formen wie `explizite`, `expliziten`, `expliziter` und `explizites`, in deutschsprachigen Anweisungen. Anfragen ohne eines dieser Kontrollwörter erlauben nur Vorbereitung und Anleitung.
+
 ## Decision Records
 
 Wichtige Entscheidungen werden als Decision Records dokumentiert.

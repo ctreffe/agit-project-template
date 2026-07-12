@@ -14,6 +14,7 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Require recognized Git history control words before an assistant may perform Git history actions.
 - Clarify the AI Collaboration Note with an explicit AI-assisted collaboration sentence.
 - Add setup guidance requiring derived projects to preserve and adapt a visible AI Collaboration Note linked to `ChatGPT.md`.
 - Introduce the AGIT Generic Collaboration Model as v0.1.0.

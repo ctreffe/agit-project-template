@@ -61,6 +61,12 @@ AGIT projects should start with maintainer-owned intent:
 8. Harmonize affected documents before important milestones.
 9. Run retrospectives when reusable lessons emerge.
 
+## Git History Control Words
+
+AI assistants must not perform Git history actions such as staging, committing, tagging, pushing, pulling, merging, rebasing, resetting or switching branches unless the maintainer instruction for that specific action contains a recognized control word.
+
+Recognized control words are `explicit` and `explicitly` in English-language instructions, and the German word family `explizit`, including inflected forms such as `explizite`, `expliziten`, `expliziter` and `explizites`, in German-language instructions. Requests without one of these control words authorize preparation and guidance only.
+
 ## Decision Records
 
 Important decisions are documented as Decision Records.

@@ -123,13 +123,24 @@ may prepare file changes, propose commit boundaries and suggest commit summaries
 and descriptions.
 
 The assistant must not perform Git history actions unless the maintainer
-explicitly instructs the assistant to perform that specific action.
+instructs the assistant to perform that specific action and uses a recognized
+control word.
+
+Recognized control words are `explicit` and `explicitly` in English-language
+instructions, and the German word family `explizit`, including inflected forms
+such as `explizite`, `expliziten`, `expliziter` and `explizites`, in
+German-language instructions.
+
+For Git history actions, general intent is not enough. Requests such as "commit
+this", "create the commit", "set the tag" or "push this" remain requests to
+prepare the repository-ready state and commit metadata unless the instruction
+contains a recognized control word.
 
 Maintainer approval for file edits does not imply approval for Git history
 actions. A request to prepare, build, organize or document a change does not
 imply permission to commit it. Approval for one class of Git history action does
 not imply approval for another; local commits, tags and pushes each require
-their own explicit maintainer instruction.
+their own maintainer instruction with a recognized control word.
 
 Repository history is maintainer-controlled project memory.
 

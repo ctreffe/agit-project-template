@@ -213,6 +213,7 @@ Remove or adapt entries that do not apply.
 
 Template-only initialization files may be removed or retained after setup depending on project needs; retained files should keep their original names.
 - After milestone commits or tags, update this document to reflect the completed state rather than leaving pre-commit review instructions as the current focus.
+- Git history actions require a maintainer instruction containing a recognized control word: `explicit` or `explicitly` in English, or `explizit` and inflected forms such as `explizite`, `expliziten`, `expliziter` and `explizites` in German. Commit, tag or push wording without a recognized control word only authorizes preparation and guidance.
 
 ---
 

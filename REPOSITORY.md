@@ -85,11 +85,15 @@ descriptions.
 
 AI assistants must not stage files, create commits, amend commits, rebase,
 reset, revert, create or delete branches, create or delete tags, push, pull,
-merge or otherwise change Git history unless the maintainer explicitly
-instructs the assistant to perform that specific action.
+merge or otherwise change Git history unless the maintainer instructs the
+assistant to perform that specific action and uses a recognized control word:
+`explicit` or `explicitly` in English, or the German word family `explizit`,
+including `explizite`, `expliziten`, `expliziter` and `explizites`.
 
 Approval for file edits is not approval for Git history actions. Approval for
-one history action is not approval for another.
+one history action is not approval for another. Requests such as "commit this",
+"create the commit", "tag this" or "push this" do not authorize the assistant to
+run Git history commands unless they contain a recognized control word.
 
 Commits should be small enough to review and should represent one logical project step.
 
