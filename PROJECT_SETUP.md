@@ -90,7 +90,7 @@ Use them when they help. Remove or adapt them when another structure is clearer.
 
 Do not store private, confidential or unlicensed material in versioned folders unless the project intentionally tracks it.
 
-Create `decisions/` when the project has real Project Decision Records to store.
+Use `decisions/` when the project has real decision records to store. PDRs are the default for generic project decisions, but ADRs, DDRs or WDRs may be added when the decision subject is technical, documentation-specific or scientific-writing-specific.
 
 For data- or artifact-oriented projects, decide whether the project should distinguish raw inputs, reviewed derivatives and generated outputs. A project may remain based on the generic template while adopting selected development practices for scripts, validation and reproducible rebuild commands.
 
@@ -114,9 +114,9 @@ Record the roadmap in `PROJECT_CONTEXT.md` or a dedicated roadmap document.
 
 ---
 
-# 6. Decide Whether PDRs Are Needed
+# 6. Decide Whether Decision Records Are Needed
 
-Use Project Decision Records for important decisions.
+Use Decision Records for important decisions.
 
 Good first PDR candidates include:
 
@@ -127,7 +127,7 @@ Good first PDR candidates include:
 - privacy boundaries
 - transition toward the AGIT Dev Template
 
-The PDR concept is documented in `DECISIONS.md`.
+The Decision Record concept is documented in `DECISIONS.md`.
 
 ---
 

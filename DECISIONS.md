@@ -1,16 +1,18 @@
 # DECISIONS.md
 
-# Project Decision Records
+# Decision Records
 
-Project Decision Records (PDRs) document important decisions that future collaborators should understand without relying on chat history.
+Decision Records document important decisions that future collaborators should understand without relying on chat history.
 
-PDRs are the generic AGIT equivalent of Architecture Decision Records. They are broader than software architecture and can apply to any project decision with durable consequences.
+The AGIT Project Template defaults to Project Decision Records (PDRs), but derived projects may also use Architecture Decision Records (ADRs), Documentation Decision Records (DDRs) or Writing Decision Records (WDRs) when the decision subject calls for a more specific record type.
+
+Choose the prefix by decision subject, not by repository type.
 
 ---
 
-# When to Use a PDR
+# When to Use a Decision Record
 
-Use a PDR when a decision affects:
+Use a decision record when a decision affects:
 
 - project direction
 - scope or non-goals
@@ -31,7 +33,7 @@ Do not create a PDR for every small choice. Use one when future collaborators wo
 
 # Recommended Location
 
-When a project needs PDRs, create a `decisions/` folder.
+When a project needs durable decision records, use the `decisions/` folder.
 
 Example:
 
@@ -39,9 +41,11 @@ Example:
 decisions/
   PDR-0001-project-direction.md
   PDR-0002-source-handling.md
+  ADR-0001-tooling-model.md
+  DDR-0001-documentation-structure.md
 ```
 
-The generic template explains the concept, but derived projects should create their own PDRs only when real decisions exist.
+The generic template explains the concept, but derived projects should create their own decision records only when real decisions exist.
 
 ---
 
@@ -76,6 +80,6 @@ What follows from the decision?
 # Relationship to Other Documents
 
 - `PROJECT_CONTEXT.md` should summarize important decisions that affect current work.
-- PDRs should preserve durable decision reasoning.
+- Decision records should preserve durable decision reasoning.
 - `CHANGELOG.md` records completed changes, not decision rationale.
 - `README.md` should link to relevant decisions only when users or contributors need them.

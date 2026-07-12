@@ -147,11 +147,11 @@ The maintainer remains responsible for approving access to sensitive source mate
 
 ---
 
-# Decisions and PDRs
+# Decisions and Decision Records
 
-Important decisions should be documented as Project Decision Records (PDRs).
+Important decisions should be documented as Decision Records.
 
-The PDR concept is described in `DECISIONS.md`.
+The Decision Record concept is described in `DECISIONS.md`.
 
 Use a PDR when a decision affects:
 
@@ -165,7 +165,7 @@ Use a PDR when a decision affects:
 - review or approval process
 - transition toward a development-oriented project
 
-PDRs should explain context, decision, rationale and consequences.
+Decision records should explain context, decision, rationale and consequences.
 
 Not every small choice needs a PDR.
 

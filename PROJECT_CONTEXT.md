@@ -187,9 +187,9 @@ Important decisions already made:
 
 - `<decision>`
 
-Relevant PDRs:
+Relevant decision records:
 
-- `<PDR file, if any>`
+- `<decision record file, if any>`
 
 ---
 
@@ -199,7 +199,8 @@ Relevant PDRs:
 - `CHANGELOG.md` - version or project-state history
 - `ChatGPT.md` - collaboration model
 - `CODEX.md` - local Codex operating policy, if Codex is used
-- `DECISIONS.md` - Project Decision Record guidance
+- `DECISIONS.md` - Decision Record guidance
+- `decisions/` - Decision Record templates or project decisions, if used
 - `PHILOSOPHY.md` - project philosophy
 - `DOCUMENTATION.md` - documentation standards
 - `REPOSITORY.md` - repository standards

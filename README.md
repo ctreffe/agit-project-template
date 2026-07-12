@@ -42,7 +42,7 @@ This template provides:
 - documentation standards
 - repository standards
 - a shared project philosophy
-- Project Decision Record guidance for important decisions
+- Decision Record guidance for important decisions
 - working folders for inputs, references, notes and outputs
 - source-sensitivity guidance for raw inputs, reviewed derivatives and generated outputs
 - changelog and version metadata
@@ -61,19 +61,19 @@ AGIT projects should start with maintainer-owned intent:
 8. Harmonize affected documents before important milestones.
 9. Run retrospectives when reusable lessons emerge.
 
-## Project Decision Records
+## Decision Records
 
-Important decisions are documented as Project Decision Records (PDRs).
+Important decisions are documented as Decision Records.
 
-Use PDRs for durable decisions such as project direction, scope, collaboration structure, documentation model, tool choices, review process, privacy boundaries or transition to a development-oriented project.
+Use PDRs for durable project decisions such as project direction, scope, collaboration structure, documentation model, tool choices, review process, privacy boundaries or transition to a development-oriented project. Use ADRs, DDRs or WDRs when a derived project also needs technical, documentation or scientific writing decisions.
 
-When a project needs PDRs, create:
+When a project needs decision records, use:
 
 ```text
 decisions/
 ```
 
-The PDR concept is documented in [DECISIONS.md](DECISIONS.md).
+The decision record concept is documented in [DECISIONS.md](DECISIONS.md), and the default location is [decisions/](decisions/).
 
 ## Working Folders
 
@@ -104,7 +104,8 @@ The transition should be documented deliberately, preferably with a Project Deci
 - [PHILOSOPHY.md](PHILOSOPHY.md) - project philosophy
 - [DOCUMENTATION.md](DOCUMENTATION.md) - documentation standards
 - [REPOSITORY.md](REPOSITORY.md) - repository standards
-- [DECISIONS.md](DECISIONS.md) - Project Decision Record guidance
+- [DECISIONS.md](DECISIONS.md) - Decision Record guidance
+- [decisions/](decisions/) - Decision Record templates
 - [CHANGELOG.md](CHANGELOG.md) - version history
 - [VERSION](VERSION) - current template version metadata
 - [README.de.md](README.de.md) - German documentation

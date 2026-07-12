@@ -41,9 +41,9 @@ Repository organization and version-control guidance.
 
 ## DECISIONS.md
 
-Project Decision Record guidance.
+Decision Record guidance.
 
-It explains when to create PDRs, where to store them and which structure to use.
+It explains when to create decision records, where to store them and which structure to use.
 
 ## input/
 
@@ -69,7 +69,7 @@ Keep current state and history separate.
 
 - Current state belongs in `PROJECT_CONTEXT.md`.
 - History belongs in `CHANGELOG.md`.
-- Durable decisions belong in PDRs when the project creates them.
+- Durable decisions belong in decision records when the project creates them.
 - Working notes belong in `notes/`.
 - Deliverables belong in `output/`.
 

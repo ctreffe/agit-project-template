@@ -51,9 +51,9 @@ Projects may adapt this structure. When a folder gains project-specific meaning,
 
 `output/` stores deliverables.
 
-`DECISIONS.md` explains Project Decision Records.
+`DECISIONS.md` explains Decision Records.
 
-Create `decisions/` when the project has real PDRs to store.
+Use `decisions/` when the project has real decision records to store.
 
 Do not store private, confidential or unlicensed material in versioned folders unless that is an intentional project decision.
 
