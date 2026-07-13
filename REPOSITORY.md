@@ -71,6 +71,13 @@ Generated outputs are produced from sources, derivatives or scripts. The reposit
 
 `.gitignore` rules and source documentation should be updated together when private local inputs are required.
 
+Sensitive raw inputs should remain outside Git by default. Establish ignore
+rules and a source inventory before copying them into a repository working
+tree. Before a commit is prepared, review new and untracked files for secrets,
+personal data, confidential material, licensing restrictions and accidental
+raw-source inclusion. Prefer reviewed derivatives whenever they satisfy the
+project need.
+
 ---
 
 # Git Workflow
@@ -95,7 +102,9 @@ one history action is not approval for another. Requests such as "commit this",
 "create the commit", "tag this" or "push this" do not authorize the assistant to
 run Git history commands unless they contain a recognized control word.
 
-Commits should be small enough to review and should represent one logical project step.
+Commits should be small enough to review and should represent one logical
+project step. A roadmap milestone should normally be built through multiple
+regular working commits when its work can be separated meaningfully.
 
 Regular working commits must use Conventional Commit prefixes such as:
 
@@ -108,14 +117,29 @@ test:
 chore:
 ```
 
-Milestone commits are the exception. A milestone commit should not use a Conventional Commit prefix. It should use a human-readable summary that includes the completed version number.
+Milestone commits are the exception. A milestone commit should not use a
+Conventional Commit prefix. It should use a human-readable summary that
+includes the completed version number, for example:
 
-Each commit should include:
+```text
+Finalize project discovery milestone (v0.3.0)
+```
+
+A milestone commit should primarily close and harmonize work already recorded
+in regular commits. It must not hide a large set of unrelated or unreviewed
+changes. A genuinely small milestone may need only one preceding working
+commit, but the commit boundary should follow the logical work rather than the
+version boundary.
+
+Every commit should include:
 
 - a concise summary
-- a meaningful description when useful
+- a meaningful description
 
-Commit descriptions should describe the actual change and should not claim future work as completed.
+Commit summaries should describe the primary purpose of the change. Commit
+descriptions should describe the actual diff and, when useful, its reason or
+validation. They should not repeat unrelated history or claim future work as
+completed.
 
 ---
 

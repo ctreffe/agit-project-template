@@ -196,6 +196,17 @@ Adapt the project context, README, repository metadata and working folders for
 the new project. Establish the initial project intent and roadmap.
 ```
 
+The initialization is complete only when repository identity, maintainer
+intent, desired end state, boundaries, roadmap, source-sensitivity rules,
+working folders, decision-record needs, versioning and retained template files
+have been reviewed and the resulting repository state is internally
+consistent. Do not begin substantive project work while required
+maintainer-owned setup decisions remain hidden behind placeholders.
+
+The initialization commit is normally a regular `chore:` commit. Use an
+unprefixed milestone commit only when initialization also completes a genuinely
+defined and reviewed versioned milestone.
+
 ---
 
 # 11. Continue the Project

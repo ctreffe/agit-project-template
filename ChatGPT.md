@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# AGIT Generic Collaboration Model v0.1.0
+# AGIT Generic Collaboration Model v0.2.0
 
 **Status:** Stable generic model
 **Applies to:** AGIT projects  
@@ -94,9 +94,26 @@ AGIT projects should progress through small loops:
 Plan -> Produce -> Review -> Harmonize -> Record -> Continue
 ```
 
-For repository-based work, these loops may map to commits. For non-code projects, they may map to reviewed document states, decision records or deliverable versions.
+For repository-based work, these loops should normally map to regular working
+commits. For non-code projects, they may map to reviewed document states,
+decision records or deliverable versions.
 
-A work step should represent one logical change or result.
+A work step should represent one logical change or result. A roadmap milestone
+should normally contain several small, reviewable working steps when the work
+can be separated meaningfully. The project should not accumulate an entire
+milestone as one undifferentiated change merely to create a single milestone
+commit at the end.
+
+The preferred repository rhythm is:
+
+```text
+Plan -> Produce -> Review or validate -> Adjust -> Prepare working commit -> Continue
+```
+
+When the milestone objective is satisfied, perform a separate freshness and
+harmonization pass, then prepare the milestone commit. The milestone commit
+closes the milestone; it is not a container for work that should already have
+been recorded in regular commits.
 
 ---
 
@@ -144,7 +161,20 @@ their own maintainer instruction with a recognized control word.
 
 Repository history is maintainer-controlled project memory.
 
-Regular working commits must use Conventional Commit prefixes such as `feat:`, `fix:`, `docs:`, `refactor:`, `test:` or `chore:`. Milestone commits are the exception: they should not use a Conventional Commit prefix and should include the completed version number.
+Regular working commits must use Conventional Commit prefixes such as `feat:`,
+`fix:`, `docs:`, `refactor:`, `test:` or `chore:`. Milestone commits are the
+exception: they should not use a Conventional Commit prefix and should include
+the completed version number.
+
+Every recommended commit must include both a concise summary and a meaningful
+description. The description should state what the commit actually changes and,
+when useful, why; it must not repeat unrelated history or present future work as
+completed.
+
+When decisions, review questions or maintainer actions need a response, the
+assistant should use a concise numbered list whenever practical. Each item
+should be independently answerable and distinguish decisions, checks, review
+points and Git actions.
 
 ---
 
@@ -155,6 +185,13 @@ Before inspecting private, unpublished, confidential, licensed or personal raw m
 When possible, prefer reviewed derivatives that expose only the information needed for the project, such as anonymized tables, redacted excerpts, normalized data, extracted observations or review artifacts.
 
 The maintainer remains responsible for approving access to sensitive source material and for deciding what may be versioned or shared.
+
+Sensitive raw material should not be added to Git by default. Before placing
+source files in a repository, define what is allowed to be versioned, establish
+the necessary `.gitignore` rules and prefer reviewed, redacted or anonymized
+derivatives when they are sufficient. If sensitive material has entered the
+working tree or staging area, stop and review its handling before preparing a
+commit.
 
 ---
 

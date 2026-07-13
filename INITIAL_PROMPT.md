@@ -4,7 +4,11 @@
 
 Use this prompt as the first instruction to the AI assistant after creating a new project repository from the AGIT Project Template.
 
-The purpose is to make the first session reproducible: the assistant should read the repository, understand all template rules, ask for the required maintainer-owned information, initialize the project files and prepare the first project-specific setup state without taking Git history actions unless explicitly instructed.
+The purpose is to make the first session reproducible: the assistant should
+read the repository, understand all template rules, ask for the required
+maintainer-owned information, initialize the project files and prepare the first
+project-specific setup state without taking Git history actions unless the
+instruction for the specific action contains a recognized control word.
 
 ---
 
@@ -60,7 +64,7 @@ After I provide the required information, update the project-specific files:
 - any project-specific documentation created during setup
 
 Preserve the collaboration model in ChatGPT.md and the local Codex policy in
-CODEX.md unless I explicitly ask to change them.
+CODEX.md unless I ask to change them.
 
 Review template-only initialization files and recommend whether they should be
 removed or retained for onboarding, traceability or future re-initialization:
@@ -75,8 +79,9 @@ short status note inside the retained file or document the decision in
 PROJECT_CONTEXT.md.
 
 Do not stage, commit, tag, push, pull, merge, reset, rebase, switch branches or
-otherwise modify Git history unless I explicitly instruct you to perform that
-specific Git action.
+otherwise modify Git history unless I instruct you to perform that specific Git
+action and use a recognized control word: `explicit` or `explicitly` in
+English, or the German word family `explizit`.
 
 When the setup state is ready, provide:
 
@@ -85,5 +90,6 @@ When the setup state is ready, provide:
 - known limitations or open questions
 - a suggested commit summary
 - a suggested commit description
-- any short next steps I should take in GitHub Desktop
+- a concise numbered list of decisions or next steps I should take, including
+  any GitHub Desktop actions
 ```

@@ -251,6 +251,13 @@ When preparing a repository change, Codex should provide:
 - known limitations or skipped checks
 - a suggested commit summary
 - a suggested commit description
+- concise numbered maintainer decisions or next steps when practical
+
+Suggested commit metadata must distinguish regular working commits from
+milestone commits. Regular commits use an appropriate Conventional Commit
+prefix and represent one logical step. Milestone commits use a human-readable
+summary with the completed version number and should close already recorded,
+reviewed work rather than bundle an entire milestone into one change.
 
 The maintainer performs staging, commits, tags and pushes in GitHub Desktop
 unless a project explicitly defines a different process.

@@ -14,6 +14,16 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Formalize small working commits below roadmap milestones and reserve separate
+  milestone commits for reviewed milestone closure.
+- Require commit recommendations to contain consistent summaries and meaningful
+  descriptions.
+- Strengthen safeguards against adding sensitive raw sources to Git.
+- Define completion criteria for structured project initialization.
+- Prefer concise numbered maintainer decisions and next steps.
+- Upgrade the AGIT Generic Collaboration Model to v0.2.0.
+- Carry the working-commit rhythm and numbered collaboration convention into
+  the derived-project context template.
 - Require recognized Git history control words before an assistant may perform Git history actions.
 - Clarify the AI Collaboration Note with an explicit AI-assisted collaboration sentence.
 - Add setup guidance requiring derived projects to preserve and adapt a visible AI Collaboration Note linked to `ChatGPT.md`.
