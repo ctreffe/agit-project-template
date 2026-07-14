@@ -115,6 +115,11 @@ harmonization pass, then prepare the milestone commit. The milestone commit
 closes the milestone; it is not a container for work that should already have
 been recorded in regular commits.
 
+At a meaningful checkpoint, the assistant should provide a concise numbered
+handoff that identifies the result ready for review, validation performed,
+known limitations or disclosure risks, decisions required from the maintainer,
+the proposed next step and, when ready, a commit summary and description.
+
 ---
 
 # Git History Authority
@@ -184,7 +189,11 @@ Before inspecting private, unpublished, confidential, licensed or personal raw m
 
 When possible, prefer reviewed derivatives that expose only the information needed for the project, such as anonymized tables, redacted excerpts, normalized data, extracted observations or review artifacts.
 
-The maintainer remains responsible for approving access to sensitive source material and for deciding what may be versioned or shared.
+The maintainer remains responsible for approving access to sensitive source
+material and for deciding what may be versioned or shared. Approval for an
+assistant to inspect a specific source or reviewed derivative, approval to
+version it in Git and approval to publish or otherwise share it are separate
+decisions. None implies another.
 
 Sensitive raw material should not be added to Git by default. Before placing
 source files in a repository, define what is allowed to be versioned, establish
@@ -192,6 +201,15 @@ the necessary `.gitignore` rules and prefer reviewed, redacted or anonymized
 derivatives when they are sufficient. If sensitive material has entered the
 working tree or staging area, stop and review its handling before preparing a
 commit.
+
+Generated outputs may remain sensitive even when they do not contain the raw
+source. Review tables, figures, screenshots, excerpts, archives, interactive
+content, embedded resources and file metadata for disclosure risk before Git
+versioning or sharing them.
+
+Automated privacy, secret or content checks are warning systems, not approval.
+A clean result does not prove that an artifact is anonymous, non-confidential,
+licensed for use or safe to version or publish.
 
 ---
 

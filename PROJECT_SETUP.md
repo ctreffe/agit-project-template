@@ -37,7 +37,7 @@ Identify the starting point for the project:
 
 The baseline should be explicit enough that a future session can continue from the repository. When using AI assistance, begin the first session with `INITIAL_PROMPT.md` when practical.
 
-Before asking an assistant to inspect input files, classify potential sensitivity. For private, unpublished, confidential, licensed or personal material, start with a source inventory rather than raw content inspection. Decide whether the project needs anonymized or reviewed derivatives before raw inputs are read.
+Before asking an assistant to inspect input files, classify potential sensitivity. For private, unpublished, confidential, licensed or personal material, start with a source inventory rather than raw content inspection. Decide whether the project needs anonymized or reviewed derivatives before raw inputs are read. Record assistant-access approval, Git-versioning approval and publication or sharing approval separately; none implies another. Treat automated checker results as warnings rather than proof that an artifact is safe.
 
 Document source handling in `PROJECT_CONTEXT.md`, a folder README, `input/SOURCES.md` or another project-specific source registry when useful.
 
@@ -90,7 +90,7 @@ Use them when they help. Remove or adapt them when another structure is clearer.
 
 Do not store private, confidential or unlicensed material in versioned folders unless the project intentionally tracks it.
 
-Use `decisions/` when the project has real decision records to store. PDRs are the default for generic project decisions, but ADRs, DDRs or WDRs may be added when the decision subject is technical, documentation-specific or scientific-writing-specific.
+Use `decisions/` when the project has real decision records to store. PDRs are the default for generic project decisions, while ADRs or DDRs may be added when the decision subject is technical or documentation-specific.
 
 For data- or artifact-oriented projects, decide whether the project should distinguish raw inputs, reviewed derivatives and generated outputs. A project may remain based on the generic template while adopting selected development practices for scripts, validation and reproducible rebuild commands.
 

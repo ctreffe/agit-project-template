@@ -71,7 +71,7 @@ Recognized control words are `explicit` and `explicitly` in English-language ins
 
 Important decisions are documented as Decision Records.
 
-Use PDRs for durable project decisions such as project direction, scope, collaboration structure, documentation model, tool choices, review process, privacy boundaries or transition to a development-oriented project. Use ADRs, DDRs or WDRs when a derived project also needs technical, documentation or scientific writing decisions.
+Use PDRs for durable project decisions such as project direction, scope, collaboration structure, documentation model, tool choices, review process, privacy boundaries or transition to a development-oriented project. Use ADRs or DDRs when a derived project also needs technical or documentation-specific decisions.
 
 When a project needs decision records, use:
 

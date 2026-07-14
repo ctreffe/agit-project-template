@@ -14,6 +14,12 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Separate assistant access, Git versioning and publication approval for
+  sensitive sources, derivatives and generated outputs.
+- Define automated sensitivity checks as warnings rather than safety approval.
+- Add a standard checkpoint handoff for reviewable working steps.
+- Limit the generic Decision Record vocabulary to PDR, ADR and DDR and remove
+  domain-specific record guidance from the generic template.
 - Formalize small working commits below roadmap milestones and reserve separate
   milestone commits for reviewed milestone closure.
 - Require commit recommendations to contain consistent summaries and meaningful

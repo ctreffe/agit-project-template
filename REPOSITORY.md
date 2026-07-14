@@ -67,7 +67,11 @@ Raw inputs are maintainer-provided or external materials in their original form.
 
 Reviewed derivatives are project-specific representations that have been checked for the intended use, such as anonymized tables, extracted observations, redacted excerpts, normalized CSV files, summaries or review workbooks. They are often safer and more useful to version than raw inputs.
 
-Generated outputs are produced from sources, derivatives or scripts. The repository should make clear whether generated outputs are versioned review artifacts or regenerated locally.
+Generated outputs are produced from sources, derivatives or scripts. The repository should make clear whether generated outputs are versioned review artifacts or regenerated locally. Review their visible content, embedded resources and file metadata for disclosure risk before versioning or sharing them.
+
+Assistant access, Git versioning and publication or other sharing are separate
+approval decisions. A reviewed derivative may be suitable for one of these
+purposes without being suitable for the others.
 
 `.gitignore` rules and source documentation should be updated together when private local inputs are required.
 
@@ -77,6 +81,9 @@ tree. Before a commit is prepared, review new and untracked files for secrets,
 personal data, confidential material, licensing restrictions and accidental
 raw-source inclusion. Prefer reviewed derivatives whenever they satisfy the
 project need.
+
+Automated privacy, secret or content checks may identify risks, but a clean
+result does not authorize access, versioning or publication.
 
 ---
 

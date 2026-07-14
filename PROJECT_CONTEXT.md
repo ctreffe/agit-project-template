@@ -144,7 +144,25 @@ Source handling notes:
 Source sensitivity and handling:
 
 ```text
-<which raw inputs are private, confidential, licensed, unpublished or personal; what may be inspected by assistants; what should be represented through reviewed derivatives>
+<which raw inputs are private, confidential, licensed, unpublished or personal; what should be represented through reviewed derivatives>
+```
+
+Assistant-access approval:
+
+```text
+<exact sources or reviewed derivatives, permitted task and limitations>
+```
+
+Git-versioning approval:
+
+```text
+<exact reviewed artifacts approved for Git, or none>
+```
+
+Publication or sharing approval:
+
+```text
+<exact artifacts and audience, or none>
 ```
 
 Reviewed derivatives:

@@ -71,7 +71,7 @@ Anerkannte Kontrollwörter sind `explicit` und `explicitly` in englischsprachige
 
 Wichtige Entscheidungen werden als Decision Records dokumentiert.
 
-PDRs eignen sich für dauerhafte Projektentscheidungen zu Projektausrichtung, Scope, Kollaborationsstruktur, Dokumentationsmodell, Toolwahl, Reviewprozess, Datenschutzgrenzen oder dem Übergang zu einem entwicklungsorientierten Projekt. ADRs, DDRs oder WDRs können ergänzt werden, wenn ein abgeleitetes Projekt technische, dokumentationsbezogene oder wissenschaftliche Schreibentscheidungen dokumentieren muss.
+PDRs eignen sich für dauerhafte Projektentscheidungen zu Projektausrichtung, Scope, Kollaborationsstruktur, Dokumentationsmodell, Toolwahl, Reviewprozess, Datenschutzgrenzen oder dem Übergang zu einem entwicklungsorientierten Projekt. ADRs oder DDRs können ergänzt werden, wenn ein abgeleitetes Projekt technische oder dokumentationsbezogene Entscheidungen dokumentieren muss.
 
 Wenn ein Projekt Decision Records benötigt, wird folgender Ordner verwendet:
 
