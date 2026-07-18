@@ -6,6 +6,8 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-07-19
+
 ### Added
 
 - Add `RETROSPECTIVE_PROMPT.md` for evidence-based Maintainer-Agent
