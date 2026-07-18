@@ -119,16 +119,23 @@ Der Übergang sollte bewusst dokumentiert werden, vorzugsweise mit einem Project
 - [LICENSE](LICENSE) - MIT-Lizenz
 
 
-## Template-spezifische Initialisierungsdokumente
+## Initialisierungsnachweis
 
-Die folgenden Dokumente unterstützen vor allem die Projekteinrichtung:
+Die folgenden Dokumente unterstützen vor allem die Projekteinrichtung und
+sollten im abgeleiteten Repository normalerweise als Nachweis des methodischen
+Ausgangspunkts erhalten bleiben:
 
 - `PROJECT_SETUP.md`
 - `INITIAL_PROMPT.md`
-- `DOCUMENTATION.md`
-- `REPOSITORY.md`
 
-Nach Abschluss der Ersteinrichtung können diese Dokumente aus dem abgeleiteten Projekt entfernt werden, sofern sie dort nicht weiterhin nützlich sind. Sie können auch für Onboarding, Nachvollziehbarkeit oder spätere Re-Initialisierung behalten werden. Beibehaltene Initialisierungsdateien behalten ihre ursprünglichen Namen; ihr Setup-Status kann optional in der Datei selbst oder in `PROJECT_CONTEXT.md` dokumentiert werden.
+Initialisierungsstatus, ursprüngliche Template-Version und ursprünglicher
+Template-Commit sowie spätere Template-Harmonisierungen werden in
+`PROJECT_CONTEXT.md` festgehalten. Eine Initialisierungsdatei wird nur als
+bewusste und dokumentierte Maintainer-Ausnahme entfernt.
+
+`DOCUMENTATION.md` und `REPOSITORY.md` enthalten fortlaufend geltende
+Projektregeln. Sie werden für das abgeleitete Projekt angepasst und aktuell
+gehalten, nicht als entbehrliches Setup-Material behandelt.
 
 `CONTINUATION_PROMPT.md` sollte normalerweise im abgeleiteten Projekt verbleiben,
 da die Datei einen reproduzierbaren Wiedereinstieg nach einer Pause oder einem

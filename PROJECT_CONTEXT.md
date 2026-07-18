@@ -10,6 +10,56 @@ Replace the placeholders during project setup.
 
 ---
 
+# Template Lineage and Initialization
+
+Repository role:
+
+```text
+<derived project>
+```
+
+Source template:
+
+```text
+AGIT Project Template
+```
+
+Initial template baseline:
+
+```text
+<template version and commit hash>
+```
+
+Initialization status:
+
+```text
+<not started | in progress | completed>
+```
+
+Initialization date:
+
+```text
+<YYYY-MM-DD | not yet completed>
+```
+
+Last template harmonization:
+
+```text
+<not yet performed | template version, commit hash and date>
+```
+
+Intentional template deviations and relevant Decision Records:
+
+```text
+<none | concise list>
+```
+
+Keep `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` as initialization provenance.
+They describe the project's methodological roots; this section records their
+lifecycle status and the baselines used over time.
+
+---
+
 # Project
 
 Project name:
@@ -214,6 +264,8 @@ Relevant decision records:
 # Relevant Documents
 
 - `README.md` - project overview
+- `PROJECT_SETUP.md` - retained initialization method and provenance
+- `INITIAL_PROMPT.md` - retained first-session initialization prompt
 - `CHANGELOG.md` - version or project-state history
 - `ChatGPT.md` - collaboration model
 - `CODEX.md` - local Codex operating policy, if Codex is used
@@ -230,7 +282,7 @@ Relevant decision records:
 
 Remove or adapt entries that do not apply.
 
-Template-only initialization files may be removed or retained after setup depending on project needs; retained files should keep their original names.
+- `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` remain as initialization provenance unless the maintainer documents a deliberate exception.
 - Active roadmap milestones should progress through small regular commits when
   meaningful project steps can be reviewed separately.
 - Maintainer decisions and clarification questions should be presented as

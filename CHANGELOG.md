@@ -16,6 +16,9 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Retain initialization artifacts as project provenance, record template
+  lineage and harmonization baselines in `PROJECT_CONTEXT.md`, and clarify that
+  documentation and repository guidance remain active project rules.
 - Separate assistant access, Git versioning and publication approval for
   sensitive sources, derivatives and generated outputs.
 - Define automated sensitivity checks as warnings rather than safety approval.

@@ -4,7 +4,10 @@
 
 This document describes how to initialize a new project from the AGIT Project Template.
 
-It is primarily useful during project creation. Derived projects may remove it after setup when it is no longer useful, or retain it for onboarding, traceability or future re-initialization.
+It is primarily used during project creation and should normally remain in a
+derived repository as a record of its initialization method. Record lifecycle
+status and template lineage in `PROJECT_CONTEXT.md` instead of rewriting this
+guide after setup.
 
 ---
 
@@ -162,16 +165,20 @@ The chosen scheme should be documented.
 
 ---
 
-# 9. Review Template-Only Initialization Files
+# 9. Record Initialization Provenance
 
-The following documents primarily support project initialization and may be removed after setup if they are no longer useful:
+Keep the two initialization artifacts under their original names:
 
 - `PROJECT_SETUP.md`
 - `INITIAL_PROMPT.md`
-- `DOCUMENTATION.md`
-- `REPOSITORY.md`
 
-Retain them when they help with onboarding, traceability, future re-initialization or project governance. If retained, do not rename them. Optionally add a short setup status note inside the retained file or record the decision in `PROJECT_CONTEXT.md`.
+In `PROJECT_CONTEXT.md`, record their lifecycle status, initialization date,
+source template version and commit, later harmonization baseline and intentional
+template deviations. Remove an initialization artifact only as a deliberate,
+documented maintainer exception.
+
+Adapt `DOCUMENTATION.md` and `REPOSITORY.md` as ongoing project rules and keep
+them current throughout the project lifecycle.
 
 ---
 
@@ -223,5 +230,5 @@ Keep `PROJECT_CONTEXT.md` current when:
 - the project is paused
 - a new session needs to resume work
 
-`CONTINUATION_PROMPT.md` should normally remain in the derived repository even
-when template-only initialization files are removed.
+`CONTINUATION_PROMPT.md` should remain in the derived repository for repeatable
+re-entry after initialization.

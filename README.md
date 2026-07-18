@@ -119,16 +119,22 @@ The transition should be documented deliberately, preferably with a Project Deci
 - [LICENSE](LICENSE) - MIT License
 
 
-## Template-Only Initialization Documents
+## Initialization Provenance
 
-The following documents primarily support project initialization:
+The following documents primarily support project initialization and should
+normally remain in a derived repository as a record of its methodological
+starting point:
 
 - `PROJECT_SETUP.md`
 - `INITIAL_PROMPT.md`
-- `DOCUMENTATION.md`
-- `REPOSITORY.md`
 
-After the initial setup is complete, these documents may be removed from the derived project unless they remain useful there. They may also be retained for onboarding, traceability or future re-initialization. If retained, keep their original names and optionally document their setup status inside the file or in `PROJECT_CONTEXT.md`.
+Record initialization status, the initial template version and commit, and later
+template harmonizations in `PROJECT_CONTEXT.md`. Remove either initialization
+document only as a deliberate, documented maintainer exception.
+
+`DOCUMENTATION.md` and `REPOSITORY.md` are ongoing project rules. Adapt them to
+the derived project and keep them current rather than treating them as disposable
+setup material.
 
 `CONTINUATION_PROMPT.md` should normally remain in the derived project because
 it supports repeatable re-entry after a pause or context-window change.
