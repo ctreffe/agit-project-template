@@ -24,6 +24,13 @@ The reproducible re-entry instruction for a new context window or assistant
 session. It defines the reading order, Git-state reconciliation and numbered
 continuation handoff without repeating project initialization.
 
+## HARMONIZATION_PROMPT.md
+
+The repeatable project-content alignment instruction. It compares a derived
+project with its recorded source template, checks internal consistency and
+reviews roadmap fit without evaluating collaboration or deriving template
+improvements.
+
 ## CHANGELOG.md
 
 The history of completed project states or template versions.
@@ -127,7 +134,9 @@ Review artifacts belong in the place that fits the project, such as `notes/`, `d
 
 # Harmonization
 
-When a change affects multiple documents, update them together.
+Use `HARMONIZATION_PROMPT.md` for a deliberate source-template comparison,
+internal consistency review and roadmap alignment. When a change affects
+multiple documents, update them together.
 
 Avoid adding isolated notes when existing sections should be revised.
 

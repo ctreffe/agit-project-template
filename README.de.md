@@ -106,6 +106,7 @@ Der Übergang sollte bewusst dokumentiert werden, vorzugsweise mit einem Project
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) - Setup-Anleitung für abgeleitete Projekte
 - [INITIAL_PROMPT.md](INITIAL_PROMPT.md) - reproduzierbarer erster Prompt für die Projektinitialisierung
 - [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) - reproduzierbarer Wiedereinstiegsprompt für ein neues Kontextfenster
+- [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) - Abgleich mit dem Quell-Template sowie interne Konsistenz- und Roadmap-Harmonisierung
 - [ChatGPT.md](ChatGPT.md) - AGIT Collaboration Model
 - [CODEX.md](CODEX.md) - lokale Codex Operating Policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) - Projektphilosophie

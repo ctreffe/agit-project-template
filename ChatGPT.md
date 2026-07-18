@@ -287,13 +287,23 @@ When a change affects multiple documents, update them together so the repository
 
 Do not append isolated notes when an existing section should be updated.
 
-Harmonization commits or review steps are appropriate when the project model, roadmap, documentation structure or collaboration process changes.
+Use `HARMONIZATION_PROMPT.md` for a deliberate content harmonization. A
+harmonization compares a derived project with its recorded source template,
+reconciles internal project files and checks whether the roadmap still fits
+maintainer intent and the current state. The concrete project and its Decision
+Records remain authoritative; template changes are never copied blindly.
+
+Harmonization concerns project content. It does not evaluate Maintainer-Agent
+collaboration or derive changes for the source template. Collaboration
+observations are deferred to a retrospective.
 
 ---
 
 # Retrospectives and Template Evolution
 
-Retrospectives should identify reusable lessons from real project work.
+Retrospectives evaluate Maintainer-Agent collaboration and the rules, feedback,
+decision, handoff and work rhythms that shape it. They occur less frequently
+than harmonizations, usually after a suitable milestone.
 
 When a derived project reveals a collaboration pattern that would help future projects, propose it for the template.
 

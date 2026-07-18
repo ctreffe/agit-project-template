@@ -106,6 +106,7 @@ The transition should be documented deliberately, preferably with a Project Deci
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) - setup guide for derived projects
 - [INITIAL_PROMPT.md](INITIAL_PROMPT.md) - reproducible first prompt for project initialization
 - [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) - reproducible re-entry prompt for a new context window
+- [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) - source-template, internal-consistency and roadmap harmonization
 - [ChatGPT.md](ChatGPT.md) - AGIT Collaboration Model
 - [CODEX.md](CODEX.md) - local Codex operating policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) - project philosophy

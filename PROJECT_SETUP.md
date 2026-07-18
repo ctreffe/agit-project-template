@@ -232,3 +232,6 @@ Keep `PROJECT_CONTEXT.md` current when:
 
 `CONTINUATION_PROMPT.md` should remain in the derived repository for repeatable
 re-entry after initialization.
+
+`HARMONIZATION_PROMPT.md` should also remain for periodic source-template,
+internal-consistency and roadmap alignment.
