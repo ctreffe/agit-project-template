@@ -105,6 +105,7 @@ Der Übergang sollte bewusst dokumentiert werden, vorzugsweise mit einem Project
 - [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) - aktueller Projektstand und Übergabepunkt
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) - Setup-Anleitung für abgeleitete Projekte
 - [INITIAL_PROMPT.md](INITIAL_PROMPT.md) - reproduzierbarer erster Prompt für die Projektinitialisierung
+- [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) - reproduzierbarer Wiedereinstiegsprompt für ein neues Kontextfenster
 - [ChatGPT.md](ChatGPT.md) - AGIT Collaboration Model
 - [CODEX.md](CODEX.md) - lokale Codex Operating Policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) - Projektphilosophie
@@ -128,6 +129,10 @@ Die folgenden Dokumente unterstützen vor allem die Projekteinrichtung:
 - `REPOSITORY.md`
 
 Nach Abschluss der Ersteinrichtung können diese Dokumente aus dem abgeleiteten Projekt entfernt werden, sofern sie dort nicht weiterhin nützlich sind. Sie können auch für Onboarding, Nachvollziehbarkeit oder spätere Re-Initialisierung behalten werden. Beibehaltene Initialisierungsdateien behalten ihre ursprünglichen Namen; ihr Setup-Status kann optional in der Datei selbst oder in `PROJECT_CONTEXT.md` dokumentiert werden.
+
+`CONTINUATION_PROMPT.md` sollte normalerweise im abgeleiteten Projekt verbleiben,
+da die Datei einen reproduzierbaren Wiedereinstieg nach einer Pause oder einem
+Wechsel des Kontextfensters ermöglicht.
 ## Lizenz
 
 Dieses Projekt steht unter der MIT-Lizenz.

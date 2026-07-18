@@ -105,6 +105,7 @@ The transition should be documented deliberately, preferably with a Project Deci
 - [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) - current project state and handoff point
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) - setup guide for derived projects
 - [INITIAL_PROMPT.md](INITIAL_PROMPT.md) - reproducible first prompt for project initialization
+- [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) - reproducible re-entry prompt for a new context window
 - [ChatGPT.md](ChatGPT.md) - AGIT Collaboration Model
 - [CODEX.md](CODEX.md) - local Codex operating policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) - project philosophy
@@ -128,6 +129,9 @@ The following documents primarily support project initialization:
 - `REPOSITORY.md`
 
 After the initial setup is complete, these documents may be removed from the derived project unless they remain useful there. They may also be retained for onboarding, traceability or future re-initialization. If retained, keep their original names and optionally document their setup status inside the file or in `PROJECT_CONTEXT.md`.
+
+`CONTINUATION_PROMPT.md` should normally remain in the derived project because
+it supports repeatable re-entry after a pause or context-window change.
 
 ## License
 

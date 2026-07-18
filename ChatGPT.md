@@ -72,6 +72,11 @@ It should capture:
 
 When a session becomes long, when a substantial change is in progress or when work may continue on another computer or in another conversation, the project context should be updated before lower-priority work continues.
 
+Begin a new context window or assistant session with
+`CONTINUATION_PROMPT.md`. It defines the ordered re-entry check and requires the
+assistant to reconcile `PROJECT_CONTEXT.md` with current read-only Git evidence
+before substantive work continues.
+
 ---
 
 # Roadmap-First Work

@@ -18,6 +18,12 @@ The public entry point. It explains what the project is, who it is for and where
 
 The current-state handoff document. It describes where the project stands now.
 
+## CONTINUATION_PROMPT.md
+
+The reproducible re-entry instruction for a new context window or assistant
+session. It defines the reading order, Git-state reconciliation and numbered
+continuation handoff without repeating project initialization.
+
 ## CHANGELOG.md
 
 The history of completed project states or template versions.

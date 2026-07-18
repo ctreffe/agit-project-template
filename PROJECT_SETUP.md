@@ -211,7 +211,8 @@ defined and reviewed versioned milestone.
 
 # 11. Continue the Project
 
-Continue according to `ChatGPT.md`.
+Continue according to `ChatGPT.md`. Begin work in a new context window or
+assistant session with `CONTINUATION_PROMPT.md`.
 
 Keep `PROJECT_CONTEXT.md` current when:
 
@@ -221,3 +222,6 @@ Keep `PROJECT_CONTEXT.md` current when:
 - new inputs or references become important
 - the project is paused
 - a new session needs to resume work
+
+`CONTINUATION_PROMPT.md` should normally remain in the derived repository even
+when template-only initialization files are removed.

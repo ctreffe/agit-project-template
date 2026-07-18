@@ -8,6 +8,8 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add `CONTINUATION_PROMPT.md` for reproducible project re-entry in a new
+  context window or assistant session.
 - Add `INITIAL_PROMPT.md` as a reproducible first-session prompt for derived project initialization.
 - Add an AGIT Templateverse section to the English and German READMEs.
 - Add `decisions/` as the shared Decision Record location with default PDR guidance and support for ADR, DDR and WDR prefixes when needed.
