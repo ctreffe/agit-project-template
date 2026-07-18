@@ -116,7 +116,8 @@ Plan -> Produce -> Review or validate -> Adjust -> Prepare working commit -> Con
 ```
 
 When the milestone objective is satisfied, perform a separate freshness and
-harmonization pass, then prepare the milestone commit. The milestone commit
+consistency pass, then prepare the milestone commit. Invoke the formal
+harmonization prompt only when the maintainer requests it. The milestone commit
 closes the milestone; it is not a container for work that should already have
 been recorded in regular commits.
 
@@ -302,12 +303,23 @@ observations are deferred to a retrospective.
 # Retrospectives and Template Evolution
 
 Retrospectives evaluate Maintainer-Agent collaboration and the rules, feedback,
-decision, handoff and work rhythms that shape it. They occur less frequently
-than harmonizations, usually after a suitable milestone.
+decision, handoff and work rhythms that shape it. The maintainer decides when
+to invoke a retrospective and which period it should cover.
+
+Use `RETROSPECTIVE_PROMPT.md` for the structured collaboration review. Separate
+practices to retain, project-level collaboration changes, content implications
+for later harmonization, abstracted template candidates and no-action findings.
 
 When a derived project reveals a collaboration pattern that would help future projects, propose it for the template.
 
 Template changes should be made deliberately and should avoid overfitting the template to one project.
+
+A retrospective finding is only a template candidate. The assistant must not
+modify the source-template repository unless the maintainer authorizes that
+specific template change with a recognized control word. Template-edit
+permission does not authorize staging, committing, pushing or any other Git
+history action; each Git action requires its own specific control-word
+instruction.
 
 ---
 

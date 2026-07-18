@@ -58,7 +58,7 @@ AGIT projects should start with maintainer-owned intent:
 5. Work in small reviewable steps.
 6. Document important decisions.
 7. Keep `PROJECT_CONTEXT.md` current.
-8. Harmonize affected documents before important milestones.
+8. Check affected documents for freshness and consistency before important milestones.
 9. Run retrospectives when reusable lessons emerge.
 
 ## Git History Control Words
@@ -107,6 +107,7 @@ The transition should be documented deliberately, preferably with a Project Deci
 - [INITIAL_PROMPT.md](INITIAL_PROMPT.md) - reproducible first prompt for project initialization
 - [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) - reproducible re-entry prompt for a new context window
 - [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) - source-template, internal-consistency and roadmap harmonization
+- [RETROSPECTIVE_PROMPT.md](RETROSPECTIVE_PROMPT.md) - Maintainer-initiated Maintainer-Agent collaboration review
 - [ChatGPT.md](ChatGPT.md) - AGIT Collaboration Model
 - [CODEX.md](CODEX.md) - local Codex operating policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) - project philosophy

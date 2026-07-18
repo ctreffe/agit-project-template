@@ -48,6 +48,12 @@ Last template harmonization:
 <not yet performed | template version, commit hash and date>
 ```
 
+Last collaboration retrospective:
+
+```text
+<not yet performed | reviewed period or milestone, date and relevant record>
+```
+
 Intentional template deviations and relevant Decision Records:
 
 ```text
@@ -271,6 +277,7 @@ Relevant decision records:
 - `CODEX.md` - local Codex operating policy, if Codex is used
 - `CONTINUATION_PROMPT.md` - reproducible re-entry instruction for a new context window or assistant session
 - `HARMONIZATION_PROMPT.md` - source-template, internal-consistency and roadmap harmonization
+- `RETROSPECTIVE_PROMPT.md` - structured Maintainer-Agent collaboration review
 - `DECISIONS.md` - Decision Record guidance
 - `decisions/` - Decision Record templates or project decisions, if used
 - `PHILOSOPHY.md` - project philosophy

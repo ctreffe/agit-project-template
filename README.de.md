@@ -58,7 +58,7 @@ AGIT-Projekte sollten mit maintainer-eigenem Intent beginnen:
 5. In kleinen prüfbaren Schritten arbeiten.
 6. Wichtige Entscheidungen dokumentieren.
 7. `PROJECT_CONTEXT.md` aktuell halten.
-8. Betroffene Dokumente vor wichtigen Meilensteinen harmonisieren.
+8. Betroffene Dokumente vor wichtigen Meilensteinen auf Aktualität und Konsistenz prüfen.
 9. Retrospektiven durchführen, wenn wiederverwendbare Erkenntnisse entstehen.
 
 ## Kontrollwörter für Git-History-Aktionen
@@ -107,6 +107,7 @@ Der Übergang sollte bewusst dokumentiert werden, vorzugsweise mit einem Project
 - [INITIAL_PROMPT.md](INITIAL_PROMPT.md) - reproduzierbarer erster Prompt für die Projektinitialisierung
 - [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) - reproduzierbarer Wiedereinstiegsprompt für ein neues Kontextfenster
 - [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) - Abgleich mit dem Quell-Template sowie interne Konsistenz- und Roadmap-Harmonisierung
+- [RETROSPECTIVE_PROMPT.md](RETROSPECTIVE_PROMPT.md) - Maintainer-initiierter Review der Zusammenarbeit zwischen Maintainer und Agent
 - [ChatGPT.md](ChatGPT.md) - AGIT Collaboration Model
 - [CODEX.md](CODEX.md) - lokale Codex Operating Policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) - Projektphilosophie

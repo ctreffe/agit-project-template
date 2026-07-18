@@ -31,6 +31,12 @@ project with its recorded source template, checks internal consistency and
 reviews roadmap fit without evaluating collaboration or deriving template
 improvements.
 
+## RETROSPECTIVE_PROMPT.md
+
+The repeatable Maintainer-Agent collaboration review. It separates practices
+to retain, project collaboration changes, content implications for later
+harmonization and abstracted template candidates.
+
 ## CHANGELOG.md
 
 The history of completed project states or template versions.
