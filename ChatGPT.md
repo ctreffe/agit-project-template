@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# AGIT Generic Collaboration Model v0.2.0
+# AGIT Generic Collaboration Model v0.3.0
 
 **Status:** Stable generic model
 **Applies to:** AGIT projects  
@@ -128,13 +128,16 @@ the proposed next step and, when ready, a commit summary and description.
 
 ---
 
-# Git History Authority
+# Git Index and Protected Git Action Authority
 
-The assistant has no default permission to perform Git history actions.
+Staging and unstaging are Git index operations, not history actions. They do
+not require a control word. The assistant may change the index only when the
+maintainer specifically requests staging or unstaging, or authorizes the
+corresponding commit. Existing staged selections and unrelated changes must be
+preserved.
 
-Git history actions include, but are not limited to:
+Protected Git actions include, but are not limited to:
 
-- staging files
 - creating commits
 - amending commits
 - rebasing
@@ -150,7 +153,7 @@ The assistant may inspect Git status, diffs and logs when useful. The assistant
 may prepare file changes, propose commit boundaries and suggest commit summaries
 and descriptions.
 
-The assistant must not perform Git history actions unless the maintainer
+The assistant must not perform protected Git actions unless the maintainer
 instructs the assistant to perform that specific action and uses a recognized
 control word.
 
@@ -159,14 +162,14 @@ instructions, and the German word family `explizit`, including inflected forms
 such as `explizite`, `expliziten`, `expliziter` and `explizites`, in
 German-language instructions.
 
-For Git history actions, general intent is not enough. Requests such as "commit
+For protected Git actions, general intent is not enough. Requests such as "commit
 this", "create the commit", "set the tag" or "push this" remain requests to
 prepare the repository-ready state and commit metadata unless the instruction
 contains a recognized control word.
 
-Maintainer approval for file edits does not imply approval for Git history
+Maintainer approval for file edits does not imply approval for protected Git
 actions. A request to prepare, build, organize or document a change does not
-imply permission to commit it. Approval for one class of Git history action does
+imply permission to commit it. Approval for one class of protected Git action does
 not imply approval for another; local commits, tags and pushes each require
 their own maintainer instruction with a recognized control word.
 
@@ -317,9 +320,9 @@ Template changes should be made deliberately and should avoid overfitting the te
 A retrospective finding is only a template candidate. The assistant must not
 modify the source-template repository unless the maintainer authorizes that
 specific template change with a recognized control word. Template-edit
-permission does not authorize staging, committing, pushing or any other Git
-history action; each Git action requires its own specific control-word
-instruction.
+permission does not authorize Git index or protected Git actions. Staging and
+unstaging require a specific request but no control word; each protected Git
+action requires its own specific control-word instruction.
 
 ---
 

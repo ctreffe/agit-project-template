@@ -6,6 +6,12 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade the AGIT Generic Collaboration Model to v0.3.0 and classify staging
+  and unstaging as specifically requested index operations outside the
+  control-word rule while preserving staged and unrelated changes.
+
 ## [0.2.0] - 2026-07-19
 
 ### Added

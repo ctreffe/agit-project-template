@@ -51,12 +51,15 @@ project explicitly defines a different workflow.
 Codex may prepare working tree changes, explain diffs, run checks and propose
 commit metadata. Suggested metadata should follow the repository commit rules: Conventional Commit prefixes for regular working commits, and no prefix for milestone commits that include the completed version number.
 
-The maintainer decides what to stage, commit, tag, push or discard.
+Staging and unstaging are index operations and do not require a control word.
+Codex may perform them only when the maintainer specifically requests the index
+action or authorizes the corresponding commit. Codex must preserve existing
+staged selections and unrelated changes.
 
-Codex has no default permission to perform Git history actions. File-edit
-approval, tool approval or approval to prepare a commit-ready change does not
-authorize staging, committing, tagging, pushing or any other Git history action.
-Each such action requires a maintainer instruction for that specific action that
+Codex has no default permission to perform protected Git actions. File-edit,
+tool or staging approval does not authorize committing, tagging, pushing or
+another protected Git action. Each such action requires a maintainer instruction
+for that specific action that
 uses a recognized control word: `explicit` or `explicitly` in English, or the
 German word family `explizit`, including `explizite`, `expliziten`, `expliziter`
 and `explizites`.
@@ -86,11 +89,11 @@ work.
 
 ---
 
-# Read-Only Git Usage
+# Git Inspection and Index Usage
 
-Codex may use Git only for read-only inspection unless the maintainer instructs
-Codex to perform a specific Git history action and uses a recognized control
-word.
+Codex may use Git for read-only inspection by default. It may also perform a
+specifically requested staging or unstaging action under the index rules above.
+Protected Git actions require a recognized control word.
 
 Allowed read-only Git commands include:
 
@@ -109,8 +112,8 @@ git describe --tags
 git rev-parse
 ```
 
-Codex must not use Git to modify repository history, staging state, branches,
-tags or working tree contents.
+Codex must not modify repository history, branches, tags or working tree
+contents through Git without the required protected-action authorization.
 
 Forbidden Git actions include:
 
@@ -193,8 +196,9 @@ external tool.
 Codex must not perform the following actions unless the maintainer instructs
 Codex to perform the specific action with a recognized control word:
 
-- Git history actions
-- staging, committing, tagging, branching, pushing or pulling
+- protected Git actions without the required control-word instruction
+- staging or unstaging without a specific request or corresponding commit
+  authorization
 - destructive filesystem actions outside a clearly requested change
 - hidden system changes
 - global package or tool installation

@@ -63,8 +63,13 @@ Provide a concise numbered re-entry report containing:
 7. the smallest useful next step and how it should be validated
 8. only the maintainer questions that must be answered before continuing
 
-Do not stage, commit, tag, push, pull, merge, reset, rebase, switch branches or
-otherwise modify Git history unless I instruct you to perform that specific Git
+Staging and unstaging do not require a control word, but perform them only when
+I specifically request the index action or authorize the corresponding commit.
+Preserve existing staged selections and unrelated changes.
+
+Do not commit, amend, tag, push, pull, merge, reset, rebase, switch branches,
+manipulate stashes or perform another protected Git action unless I instruct
+you to perform that specific Git
 action and use a recognized control word: `explicit` or `explicitly` in
 English, or the German word family `explizit`.
 ```

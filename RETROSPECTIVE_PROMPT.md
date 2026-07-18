@@ -77,10 +77,11 @@ If the current repository is itself a template, treat every proposed change to
 its collaboration model or reusable template guidance as a template change and
 apply the same control-word requirement.
 
-Template-edit permission does not authorize Git history. Staging, committing,
-tagging, pushing, pulling, merging, rebasing, resetting or switching branches
-still requires a maintainer instruction for that specific Git action containing
-a recognized control word.
+Template-edit permission does not authorize Git index or protected Git actions.
+Staging and unstaging require a specific maintainer instruction but no control
+word. Committing, amending, tagging, pushing, pulling, merging, rebasing,
+resetting, switching branches and manipulating stashes require a maintainer
+instruction for that specific action containing a recognized control word.
 
 Before any retrospective-driven edits, provide a concise numbered report:
 

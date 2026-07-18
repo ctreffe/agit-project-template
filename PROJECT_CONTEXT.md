@@ -296,7 +296,10 @@ Remove or adapt entries that do not apply.
 - Maintainer decisions and clarification questions should be presented as
   concise numbered lists when practical.
 - After milestone commits or tags, update this document to reflect the completed state rather than leaving pre-commit review instructions as the current focus.
-- Git history actions require a maintainer instruction containing a recognized control word: `explicit` or `explicitly` in English, or `explizit` and inflected forms such as `explizite`, `expliziten`, `expliziter` and `explizites` in German. Commit, tag or push wording without a recognized control word only authorizes preparation and guidance.
+- Staging and unstaging require a specific maintainer request or authorization
+  of the corresponding commit, but no control word. Protected Git actions
+  require a specific instruction containing `explicit`, `explicitly` or the
+  German word family `explizit`.
 
 ---
 
