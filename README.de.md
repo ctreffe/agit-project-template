@@ -13,11 +13,11 @@
 >
 > Das Kollaborationsmodell wird in [ChatGPT.md](ChatGPT.md) gepflegt.
 
----
+<br>
 
-**Sprache:** [English documentation](README.md)
+**[Link to the English README](README.md)**
 
----
+<br>
 
 ## Inhalt
 
@@ -73,6 +73,12 @@ Nach dem Erzeugen des Repositorys muss der Maintainer nur
 das Repository zu lesen, alle Setup-Leitlinien anzuwenden und die vollständige
 Initialisierung zu führen. Der Maintainer muss `PROJECT_SETUP.md` oder die
 anderen Setup-Dateien nicht separat öffnen oder ausführen.
+
+Die einfachste Anweisung an den Agenten lautet:
+
+> Lies `INITIAL_PROMPT.md` vollständig und führe den darin enthaltenen Initialisierungs-Prompt aus.
+
+Die Datei muss dafür nicht geöffnet und ihr Prompt nicht in die Unterhaltung kopiert werden.
 
 Der Agent:
 

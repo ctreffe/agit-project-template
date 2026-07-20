@@ -13,11 +13,11 @@
 >
 > The collaboration model is maintained in [ChatGPT.md](ChatGPT.md).
 
----
+<br>
 
-**Language:** [Deutsche Dokumentation](README.de.md)
+**[Link zur deutschen README](README.de.md)**
 
----
+<br>
 
 ## Contents
 
@@ -73,6 +73,12 @@ After creating the repository, the maintainer needs to invoke only
 repository, follow all setup guidance and lead the complete initialization. The
 maintainer does not need to open or execute `PROJECT_SETUP.md` or the other
 setup files separately.
+
+The simplest instruction to the agent is:
+
+> Read `INITIAL_PROMPT.md` in full and carry out the initialization prompt it contains.
+
+There is no need to open the file and copy its prompt into the conversation.
 
 The agent then:
 
