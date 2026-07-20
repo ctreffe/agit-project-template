@@ -13,7 +13,11 @@
 >
 > Das Kollaborationsmodell wird in [ChatGPT.md](ChatGPT.md) gepflegt.
 
-[English documentation](README.md) · Die englische README ist maßgeblich; die deutsche README wird als enge Übersetzung gepflegt.
+---
+
+**Sprache:** [English documentation](README.md)
+
+---
 
 ## Inhalt
 
@@ -64,18 +68,26 @@ Wenn ein generisches Projekt später entwicklungsorientiert wird, dokumentiere d
 
 ## Projektinitialisierung
 
-Die Initialisierung verwandelt das wiederverwendbare Template in ein konkretes Projekt und bewahrt, wie dieses Projekt begonnen hat.
+Nach dem Erzeugen des Repositorys muss der Maintainer nur
+[INITIAL_PROMPT.md](INITIAL_PROMPT.md) aufrufen. Der Prompt weist den Agenten an,
+das Repository zu lesen, alle Setup-Leitlinien anzuwenden und die vollständige
+Initialisierung zu führen. Der Maintainer muss `PROJECT_SETUP.md` oder die
+anderen Setup-Dateien nicht separat öffnen oder ausführen.
 
-1. Erzeuge ein Repository aus diesem Template und lege die maßgebliche lokale Baseline fest.
-2. Beginne die erste Assistant-Sitzung mit [INITIAL_PROMPT.md](INITIAL_PROMPT.md).
-3. Folge [PROJECT_SETUP.md](PROJECT_SETUP.md).
-4. Stelle den vom Maintainer definierten Zweck, gewünschten Endzustand, vorgesehene Nutzer:innen oder Zielgruppen, Grenzen, Risiken und Nicht-Ziele bereit.
-5. Entscheide, welche Arbeitsordner, Regeln zur Quellenbehandlung, Review-Erwartungen und Decision-Record-Typen das Projekt benötigt.
-6. Passe beide README-Dateien, Repository-Metadaten und laufende Projektregeln an.
-7. Vervollständige [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) mit initialer Roadmap, Repository-Baseline und Template-Provenienz.
-8. Bereite den ersten kleinen, prüfbaren Projektzustand vor und validiere seine interne Konsistenz vor dem Commit.
+Der Agent:
 
-Die Initialisierung ist unvollständig, solange notwendige Projektentscheidungen hinter Platzhaltern verborgen bleiben. `PROJECT_SETUP.md` und `INITIAL_PROMPT.md` verbleiben normalerweise als Initialisierungsprovenienz im abgeleiteten Repository.
+1. liest die Kollaborations-, Setup-, Dokumentations-, Repository- und Entscheidungsregeln;
+2. prüft die Repository-Baseline, ohne die Git-Historie zu verändern;
+3. stellt kompakte Fragen zu vom Maintainer definiertem Zweck, gewünschtem Endzustand, Zielgruppe, Grenzen, Risiken, Roadmap, Quellenbehandlung und Review-Modell;
+4. fragt jede folgenreiche Entscheidung ab, statt Projektrichtung zu erfinden;
+5. passt nach den Antworten README-Dateien, Projektkontext, Arbeitsordner und laufende Projektregeln an;
+6. dokumentiert Template-Baseline und Initialisierungsprovenienz in [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md);
+7. prüft, dass erforderliche Platzhalter und ungelöste Setup-Entscheidungen sichtbar sind; und
+8. übergibt den initialisierten Repository-Zustand mit Validierungsergebnissen, Einschränkungen und vorgeschlagenen Commit-Metadaten.
+
+`PROJECT_SETUP.md` bleibt die detaillierte Initialisierungscheckliste des Agenten
+und ein Provenienzartefakt. `INITIAL_PROMPT.md` ist der einzige
+benutzerorientierte Einstiegspunkt, der diese Checkliste aktiviert.
 
 ## Empfohlener Workflow
 
@@ -121,7 +133,7 @@ Das generische Template verwendet standardmäßig PDRs und erklärt das Modell i
 
 ### Einstiegspunkte und Projektgedächtnis
 
-- **`README.md` und `README.de.md`** führen in das Projekt ein, erklären den Einstieg und verlinken die vertiefenden Regeln. Englisch ist maßgeblich, während Deutsch als enge strukturelle und semantische Übersetzung gepflegt wird.
+- **`README.md` und `README.de.md`** führen auf Englisch und Deutsch in das Projekt ein, erklären den Einstieg und verlinken die vertiefenden Regeln.
 - **`PROJECT_CONTEXT.md`** ist der primäre Wiedereinstiegspunkt. Die Datei hält aktuelle Intention, Status, Roadmap, Baseline, Validierungsstand, offene Entscheidungen und den nächsten sinnvollen Schritt fest, statt die vollständige Projekthistorie zu duplizieren.
 - **`CHANGELOG.md` und `VERSION`** beschreiben abgeschlossene Zustände und die Versionshistorie. Sie werden aktualisiert, wenn ein versionierter Milestone abgeschlossen ist, nicht bereits bei Arbeitsbeginn.
 
@@ -167,26 +179,25 @@ Halte Source-Template-Version und -Commit, Initialisierungsstatus, letzte Harmon
 
 ## Verwendung dieses Templates
 
-1. Initialisiere das Repository mit `INITIAL_PROMPT.md` und `PROJECT_SETUP.md`.
-2. Halte `PROJECT_CONTEXT.md` als kompakte Projektübergabe aktuell.
-3. Leite die Roadmap aus der vom Maintainer definierten Intention, Grenzen und Erfolgskriterien ab.
-4. Arbeite in kleinen Artefakten oder Änderungen, die unabhängig geprüft werden können.
-5. Unterscheide Rohinputs, geprüfte Derivate und erzeugte Outputs, bevor Zugriff, Versionierung oder Veröffentlichung freigegeben werden.
-6. Dokumentiere folgenreiche Entscheidungen mit dem passenden Gegenstandspräfix in `decisions/`.
-7. Validiere Ergebnisse, bevor sie als abgeschlossen dargestellt werden.
-8. Beginne spätere Sitzungen mit `CONTINUATION_PROMPT.md`, statt die Initialisierung zu wiederholen.
-9. Nutze Harmonisierung, wenn Projektinhalt oder Template-Abgleich bewusst geprüft werden müssen.
-10. Nutze eine Retrospektive separat, wenn der Kollaborationsprozess bewertet werden soll.
-11. Schließe Milestones mit kohärentem Kontext, Dokumentation, Changelog und Versionsmetadaten ab.
+1. Erzeuge ein Repository aus dem Template und gib dem Agenten die Anweisung aus `INITIAL_PROMPT.md`.
+2. Beantworte die nummerierten Fragen des Agenten; der Agent liest und verwendet die übrigen Setup-Dateien automatisch.
+3. Prüfe den initialisierten Repository-Zustand, die Validierungsergebnisse und den vorgeschlagenen ersten Commit.
+4. Lasse den Agenten `PROJECT_CONTEXT.md` während der späteren Arbeit als kompakte Projektübergabe aktuell halten.
+5. Arbeite in kleinen Artefakten oder Änderungen, die aus der vom Maintainer definierten Intention, Grenzen und Erfolgskriterien abgeleitet sind.
+6. Unterscheide Rohinputs, geprüfte Derivate und erzeugte Outputs, bevor Zugriff, Versionierung oder Veröffentlichung freigegeben werden.
+7. Dokumentiere folgenreiche Entscheidungen in `decisions/` und validiere Ergebnisse, bevor sie als abgeschlossen dargestellt werden.
+8. Beginne spätere Sitzungen mit `CONTINUATION_PROMPT.md`; der Agent rekonstruiert den aktuellen Zustand, ohne die Initialisierung zu wiederholen.
+9. Nutze Harmonisierung, wenn Projektinhalt oder Template-Abgleich bewusst geprüft werden müssen, und eine Retrospektive separat zur Bewertung der Zusammenarbeit.
+10. Schließe Milestones mit kohärentem Kontext, Dokumentation, Changelog und Versionsmetadaten ab.
 
 ## Tool-Setup für Maintainer
 
 Das generische Template hat keine verpflichtende domänenspezifische Toolchain. Eine praktische lokale Baseline ist:
 
-- Git und ein vom Maintainer kontrollierter Git-Client wie GitHub Desktop;
-- ein Text- oder Markdown-Editor;
-- PowerShell unter Windows oder eine gleichwertige lokale Shell;
-- `rg` oder ein anderes schnelles Suchwerkzeug;
+- [Git](https://git-scm.com/downloads) und ein vom Maintainer kontrollierter Client wie [GitHub Desktop](https://desktop.github.com/download/);
+- ein Text- oder Markdown-Editor wie [Visual Studio Code](https://code.visualstudio.com/download);
+- [PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows) unter Windows oder eine gleichwertige lokale Shell;
+- [ripgrep (`rg`)](https://github.com/BurntSushi/ripgrep/releases) oder ein anderes schnelles Suchwerkzeug;
 - projektspezifische Werkzeuge, die nur installiert werden, wenn die konkrete Arbeit sie benötigt.
 
 Bevorzuge projektlokale Umgebungen wie `.venv/` oder `node_modules/` gegenüber globalen Änderungen. Paketinstallationen, externe Dienste und Netzwerknutzung sollten einen klaren Projektzweck haben; private Repository-Materialien bleiben standardmäßig lokal.

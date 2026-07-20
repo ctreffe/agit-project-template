@@ -14,6 +14,10 @@ It should make the project understandable without relying on private chat histor
 
 The public entry point. It explains what the project is, who it is for and where to find more information.
 
+## README Language Policy
+
+In this template repository, `README.md` is authoritative and `README.de.md` is maintained as a close structural and semantic translation. Derived projects may choose a different authority model, but they must document it and keep parallel README files aligned.
+
 ## README Badge Block
 
 Place badges directly below the title and before the AI Collaboration Note.
