@@ -76,6 +76,29 @@ The derived note should state:
 
 If `README.de.md` is kept, it should contain a structurally aligned German note.
 
+## README Badge Policy
+
+Place the badge block directly below the README title and before the AI
+Collaboration Note. Use this semantic order when the corresponding information
+applies:
+
+1. status
+2. version
+3. license
+4. real build, test or documentation automation
+
+Derived projects must adapt the template badges to their own documented state.
+Do not retain the source-template version as the project version. A status
+badge needs a defined project meaning, the license badge must match the actual
+license and a release badge is appropriate only when the project maintains
+tags or releases. Add automation badges only for workflows that actually exist
+and avoid a last-commit badge by default because activity is not a quality or
+readiness signal.
+
+Keep English and German badge blocks identical when both READMEs are present.
+Record source-template version and lineage in `PROJECT_CONTEXT.md`, not in the
+derived project's badge block.
+
 Keep only what is useful for the project.
 
 ---

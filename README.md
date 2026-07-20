@@ -1,5 +1,9 @@
 # AGIT Project Template
 
+[![Status](https://img.shields.io/badge/status-stable-green)](VERSION)
+[![Version](https://img.shields.io/github/v/tag/ctreffe/agit-project-template?label=version)](CHANGELOG.md)
+[![License](https://img.shields.io/github/license/ctreffe/agit-project-template)](LICENSE)
+
 > [!NOTE]
 > **AI Collaboration**
 >

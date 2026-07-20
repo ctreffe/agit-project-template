@@ -42,6 +42,26 @@ Projects may adapt this structure. When a folder gains project-specific meaning,
 
 ---
 
+# README Badge Policy
+
+Template repositories use a compact badge block directly below the README
+title and before the AI Collaboration Note. The standard semantic order is
+status, version and license, followed only by badges for real build, test or
+documentation automation.
+
+Status links to `VERSION`, version links to `CHANGELOG.md` and license links to
+`LICENSE`. Public repositories may use dynamic GitHub metadata; private or
+proprietary repositories may use static badges updated with milestone metadata.
+Avoid a last-commit badge because activity does not establish quality or
+readiness.
+
+Derived projects adapt the block to their actual status, versioning model,
+license and automation. They must not present the source-template version as
+their project version or advertise a workflow that does not exist. English and
+German badge blocks remain identical when both languages are maintained.
+
+---
+
 # Working Folders
 
 `input/` stores project input materials.

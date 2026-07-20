@@ -14,6 +14,19 @@ It should make the project understandable without relying on private chat histor
 
 The public entry point. It explains what the project is, who it is for and where to find more information.
 
+## README Badge Block
+
+Place badges directly below the title and before the AI Collaboration Note.
+Use status, version and license in that order, followed only by badges backed
+by real build, test or documentation automation. Each badge should communicate
+maintained project information and link to its durable source where practical:
+`VERSION`, `CHANGELOG.md`, `LICENSE` or the corresponding workflow.
+
+Do not use badges as decoration or retain source-template badges unchanged in
+a derived project. A last-commit badge is discouraged because activity is not
+a quality or readiness measure. Keep English and German badge blocks identical,
+and update static badges together with the project metadata they represent.
+
 ## PROJECT_CONTEXT.md
 
 The current-state handoff document. It describes where the project stands now.
