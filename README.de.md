@@ -145,6 +145,7 @@ Das generische Template verwendet standardmäßig PDRs und erklärt das Modell i
 
 ### Zusammenarbeit und Betriebsregeln
 
+- **`AGENTS.md`** ist der kompakte, automatisch geladene Einstiegspunkt für KI-Agenten. Die Datei verweist auf die vollständigen Kollaborations-, Betriebs-, Projekt- und Validierungsleitlinien, ohne sie zu duplizieren.
 - **`ChatGPT.md`** definiert das allgemeine Kollaborationsmodell, Autoritätsgrenzen und den Arbeitsrhythmus zwischen Maintainer und Agent. Es ist transparente Projektdokumentation und kein versteckter Prompt.
 - **`CODEX.md`** definiert lokale Ausführungs-, Netzwerk-, Offenlegungs- und Git-Regeln für Codex. Behalte die Datei bei lokaler Codex-Arbeit und passe sie nur für bewusste projektspezifische Anforderungen an.
 - **`PHILOSOPHY.md`** hält die Werte hinter der Projektmethode fest, darunter Intention vor Struktur, Nachvollziehbarkeit, leichtgewichtiger Prozess und Integrität vor Außendarstellung.
@@ -175,7 +176,7 @@ In einem abgeleiteten Projekt:
 
 - fülle `PROJECT_CONTEXT.md` aus und pflege sie als aktuellen Projektzustand;
 - passe beide README-Dateien, `DOCUMENTATION.md` und `REPOSITORY.md` an das konkrete Projekt an;
-- behalte `ChatGPT.md`, `CODEX.md` und `PHILOSOPHY.md`, sofern kein dokumentierter Projektbedarf eine Änderung erfordert;
+- behalte und passe `AGENTS.md`, `ChatGPT.md`, `CODEX.md` und `PHILOSOPHY.md` an, sofern kein dokumentierter Projektbedarf eine Änderung erfordert;
 - behalte `PROJECT_SETUP.md` und `INITIAL_PROMPT.md` als Initialisierungsprovenienz;
 - behalte die Prompts für Fortsetzung, Harmonisierung und Retrospektive zur wiederholbaren späteren Nutzung;
 - passe optionale Arbeitsordner nur an oder entferne sie nur, wenn ihre Rolle verstanden ist;

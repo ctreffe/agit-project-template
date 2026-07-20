@@ -62,6 +62,12 @@ The history of completed project states or template versions.
 
 The collaboration model.
 
+## AGENTS.md
+
+The concise, automatically loaded agent entry point. It directs agents to the
+complete repository guidance and highlights the minimum working and validation
+contract without duplicating `ChatGPT.md` or `CODEX.md`.
+
 ## CODEX.md
 
 Local Codex operating policy for repository access, tool use, Git usage and

@@ -52,6 +52,7 @@ Review and adapt:
 
 - `README.md`
 - `PROJECT_CONTEXT.md`
+- `AGENTS.md`
 - `ChatGPT.md`
 - `CODEX.md`
 - `DECISIONS.md`

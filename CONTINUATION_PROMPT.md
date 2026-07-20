@@ -15,6 +15,10 @@ the new context window.
 ```text
 We are continuing an existing AGIT project in a new context window.
 
+Apply AGENTS.md as the durable repository operating baseline. If it was not
+loaded automatically, read it first. This prompt defines the re-entry procedure
+for the current session.
+
 Do not re-initialize the project and do not assume that earlier chat context is
 available. Reconstruct the current state from the repository before making
 substantive changes.
@@ -31,8 +35,9 @@ Read the repository in this order:
    PROJECT_CONTEXT.md for the current work.
 5. Consult REPOSITORY.md, DOCUMENTATION.md and PHILOSOPHY.md when needed to
    resolve repository, documentation or collaboration expectations. Do not
-   repeat PROJECT_SETUP.md or INITIAL_PROMPT.md unless initialization is
-   incomplete or the current task explicitly concerns setup.
+   execute PROJECT_SETUP.md or INITIAL_PROMPT.md as part of continuation. If
+   initialization appears incomplete, report that state and propose returning
+   to INITIAL_PROMPT.md as a separate workflow.
 
 Inspect the repository with read-only Git commands. At minimum, check the
 current branch and working tree, recent commits, the latest relevant tag and

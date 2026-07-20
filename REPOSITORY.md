@@ -18,6 +18,7 @@ Important project state, decisions, references and outputs should be captured in
 
 ```text
 README.md
+AGENTS.md
 ChatGPT.md
 CODEX.md
 PROJECT_CONTEXT.md

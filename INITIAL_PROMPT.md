@@ -4,7 +4,7 @@
 
 Use this prompt as the first instruction to the AI assistant after creating a new project repository from the AGIT Project Template.
 
-For normal initialization, the maintainer only needs to give the prompt below to the assistant. The assistant reads and applies `PROJECT_SETUP.md` and the other setup files, presents every required maintainer decision and performs the repository updates; the maintainer does not execute those files separately.
+For normal initialization, the maintainer only needs to give the prompt below to the assistant. The assistant applies `AGENTS.md`—automatically loaded where supported—reads and applies `PROJECT_SETUP.md` and the other setup files, presents every required maintainer decision and performs the repository updates; the maintainer does not execute those files separately.
 
 The purpose is to make the first session reproducible: the assistant should
 read the repository, understand all template rules, ask for the required
@@ -18,6 +18,11 @@ instruction for the specific action contains a recognized control word.
 
 ```text
 We are starting a new AGIT project from the AGIT Project Template.
+
+Apply AGENTS.md as the durable repository operating baseline. If it was not
+loaded automatically, read it first. This prompt defines the one-time
+initialization workflow; do not treat AGENTS.md alone as an instruction to
+initialize or modify the template.
 
 Please first read the repository fully enough to understand its structure,
 collaboration model, Codex policy, setup guide, documentation standards,
@@ -67,6 +72,10 @@ After I provide the required information, update the project-specific files:
 
 Preserve the collaboration model in ChatGPT.md and the local Codex policy in
 CODEX.md unless I ask to change them.
+
+Adapt AGENTS.md only where the concrete project's commands, directory layout or
+validation procedures differ from the template. Preserve its role as a concise
+router to authoritative guidance, including its safety and project boundaries.
 
 Retain the initialization artifacts under their original names as provenance:
 
