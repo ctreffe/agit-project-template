@@ -211,9 +211,13 @@ Prefer project-local environments such as `.venv/` or `node_modules/` over globa
 
 ## Continuous Improvement
 
-Use harmonization to keep a concrete project internally consistent and aligned with relevant template developments. Use retrospectives to evaluate collaboration practices and identify reusable lessons without overfitting the template to a single project.
+Use harmonization to keep a concrete project internally consistent and aligned with relevant template developments. Use retrospectives separately to evaluate collaboration practices, handoffs, decision-making and work rhythm. Mixed projects may reveal both generic improvements and evidence that a more specialized template would be the better long-term home.
 
-Template changes are deliberate, cross-document changes. A retrospective finding is only a candidate until the maintainer approves the specific template update; derived projects and their Decision Records remain authoritative for project-specific choices.
+Treat observations from a derived project as candidates rather than automatic template rules. Evaluate whether they recur, remain useful outside their original context and belong in the generic template or a domain specialization. Derived projects and their Decision Records remain authoritative for project-specific choices.
+
+The maintainer coordinates cross-template evolution in a private governance repository named `agit-templateverse`. It records shared conventions, deliberate specializations and evidence from derived projects. The repository is intentionally not linked because template users do not need access to it.
+
+Governance coordination does not create hidden requirements. Every change that affects this template must be represented here through maintained guidance, Decision Records where appropriate, the changelog and release history. Template changes should update affected documents coherently rather than append isolated notes.
 
 ## License
 

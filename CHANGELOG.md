@@ -15,6 +15,8 @@ This project follows Semantic Versioning.
 
 - Align the initialization and continuation prompts with `AGENTS.md`: setup is
   an explicit one-time workflow, while continuation only reconstructs state.
+- Expand continuous-improvement guidance with the candidate-to-governance
+  lifecycle and transparent, unlinked private Templateverse coordination.
 
 ## [0.3.0] - 2026-07-20
 

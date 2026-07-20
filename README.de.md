@@ -211,9 +211,13 @@ Bevorzuge projektlokale Umgebungen wie `.venv/` oder `node_modules/` gegenüber 
 
 ## Kontinuierliche Verbesserung
 
-Nutze Harmonisierung, um ein konkretes Projekt intern konsistent und mit relevanten Template-Entwicklungen abgestimmt zu halten. Nutze Retrospektiven, um Kollaborationspraktiken zu bewerten und wiederverwendbare Erkenntnisse zu identifizieren, ohne das Template auf ein einzelnes Projekt zu überpassen.
+Nutze Harmonisierung, um ein konkretes Projekt intern konsistent und mit relevanten Template-Entwicklungen abgestimmt zu halten. Nutze Retrospektiven separat, um Kollaborationspraktiken, Übergaben, Entscheidungsfindung und Arbeitsrhythmus zu bewerten. Gemischte Projekte können sowohl generische Verbesserungen als auch Hinweise darauf liefern, dass ein stärker spezialisiertes Template langfristig besser geeignet ist.
 
-Template-Änderungen sind bewusste, dokumentübergreifende Änderungen. Ein Retrospektivbefund ist nur ein Kandidat, bis der Maintainer das konkrete Template-Update freigibt; abgeleitete Projekte und ihre Decision Records bleiben für projektspezifische Entscheidungen maßgeblich.
+Behandle Beobachtungen aus einem abgeleiteten Projekt als Kandidaten und nicht als automatische Template-Regeln. Prüfe, ob sie wiederholt auftreten, außerhalb ihres ursprünglichen Kontexts nützlich bleiben und in das generische Template oder eine Domänenspezialisierung gehören. Abgeleitete Projekte und ihre Decision Records bleiben für projektspezifische Entscheidungen maßgeblich.
+
+Der Maintainer koordiniert die templateübergreifende Weiterentwicklung in einem privaten Governance-Repository namens `agit-templateverse`. Es dokumentiert gemeinsame Konventionen, bewusste Spezialisierungen und Evidenz aus abgeleiteten Projekten. Das Repository wird bewusst nicht verlinkt, da Template-Nutzer:innen keinen Zugriff darauf benötigen.
+
+Die Governance-Koordination erzeugt keine verborgenen Anforderungen. Jede Änderung, die dieses Template betrifft, muss hier durch gepflegte Leitlinien, gegebenenfalls Decision Records, den Changelog und die Release-Historie abgebildet werden. Template-Änderungen sollen betroffene Dokumente kohärent aktualisieren, statt isolierte Notizen anzuhängen.
 
 ## Lizenz
 
