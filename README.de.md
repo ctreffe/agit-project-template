@@ -1,154 +1,198 @@
 # AGIT Project Template
 
-AGIT-Projekt-Template für strukturierte Zusammenarbeit, Projektkontext und Dokumentation.
-
-[English documentation](README.md)
-
 > [!NOTE]
 > **KI-Zusammenarbeit**
 >
 > Dieses Repository pflegt das generische AGIT Project Template.
 >
-> Das Template dokumentiert KI-gestützte Kollaborationspraktiken, Kontextübergabe, Entscheidungsdokumentation und Repository-Konventionen für strukturierte Projektarbeit.
+> Das Template dokumentiert Praktiken für KI-gestützte Zusammenarbeit, Kontextübergaben, Decision Records und Repository-Konventionen für strukturierte Projektarbeit.
 >
-> Das Collaboration Model wird in [ChatGPT.md](ChatGPT.md) gepflegt.
+> Das Kollaborationsmodell wird in [ChatGPT.md](ChatGPT.md) gepflegt.
+
+[English documentation](README.md) · Die englische README ist maßgeblich; die deutsche README wird als enge Übersetzung gepflegt.
+
+## Inhalt
+
+- [Überblick](#überblick)
+- [Kernprinzip](#kernprinzip)
+- [AGIT Templateverse](#agit-templateverse)
+- [Wann dieses Template geeignet ist](#wann-dieses-template-geeignet-ist)
+- [Projektinitialisierung](#projektinitialisierung)
+- [Empfohlener Workflow](#empfohlener-workflow)
+- [Git-Index und geschützte Git-Aktionen](#git-index-und-geschützte-git-aktionen)
+- [Decision Records](#decision-records)
+- [Repository-Struktur](#repository-struktur)
+- [Template- und abgeleitete Projektdateien](#template--und-abgeleitete-projektdateien)
+- [Verwendung dieses Templates](#verwendung-dieses-templates)
+- [Tool-Setup für Maintainer](#tool-setup-für-maintainer)
+- [Kontinuierliche Verbesserung](#kontinuierliche-verbesserung)
+- [Lizenz](#lizenz)
 
 ## Überblick
 
-Das AGIT Project Template ist ein generischer Startpunkt für Projekte, die von strukturierter Zusammenarbeit, klarem Kontext, dokumentierten Entscheidungen und verlässlicher Übergabe zwischen Arbeitssitzungen profitieren.
+Das AGIT Project Template ist ein generischer Ausgangspunkt für Projekte, die von strukturierter Zusammenarbeit, explizitem Kontext, dokumentierten Entscheidungen und zuverlässiger Übergabe zwischen Arbeitssitzungen profitieren. Es ist bewusst nicht auf Softwareentwicklung beschränkt: Es unterstützt Forschung, Planung, Konzeptarbeit, Prozessgestaltung, operative Projekte und gemischte Projekttypen.
 
-Es ist bewusst nicht auf Softwareentwicklung beschränkt. Es kann für Recherche, Planung, Dokumentation, Prozessgestaltung, Konzeptarbeit, operative Projekte und andere strukturierte Projektarbeit verwendet werden.
+Das Template stellt ein Repository-zentriertes Kollaborationsmodell, lokale Codex-Regeln, reproduzierbare Setup- und Fortsetzungs-Prompts, einen aktuellen Projektkontext, Dokumentations- und Repository-Standards, Leitlinien für Decision Records und optionale Arbeitsordner bereit. Es ist eine Projektmethode und Repository-Grundlage, kein domänenspezifisches Framework.
 
-Für entwicklungsorientierte Projekte mit Code, Skripten, Automatisierung, Tests, Releases und technischer Architektur kann das AGIT Dev Template verwendet werden.
+## Kernprinzip
+
+Der Maintainer verantwortet Projektintention und -richtung. Der Assistant kann Informationen strukturieren, Lücken erkennen, Artefakte vorbereiten, Konsistenz prüfen und Projektwissen bewahren, darf aber den gewünschten Endzustand nicht erfinden, folgenreiche Entscheidungen nicht stillschweigend treffen und Arbeit nicht als abgeschlossen ausgeben, wenn sie nicht existiert.
+
+Das Repository ist das dauerhafte Projektgedächtnis. Künftige Maintainer, Mitwirkende oder Assistants sollen den aktuellen Zustand verstehen und die Arbeit fortsetzen können, ohne auf private Chatverläufe angewiesen zu sein.
 
 ## AGIT Templateverse
 
-Die öffentlichen AGIT Templates bilden ein kleines Templateverse: eine Familie zusammenhängender Templates, die ein repository-first, maintainer-geführtes Modell für Human-AI Collaboration teilen und für unterschiedliche Projekttypen spezialisieren.
+Die öffentlichen AGIT-Templates bilden ein kleines Templateverse: eine Familie verwandter Templates, die ein Repository-zentriertes, vom Maintainer geführtes Modell der Mensch-KI-Zusammenarbeit teilen und es für unterschiedliche Projekttypen spezialisieren.
 
-- [AGIT Project Template](https://github.com/ctreffe/agit-project-template) ist der generische Startpunkt für strukturierte Projektarbeit, Recherche, Planung, Konzeptarbeit, Prozessgestaltung und gemischte Projekte.
-- [AGIT Dev Template](https://github.com/ctreffe/agit-dev-template) ist für entwicklungsorientierte Projekte gedacht, in denen Code, Skripte, Automatisierung, Validierung, Architektur oder Release-Workflows zentral sind.
-- [AGIT Documentation Template](https://github.com/ctreffe/agit-docs-template) ist für technische Dokumentationsprojekte gedacht, etwa Benutzerhandbücher, Admin-Guides, Betriebsanweisungen, Tutorials, Migrationsguides und Dokumentationssites.
+- Das [AGIT Project Template](https://github.com/ctreffe/agit-project-template) ist der generische Ausgangspunkt für strukturierte Projektarbeit, Forschung, Planung, Konzeptarbeit, Prozessgestaltung und gemischte Projekte.
+- Das [AGIT Dev Template](https://github.com/ctreffe/agit-dev-template) ist für entwicklungsorientierte Projekte gedacht, in denen Code, Skripte, Automatisierung, Validierung, Architektur oder Release-Workflows zentral sind.
+- Das [AGIT Documentation Template](https://github.com/ctreffe/agit-docs-template) ist für technische Dokumentationsprojekte wie Benutzer- und Administrationshandbücher, Betriebsanweisungen, Tutorials, Migrationsleitfäden und Dokumentationswebsites gedacht.
 
-Das generische Project Template passt, wenn die Projektform noch offen ist. Ein spezialisiertes Template passt, wenn Entwicklungs- oder Dokumentationspraxis bereits im Zentrum der Arbeit steht.
+## Wann dieses Template geeignet ist
 
-## Was das Template bereitstellt
+Verwende das Project Template, wenn die Projektform noch offen ist oder mehrere Arbeitsarten ein gemeinsames Projektgedächtnis benötigen. Es eignet sich gut für Discovery, Planung, Forschung, Koordination, Prozessgestaltung und Projekte, die später stärker spezialisiert werden können.
 
-Dieses Template stellt bereit:
+Beginne mit einem spezialisierten Template, wenn die primäre Arbeit bereits feststeht:
 
-- ein Collaboration Model für Mensch-KI-Projektarbeit
-- lokale Codex-Betriebsregeln
-- ein Projektkontextdokument für Sitzungsübergaben
-- Anleitung zur Projekteinrichtung und einen reproduzierbaren initialen Prompt
-- Dokumentationsstandards
-- Repository-Standards
-- eine gemeinsame Projektphilosophie
-- Decision Record Guidance für wichtige Entscheidungen
-- Arbeitsordner für Inputs, Referenzen, Notizen und Ergebnisse
-- Guidance zum Umgang mit sensiblen Rohquellen, geprüften Derivaten und generierten Outputs
-- Changelog und Versionsmetadaten
+- das Dev Template für Implementierung, Tests, Automatisierung und Releases;
+- das Documentation Template für zielgruppenorientierte technische Dokumentation und Veröffentlichung;
+Wenn ein generisches Projekt später entwicklungsorientiert wird, dokumentiere den Übergang und übernimm das Dev Template oder migriere bewusst dorthin.
 
-## Projektablauf
+## Projektinitialisierung
 
-AGIT-Projekte sollten mit maintainer-eigenem Intent beginnen:
+Die Initialisierung verwandelt das wiederverwendbare Template in ein konkretes Projekt und bewahrt, wie dieses Projekt begonnen hat.
 
-1. Projektzweck und Kontext definieren.
-2. Gewünschten Endzustand beschreiben.
-3. Grenzen und Nicht-Ziele festlegen.
-4. Eine praktikable Roadmap ableiten.
-5. In kleinen prüfbaren Schritten arbeiten.
-6. Wichtige Entscheidungen dokumentieren.
-7. `PROJECT_CONTEXT.md` aktuell halten.
-8. Betroffene Dokumente vor wichtigen Meilensteinen auf Aktualität und Konsistenz prüfen.
-9. Retrospektiven durchführen, wenn wiederverwendbare Erkenntnisse entstehen.
+1. Erzeuge ein Repository aus diesem Template und lege die maßgebliche lokale Baseline fest.
+2. Beginne die erste Assistant-Sitzung mit [INITIAL_PROMPT.md](INITIAL_PROMPT.md).
+3. Folge [PROJECT_SETUP.md](PROJECT_SETUP.md).
+4. Stelle den vom Maintainer definierten Zweck, gewünschten Endzustand, vorgesehene Nutzer:innen oder Zielgruppen, Grenzen, Risiken und Nicht-Ziele bereit.
+5. Entscheide, welche Arbeitsordner, Regeln zur Quellenbehandlung, Review-Erwartungen und Decision-Record-Typen das Projekt benötigt.
+6. Passe beide README-Dateien, Repository-Metadaten und laufende Projektregeln an.
+7. Vervollständige [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) mit initialer Roadmap, Repository-Baseline und Template-Provenienz.
+8. Bereite den ersten kleinen, prüfbaren Projektzustand vor und validiere seine interne Konsistenz vor dem Commit.
+
+Die Initialisierung ist unvollständig, solange notwendige Projektentscheidungen hinter Platzhaltern verborgen bleiben. `PROJECT_SETUP.md` und `INITIAL_PROMPT.md` verbleiben normalerweise als Initialisierungsprovenienz im abgeleiteten Repository.
+
+## Empfohlener Workflow
+
+AGIT-Projekte entwickeln sich von der Maintainer-Intention aus in kleinen, prüfbaren Projektschleifen:
+
+```text
+Intention -> Roadmap -> Erzeugen -> Prüfen -> Harmonisieren -> Festhalten -> Fortsetzen
+```
+
+1. Ermittle oder bestätige die Repository-Baseline.
+2. Prüfe Maintainer-Intention, gewünschten Endzustand und aktuelle Roadmap.
+3. Wähle den kleinsten sinnvollen Schritt, der Unsicherheit reduziert oder ein prüfbares Ergebnis erzeugt.
+4. Erzeuge oder überarbeite das Projektartefakt.
+5. Prüfe oder validiere das Ergebnis und mache Einschränkungen sichtbar.
+6. Aktualisiere betroffenen Kontext, Dokumentation und Decision Records.
+7. Bereite einen regulären Arbeits-Commit mit passendem Conventional-Commit-Präfix vor.
+8. Fahre fort, bis das Milestone-Ziel erreicht ist.
+9. Schließe den Milestone separat ab, indem aktueller Zustand, Versionierung und Historie abgeglichen werden.
+
+Verwende [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md), um das Projekt in einer neuen Sitzung zu rekonstruieren. Verwende [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) für bewusste inhaltliche Projektabstimmung und [RETROSPECTIVE_PROMPT.md](RETROSPECTIVE_PROMPT.md) für eine separate Auswertung der Maintainer-Agent-Zusammenarbeit.
 
 ## Git-Index und geschützte Git-Aktionen
 
-Staging und Unstaging sind Index-Aktionen und benötigen kein Kontrollwort. Sie
-erfordern dennoch eine konkrete Maintainer-Anweisung oder die Autorisierung des
-zugehörigen Commits; vorhandenes partielles Staging muss erhalten bleiben.
+Der Maintainer kontrolliert die Git-Historie. Assistants dürfen Status, Diffs und Logs prüfen sowie Working-Tree-Änderungen und Commit-Metadaten vorbereiten.
 
-AI Assistants dürfen Commits, Amendments, Tags, Pushes, Pulls, Merges, Rebases,
-Resets, Branch-Wechsel, Stash-Manipulationen oder andere geschützte Git-Aktionen
-nur ausführen, wenn die Maintainer-Anweisung für genau diese Aktion ein
-anerkanntes Kontrollwort enthält.
+Staging und Unstaging sind Indexoperationen. Sie benötigen kein Kontrollwort, dürfen aber nur nach einer konkreten Maintainer-Anweisung oder Autorisierung des zugehörigen Commits erfolgen. Bestehende Staging-Auswahlen und nicht zusammenhängende Änderungen müssen erhalten bleiben.
 
-Anerkannte Kontrollwörter sind `explicit` und `explicitly` in englischsprachigen Anweisungen sowie die deutsche Wortfamilie `explizit`, einschließlich gebeugter Formen wie `explizite`, `expliziten`, `expliziter` und `explizites`, in deutschsprachigen Anweisungen. Anfragen zu geschützten Git-Aktionen ohne eines dieser Kontrollwörter erlauben nur Vorbereitung und Anleitung.
+Geschützte Aktionen umfassen Commits, Amendments, Tags, Pushes, Pulls, Merges, Rebases, Resets, Branch-Wechsel, Stash-Manipulationen und andere Operationen an der Git-Historie. Ein Assistant darf eine bestimmte geschützte Aktion nur ausführen, wenn die Anweisung für genau diese Aktion `explicit` oder `explicitly` auf Englisch oder die deutsche Wortfamilie `explizit` enthält. Die Freigabe von Dateiänderungen autorisiert keine Änderung der Git-Historie; die Freigabe einer geschützten Aktion autorisiert keine andere.
+
+Reguläre Arbeits-Commits verwenden Conventional-Commit-Präfixe wie `feat:`, `fix:`, `docs:` oder `chore:`. Milestone-Commits verzichten auf das Präfix, verwenden eine lesbare Zusammenfassung mit abgeschlossener Version und schließen bereits geprüfte Arbeit ab.
 
 ## Decision Records
 
-Wichtige Entscheidungen werden als Decision Records dokumentiert.
+Decision Records bewahren, warum folgenreiche Entscheidungen getroffen wurden. Wähle das Präfix nach dem Entscheidungsgegenstand, nicht nur nach dem Repository-Typ:
 
-PDRs eignen sich für dauerhafte Projektentscheidungen zu Projektausrichtung, Scope, Kollaborationsstruktur, Dokumentationsmodell, Toolwahl, Reviewprozess, Datenschutzgrenzen oder dem Übergang zu einem entwicklungsorientierten Projekt. ADRs oder DDRs können ergänzt werden, wenn ein abgeleitetes Projekt technische oder dokumentationsbezogene Entscheidungen dokumentieren muss.
+- **PDR — Project Decision Record:** Projektrichtung, Umfang, Roadmap, Zusammenarbeit, Governance, Datenschutzgrenzen, Review-Modelle oder Repository-Beziehungen.
+- **ADR — Architecture Decision Record:** technische Architektur, Tooling, Formate, Automatisierung oder eine andere dauerhafte technische Struktur in einem abgeleiteten Projekt.
+- **DDR — Documentation Decision Record:** Dokumentationsstruktur, Terminologie, zielgruppenorientiertes Material, Veröffentlichungsregeln oder Dokumentations-QA.
 
-Wenn ein Projekt Decision Records benötigt, wird folgender Ordner verwendet:
+Das generische Template verwendet standardmäßig PDRs und erklärt das Modell in [DECISIONS.md](DECISIONS.md). Verwende [decisions/](decisions/) nur für Entscheidungen, deren Begründung für zukünftige Mitwirkende relevant bleibt; kleine Routineentscheidungen benötigen keinen Record.
 
-```text
-decisions/
-```
+## Repository-Struktur
 
-Das Decision-Record-Konzept ist in [DECISIONS.md](DECISIONS.md) dokumentiert; der Standardort ist [decisions/](decisions/).
+### Einstiegspunkte und Projektgedächtnis
 
-## Arbeitsordner
+- **`README.md` und `README.de.md`** führen in das Projekt ein, erklären den Einstieg und verlinken die vertiefenden Regeln. Englisch ist maßgeblich, während Deutsch als enge strukturelle und semantische Übersetzung gepflegt wird.
+- **`PROJECT_CONTEXT.md`** ist der primäre Wiedereinstiegspunkt. Die Datei hält aktuelle Intention, Status, Roadmap, Baseline, Validierungsstand, offene Entscheidungen und den nächsten sinnvollen Schritt fest, statt die vollständige Projekthistorie zu duplizieren.
+- **`CHANGELOG.md` und `VERSION`** beschreiben abgeschlossene Zustände und die Versionshistorie. Sie werden aktualisiert, wenn ein versionierter Milestone abgeschlossen ist, nicht bereits bei Arbeitsbeginn.
 
-Das Template enthält optionale Arbeitsordner:
+### Zusammenarbeit und Betriebsregeln
 
-- `input/` für vom Maintainer bereitgestellte Materialien
-- `references/` für Quellen und Referenzmaterial
-- `notes/` für Arbeitsnotizen und offene Fragen
-- `output/` für Projektergebnisse
+- **`ChatGPT.md`** definiert das allgemeine Kollaborationsmodell, Autoritätsgrenzen und den Arbeitsrhythmus zwischen Maintainer und Agent. Es ist transparente Projektdokumentation und kein versteckter Prompt.
+- **`CODEX.md`** definiert lokale Ausführungs-, Netzwerk-, Offenlegungs- und Git-Regeln für Codex. Behalte die Datei bei lokaler Codex-Arbeit und passe sie nur für bewusste projektspezifische Anforderungen an.
+- **`PHILOSOPHY.md`** hält die Werte hinter der Projektmethode fest, darunter Intention vor Struktur, Nachvollziehbarkeit, leichtgewichtiger Prozess und Integrität vor Außendarstellung.
 
-Projekte können diese Ordner anpassen oder entfernen, wenn sie nicht nützlich sind.
+### Setup, Fortsetzung und Review
 
-## Übergang zu Dev-Projekten
+- **`PROJECT_SETUP.md` und `INITIAL_PROMPT.md`** leiten die erste Initialisierung an und bewahren ihre methodische Provenienz. Abgeleitete Projekte behalten normalerweise beide Dateien und dokumentieren ihren Lebenszyklusstatus in `PROJECT_CONTEXT.md`.
+- **`CONTINUATION_PROMPT.md`** definiert die geordnete Wiedereinstiegsprüfung für ein späteres Kontextfenster oder eine Assistant-Sitzung. Der Prompt gleicht vor substanzieller Arbeit den Projektkontext mit schreibgeschützten Git-Nachweisen ab.
+- **`HARMONIZATION_PROMPT.md`** gleicht Projektinhalt, interne Dokumentation und Roadmap mit der aufgezeichneten Template-Baseline ab. Der Prompt bewertet nicht die Qualität der Zusammenarbeit und kopiert Template-Änderungen nicht blind.
+- **`RETROSPECTIVE_PROMPT.md`** bewertet die Maintainer-Agent-Zusammenarbeit in einem gewählten Zeitraum. Inhaltliche Auswirkungen gehen an eine spätere Harmonisierung, während übertragbare Prozessbefunde kontrollierte Template-Kandidaten bleiben.
 
-Manche Projekte starten als allgemeine Projekte und werden später entwicklungsorientiert.
+### Repository-Leitlinien und Entscheidungen
 
-Wenn Code, Skripte, Automatisierung, Tests, Releases, technische Architektur oder Implementierungslebenszyklus zentral werden, kann das Projekt Guidance aus dem AGIT Dev Template übernehmen oder dorthin migrieren.
+- **`DOCUMENTATION.md`** definiert Dokumentrollen, die Trennung von aktuellem Zustand und Historie sowie Qualitätsanforderungen. Die Datei bleibt nach der Initialisierung eine laufende Projektregel.
+- **`REPOSITORY.md`** definiert Repository-Organisation, Git-Konventionen, Quellen- und Output-Behandlung, Versionierung und repository-fertige Übergaben. Abgeleitete Projekte passen die Datei an ihren tatsächlichen Workflow an, statt sie als vorübergehendes Setup-Material zu behandeln.
+- **`DECISIONS.md` und `decisions/`** erklären Decision Records und speichern dauerhafte Entscheidungsbegründungen. Das Template bietet wiederverwendbare PDR-Leitlinien und gegenstandsbezogene Record-Vorlagen.
 
-Der Übergang sollte bewusst dokumentiert werden, vorzugsweise mit einem Project Decision Record.
+### Optionale Arbeitsordner
 
-## Kerndokumente
+- **`input/`** enthält vom Maintainer bereitgestelltes Material, wenn das Projekt lokale Eingaben benötigt. Private, vertrauliche, lizenzierte oder personenbezogene Rohmaterialien benötigen vor Einsicht oder Git-Aufnahme eine Zugriffs- und Versionierungsentscheidung.
+- **`references/`** enthält Quellen, Referenzen oder geprüfte Quellnotizen. Projekte sollten Provenienz, Lizenzierung und Sensitivität dokumentieren, wenn diese die Nutzung beeinflussen.
+- **`notes/`** enthält Arbeitsnotizen und offene Fragen, die für das Projekt nützlich, aber noch keine dauerhaften Entscheidungen oder Deliverables sind.
+- **`output/`** enthält Projekt-Deliverables oder erzeugte Ergebnisse. Projekte legen fest, ob Outputs versionierte Milestones, Review-Artefakte oder reproduzierbare lokale Produkte sind, und prüfen sie vor der Weitergabe.
 
-- [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) - aktueller Projektstand und Übergabepunkt
-- [PROJECT_SETUP.md](PROJECT_SETUP.md) - Setup-Anleitung für abgeleitete Projekte
-- [INITIAL_PROMPT.md](INITIAL_PROMPT.md) - reproduzierbarer erster Prompt für die Projektinitialisierung
-- [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) - reproduzierbarer Wiedereinstiegsprompt für ein neues Kontextfenster
-- [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) - Abgleich mit dem Quell-Template sowie interne Konsistenz- und Roadmap-Harmonisierung
-- [RETROSPECTIVE_PROMPT.md](RETROSPECTIVE_PROMPT.md) - Maintainer-initiierter Review der Zusammenarbeit zwischen Maintainer und Agent
-- [ChatGPT.md](ChatGPT.md) - AGIT Collaboration Model
-- [CODEX.md](CODEX.md) - lokale Codex Operating Policy
-- [PHILOSOPHY.md](PHILOSOPHY.md) - Projektphilosophie
-- [DOCUMENTATION.md](DOCUMENTATION.md) - Dokumentationsstandards
-- [REPOSITORY.md](REPOSITORY.md) - Repository-Standards
-- [DECISIONS.md](DECISIONS.md) - Decision Record Guidance
-- [decisions/](decisions/) - Decision Record Templates
-- [CHANGELOG.md](CHANGELOG.md) - Versionshistorie
-- [VERSION](VERSION) - aktuelle Template-Versionsmetadaten
-- [README.md](README.md) - englische Dokumentation
-- [LICENSE](LICENSE) - MIT-Lizenz
+## Template- und abgeleitete Projektdateien
 
+In einem abgeleiteten Projekt:
 
-## Initialisierungsnachweis
+- fülle `PROJECT_CONTEXT.md` aus und pflege sie als aktuellen Projektzustand;
+- passe beide README-Dateien, `DOCUMENTATION.md` und `REPOSITORY.md` an das konkrete Projekt an;
+- behalte `ChatGPT.md`, `CODEX.md` und `PHILOSOPHY.md`, sofern kein dokumentierter Projektbedarf eine Änderung erfordert;
+- behalte `PROJECT_SETUP.md` und `INITIAL_PROMPT.md` als Initialisierungsprovenienz;
+- behalte die Prompts für Fortsetzung, Harmonisierung und Retrospektive zur wiederholbaren späteren Nutzung;
+- passe optionale Arbeitsordner nur an oder entferne sie nur, wenn ihre Rolle verstanden ist;
+- ersetze Template-Decision-Records nur dann durch echte Records, wenn folgenreiche Entscheidungen vorliegen.
 
-Die folgenden Dokumente unterstützen vor allem die Projekteinrichtung und
-sollten im abgeleiteten Repository normalerweise als Nachweis des methodischen
-Ausgangspunkts erhalten bleiben:
+Halte Source-Template-Version und -Commit, Initialisierungsstatus, letzte Harmonisierungs-Baseline und beabsichtigte Abweichungen in `PROJECT_CONTEXT.md` fest. Ein abgeleitetes Projekt ist für seine eigene Intention und akzeptierten Entscheidungen maßgeblich; Template-Updates werden geprüft und angepasst statt blind kopiert.
 
-- `PROJECT_SETUP.md`
-- `INITIAL_PROMPT.md`
+## Verwendung dieses Templates
 
-Initialisierungsstatus, ursprüngliche Template-Version und ursprünglicher
-Template-Commit sowie spätere Template-Harmonisierungen werden in
-`PROJECT_CONTEXT.md` festgehalten. Eine Initialisierungsdatei wird nur als
-bewusste und dokumentierte Maintainer-Ausnahme entfernt.
+1. Initialisiere das Repository mit `INITIAL_PROMPT.md` und `PROJECT_SETUP.md`.
+2. Halte `PROJECT_CONTEXT.md` als kompakte Projektübergabe aktuell.
+3. Leite die Roadmap aus der vom Maintainer definierten Intention, Grenzen und Erfolgskriterien ab.
+4. Arbeite in kleinen Artefakten oder Änderungen, die unabhängig geprüft werden können.
+5. Unterscheide Rohinputs, geprüfte Derivate und erzeugte Outputs, bevor Zugriff, Versionierung oder Veröffentlichung freigegeben werden.
+6. Dokumentiere folgenreiche Entscheidungen mit dem passenden Gegenstandspräfix in `decisions/`.
+7. Validiere Ergebnisse, bevor sie als abgeschlossen dargestellt werden.
+8. Beginne spätere Sitzungen mit `CONTINUATION_PROMPT.md`, statt die Initialisierung zu wiederholen.
+9. Nutze Harmonisierung, wenn Projektinhalt oder Template-Abgleich bewusst geprüft werden müssen.
+10. Nutze eine Retrospektive separat, wenn der Kollaborationsprozess bewertet werden soll.
+11. Schließe Milestones mit kohärentem Kontext, Dokumentation, Changelog und Versionsmetadaten ab.
 
-`DOCUMENTATION.md` und `REPOSITORY.md` enthalten fortlaufend geltende
-Projektregeln. Sie werden für das abgeleitete Projekt angepasst und aktuell
-gehalten, nicht als entbehrliches Setup-Material behandelt.
+## Tool-Setup für Maintainer
 
-`CONTINUATION_PROMPT.md` sollte normalerweise im abgeleiteten Projekt verbleiben,
-da die Datei einen reproduzierbaren Wiedereinstieg nach einer Pause oder einem
-Wechsel des Kontextfensters ermöglicht.
+Das generische Template hat keine verpflichtende domänenspezifische Toolchain. Eine praktische lokale Baseline ist:
+
+- Git und ein vom Maintainer kontrollierter Git-Client wie GitHub Desktop;
+- ein Text- oder Markdown-Editor;
+- PowerShell unter Windows oder eine gleichwertige lokale Shell;
+- `rg` oder ein anderes schnelles Suchwerkzeug;
+- projektspezifische Werkzeuge, die nur installiert werden, wenn die konkrete Arbeit sie benötigt.
+
+Bevorzuge projektlokale Umgebungen wie `.venv/` oder `node_modules/` gegenüber globalen Änderungen. Paketinstallationen, externe Dienste und Netzwerknutzung sollten einen klaren Projektzweck haben; private Repository-Materialien bleiben standardmäßig lokal.
+
+## Kontinuierliche Verbesserung
+
+Nutze Harmonisierung, um ein konkretes Projekt intern konsistent und mit relevanten Template-Entwicklungen abgestimmt zu halten. Nutze Retrospektiven, um Kollaborationspraktiken zu bewerten und wiederverwendbare Erkenntnisse zu identifizieren, ohne das Template auf ein einzelnes Projekt zu überpassen.
+
+Template-Änderungen sind bewusste, dokumentübergreifende Änderungen. Ein Retrospektivbefund ist nur ein Kandidat, bis der Maintainer das konkrete Template-Update freigibt; abgeleitete Projekte und ihre Decision Records bleiben für projektspezifische Entscheidungen maßgeblich.
+
 ## Lizenz
 
-Dieses Projekt steht unter der MIT-Lizenz.
+Dieses Projekt steht unter der [MIT-Lizenz](LICENSE).
