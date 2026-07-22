@@ -8,11 +8,15 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add a common inventory-based workflow for external files and sources with
+  `intake`, `restricted`, `local` and `versioned` input zones.
 - Add `AGENTS.md` as the concise, automatically loaded entry point that routes
   AI agents to the complete repository rules and validation guidance.
 
 ### Changed
 
+- Clarify user-facing terminology for files, sources, records and outputs and
+  remove the unused `notes/` and `references/` defaults.
 - Align the initialization and continuation prompts with `AGENTS.md`: setup is
   an explicit one-time workflow, while continuation only reconstructs state.
 - Expand continuous-improvement guidance with the candidate-to-governance

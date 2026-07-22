@@ -77,7 +77,14 @@ Adapt AGENTS.md only where the concrete project's commands, directory layout or
 validation procedures differ from the template. Preserve its role as a concise
 router to authoritative guidance, including its safety and project boundaries.
 
-Retain the initialization artifacts under their original names as provenance:
+Establish the repository's external-file workflow during initialization. Use
+`input/intake/` for unclassified arrivals, classify them into
+`input/restricted/`, `input/local/` or `input/versioned/`, and maintain safe
+metadata in `input/INVENTORY.md`. Treat assistant access, Git versioning and
+external sharing as separate decisions. Do not inspect or move a file merely
+because it is present; ask for any missing authorization or classification.
+
+Retain the initialization files under their original names as provenance:
 
 - PROJECT_SETUP.md
 - INITIAL_PROMPT.md
@@ -86,7 +93,7 @@ In PROJECT_CONTEXT.md, record initialization status and date, the source
 template version and commit, the latest template harmonization baseline and any
 intentional template deviations. Treat DOCUMENTATION.md and REPOSITORY.md as
 ongoing project rules that must be adapted and maintained. Remove an
-initialization artifact only if I make a deliberate exception and the reason is
+initialization file only if I make a deliberate exception and the reason is
 documented.
 
 Staging and unstaging do not require a control word, but perform them only when

@@ -89,15 +89,10 @@ It explains when to create decision records, where to store them and which struc
 
 ## input/
 
-Maintainer-provided or project input materials.
-
-## references/
-
-Sources, background material and reference notes.
-
-## notes/
-
-Working notes and open questions.
+External files and sources classified as intake, restricted, local or
+versioned. `input/INVENTORY.md` contains only source metadata suitable for Git;
+sensitive local inventory details belong in ignored
+`input/INVENTORY.local.md`.
 
 ## output/
 
@@ -112,7 +107,6 @@ Keep current state and history separate.
 - Current state belongs in `PROJECT_CONTEXT.md`.
 - History belongs in `CHANGELOG.md`.
 - Durable decisions belong in decision records when the project creates them.
-- Working notes belong in `notes/`.
 - Deliverables belong in `output/`.
 
 ---
@@ -136,7 +130,7 @@ Where relevant, distinguish:
 
 Before an assistant inspects private, unpublished, confidential, licensed or personal raw material, document the source inventory and sensitivity first. Start with file names, file types, maintainer descriptions and intended handling rather than reading raw contents by default.
 
-When raw material is sensitive, prefer reviewed derivatives that expose only the information needed for the project. Examples include anonymized tables, extracted observations, source summaries, redacted excerpts, derived CSV files or generated review artifacts.
+When raw material is sensitive, prefer reviewed derivatives that expose only the information needed for the project. Examples include anonymized tables, extracted observations, source summaries, redacted excerpts, derived CSV files or generated review files.
 
 Source documentation should make clear:
 
@@ -153,11 +147,12 @@ When a working folder gains project-specific meaning, add or update a short READ
 
 ---
 
-# Review Artifacts
+# Review Files and Records
 
-For complex milestones, create a concise review or harmonization check when it helps future continuation. A review artifact may record technical checks, content checks, source assumptions, validation results, unresolved risks and maintainer review points.
+For complex milestones, create a concise review or harmonization record when it helps future continuation. It may capture technical checks, content checks, source assumptions, validation results, unresolved risks and maintainer review points.
 
-Review artifacts belong in the place that fits the project, such as `notes/`, `docs/`, `reports/` or a project-specific review folder.
+Review files belong in the location that fits the project, such as `docs/`,
+`reports/` or a project-specific review folder.
 
 ---
 

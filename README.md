@@ -26,6 +26,7 @@
 - [AGIT Templateverse](#agit-templateverse)
 - [When to Use This Template](#when-to-use-this-template)
 - [Project Initialization](#project-initialization)
+- [External Files and Sources](#external-files-and-sources)
 - [Recommended Workflow](#recommended-workflow)
 - [Git Index and Protected Git Actions](#git-index-and-protected-git-actions)
 - [Decision Records](#decision-records)
@@ -44,7 +45,7 @@ The template provides a repository-first collaboration model, local Codex rules,
 
 ## Core Principle
 
-The maintainer owns the project intent and direction. The assistant may help structure information, identify gaps, prepare artifacts, check consistency and preserve project memory, but it must not invent the desired end state, silently resolve consequential decisions or report work as complete when it does not exist.
+The maintainer owns the project intent and direction. The assistant may help structure information, identify gaps, prepare project files and results, check consistency and preserve project memory, but it must not invent the desired end state, silently resolve consequential decisions or report work as complete when it does not exist.
 
 The repository is the durable project memory. A future maintainer, contributor or assistant should be able to understand the current state and continue the work without relying on private chat history.
 
@@ -92,8 +93,35 @@ The agent then:
 8. hands back the initialized repository state with validation results, limitations and suggested commit metadata.
 
 `PROJECT_SETUP.md` remains the agent's detailed initialization checklist and a
-provenance artifact. `INITIAL_PROMPT.md` is the single user-facing entry point
+provenance record. `INITIAL_PROMPT.md` is the single user-facing entry point
 that activates that checklist.
+
+## External Files and Sources
+
+Use `input/` for files supplied by the maintainer or obtained from external
+sources. New or uncertain files begin in `input/intake/`; files with an already
+known classification may go directly to `restricted/`, `local/` or
+`versioned/`.
+
+- **`input/intake/`** contains files whose access, Git and sharing rules have
+  not yet been decided. Assistants must not enumerate or read them by default.
+- **`input/restricted/`** contains ignored local files that remain under
+  maintainer-controlled access.
+- **`input/local/`** contains ignored local files approved for assistant access
+  within a documented scope but not for Git versioning.
+- **`input/versioned/`** contains external files deliberately approved for Git
+  and assistant access.
+
+Record safe metadata, provenance and handling decisions in
+`input/INVENTORY.md`. Use the ignored `input/INVENTORY.local.md` when filenames,
+paths or source details are themselves sensitive. External sources that remain
+outside the repository may be recorded as references in the inventory without
+copying their contents.
+
+Assistant access, Git versioning and publication or external sharing remain
+separate maintainer decisions. Moving a file does not authorize reading,
+staging, committing, pushing or sharing it. A classified file may later move to
+a more specific project folder when it becomes maintained project content.
 
 ## Recommended Workflow
 
@@ -106,7 +134,7 @@ Intent -> Roadmap -> Produce -> Review -> Harmonize -> Record -> Continue
 1. Establish or confirm the repository baseline.
 2. Review the maintainer intent, desired end state and current roadmap.
 3. Select the smallest useful step that reduces uncertainty or produces a reviewable result.
-4. Create or revise the project artifact.
+4. Create or revise the project file, result or other relevant project content.
 5. Review or validate the result and make limitations visible.
 6. Update affected context, documentation and decision records.
 7. Prepare a regular working commit with an appropriate Conventional Commit prefix.
@@ -163,12 +191,14 @@ The generic template defaults to PDRs and explains the model in [DECISIONS.md](D
 - **`REPOSITORY.md`** defines repository organization, Git conventions, source and output handling, versioning and repository-ready delivery. Derived projects adapt it to their actual workflow rather than treating it as disposable setup material.
 - **`DECISIONS.md` and `decisions/`** explain Decision Records and store durable decision rationale. The template provides reusable PDR guidance and subject-specific record templates.
 
-### Optional Working Folders
+### External Files and Project Outputs
 
-- **`input/`** holds maintainer-provided material when the project needs local inputs. Raw private, confidential, licensed or personal material requires an access and versioning decision before inspection or Git inclusion.
-- **`references/`** holds sources, references or reviewed source notes. Projects should document provenance, licensing and sensitivity when these affect use.
-- **`notes/`** holds working notes and open questions that are useful to the project but are not yet durable decisions or deliverables.
-- **`output/`** holds project deliverables or generated results. Projects define whether outputs are versioned milestones, review artifacts or reproducible local products and review them before sharing.
+- **`input/`** applies the shared intake, restricted, local and versioned
+  classifications to external files and sources. Its inventories preserve safe
+  provenance and handling decisions.
+- **`output/`** holds project deliverables or generated results. Projects define
+  whether outputs are versioned milestones, review files or reproducible local
+  products and review them before sharing.
 
 ## Template and Derived Project Files
 
@@ -179,7 +209,8 @@ The template contains reusable rules and placeholders. In a derived project:
 - keep and adapt `AGENTS.md`, `ChatGPT.md`, `CODEX.md` and `PHILOSOPHY.md` unless a documented project need requires a change;
 - retain `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` as initialization provenance;
 - retain the continuation, harmonization and retrospective prompts for repeatable later use;
-- adapt or remove optional working folders only when their role is understood;
+- adapt the input and output folders to the concrete workflow while preserving
+  their documented handling rules;
 - replace template Decision Records with real records only when consequential decisions exist.
 
 Record the source-template version and commit, initialization status, last harmonization baseline and intentional deviations in `PROJECT_CONTEXT.md`. A derived project is authoritative for its own intent and accepted decisions; template updates are reviewed and adapted rather than copied blindly.
@@ -190,7 +221,7 @@ Record the source-template version and commit, initialization status, last harmo
 2. Answer the numbered questions the agent presents; the agent reads and applies the remaining setup files automatically.
 3. Review the initialized repository state, validation results and proposed first commit.
 4. Let the agent keep `PROJECT_CONTEXT.md` current as the concise project handoff during later work.
-5. Work in small artifacts or changes derived from maintainer-owned intent, boundaries and success criteria.
+5. Work in small files, results or changes derived from maintainer-owned intent, boundaries and success criteria.
 6. Distinguish raw inputs, reviewed derivatives and generated outputs before granting access, versioning or publication.
 7. Record consequential decisions in `decisions/` and validate results before presenting them as complete.
 8. Begin later sessions by invoking `CONTINUATION_PROMPT.md`; the agent reconstructs the current state without repeating initialization.

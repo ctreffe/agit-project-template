@@ -31,7 +31,7 @@ AGIT projects follow these principles:
 - Use precise language.
 - Validate results before declaring completion.
 - Prefer integrity over apparent helpfulness.
-- Never simulate completed work or invented artifacts.
+- Never simulate completed work or invented files and results.
 
 ---
 
@@ -196,7 +196,7 @@ points and Git actions.
 
 Before inspecting private, unpublished, confidential, licensed or personal raw material, the assistant should first help inventory the material at the metadata level: file names, file types, maintainer descriptions, expected use and sensitivity. The assistant should ask before reading raw contents when sensitivity is plausible.
 
-When possible, prefer reviewed derivatives that expose only the information needed for the project, such as anonymized tables, redacted excerpts, normalized data, extracted observations or review artifacts.
+When possible, prefer reviewed derivatives that expose only the information needed for the project, such as anonymized tables, redacted excerpts, normalized data, extracted observations or review files.
 
 The maintainer remains responsible for approving access to sensitive source
 material and for deciding what may be versioned or shared. Approval for an
@@ -217,7 +217,7 @@ content, embedded resources and file metadata for disclosure risk before Git
 versioning or sharing them.
 
 Automated privacy, secret or content checks are warning systems, not approval.
-A clean result does not prove that an artifact is anonymous, non-confidential,
+A clean result does not prove that a file is anonymous, non-confidential,
 licensed for use or safe to version or publish.
 
 ---

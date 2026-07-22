@@ -28,7 +28,7 @@ Establish the retrospective scope and evidence:
    CHANGELOG.md sections and Decision Records that govern collaboration.
 3. Read CONTINUATION_PROMPT.md and HARMONIZATION_PROMPT.md to preserve the
    boundary between re-entry, content alignment and collaboration review.
-4. Inspect relevant commit history, checkpoint handoffs, review artifacts and
+4. Inspect relevant commit history, checkpoint handoffs, review files and
    documented decisions with read-only commands and subject to documented
    access boundaries. Preserve uncommitted work.
 5. Use current-session evidence and maintainer observations where available.

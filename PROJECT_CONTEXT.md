@@ -161,7 +161,7 @@ Status:
 Current baseline:
 
 ```text
-<local working tree | uploaded materials | public repository | accepted output artifact>
+<local working tree | supplied files | public repository | accepted output>
 ```
 
 Baseline notes:
@@ -212,18 +212,18 @@ Assistant-access approval:
 Git-versioning approval:
 
 ```text
-<exact reviewed artifacts approved for Git, or none>
+<exact reviewed files approved for Git, or none>
 ```
 
 Publication or sharing approval:
 
 ```text
-<exact artifacts and audience, or none>
+<exact files or outputs and audience, or none>
 ```
 
 Reviewed derivatives:
 
-- `<derived file or artifact>` - `<relationship to raw source and review status>`
+- `<derived file or result>` - `<relationship to raw source and review status>`
 
 ---
 
@@ -283,9 +283,7 @@ Relevant decision records:
 - `PHILOSOPHY.md` - project philosophy
 - `DOCUMENTATION.md` - documentation standards
 - `REPOSITORY.md` - repository standards
-- `input/` - input materials
-- `references/` - references and sources
-- `notes/` - working notes
+- `input/` - classified external files and sources
 - `output/` - deliverables
 
 Remove or adapt entries that do not apply.

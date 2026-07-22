@@ -26,6 +26,7 @@
 - [AGIT Templateverse](#agit-templateverse)
 - [Wann dieses Template geeignet ist](#wann-dieses-template-geeignet-ist)
 - [Projektinitialisierung](#projektinitialisierung)
+- [Externe Dateien und Quellen](#externe-dateien-und-quellen)
 - [Empfohlener Workflow](#empfohlener-workflow)
 - [Git-Index und geschützte Git-Aktionen](#git-index-und-geschützte-git-aktionen)
 - [Decision Records](#decision-records)
@@ -44,7 +45,7 @@ Das Template stellt ein Repository-zentriertes Kollaborationsmodell, lokale Code
 
 ## Kernprinzip
 
-Der Maintainer verantwortet Projektintention und -richtung. Der Assistant kann Informationen strukturieren, Lücken erkennen, Artefakte vorbereiten, Konsistenz prüfen und Projektwissen bewahren, darf aber den gewünschten Endzustand nicht erfinden, folgenreiche Entscheidungen nicht stillschweigend treffen und Arbeit nicht als abgeschlossen ausgeben, wenn sie nicht existiert.
+Der Maintainer verantwortet Projektintention und -richtung. Der Assistant kann Informationen strukturieren, Lücken erkennen, Projektdateien und Ergebnisse vorbereiten, Konsistenz prüfen und Projektwissen bewahren, darf aber den gewünschten Endzustand nicht erfinden, folgenreiche Entscheidungen nicht stillschweigend treffen und Arbeit nicht als abgeschlossen ausgeben, wenn sie nicht existiert.
 
 Das Repository ist das dauerhafte Projektgedächtnis. Künftige Maintainer, Mitwirkende oder Assistants sollen den aktuellen Zustand verstehen und die Arbeit fortsetzen können, ohne auf private Chatverläufe angewiesen zu sein.
 
@@ -92,8 +93,37 @@ Der Agent:
 8. übergibt den initialisierten Repository-Zustand mit Validierungsergebnissen, Einschränkungen und vorgeschlagenen Commit-Metadaten.
 
 `PROJECT_SETUP.md` bleibt die detaillierte Initialisierungscheckliste des Agenten
-und ein Provenienzartefakt. `INITIAL_PROMPT.md` ist der einzige
+und ein Provenienznachweis. `INITIAL_PROMPT.md` ist der einzige
 benutzerorientierte Einstiegspunkt, der diese Checkliste aktiviert.
+
+## Externe Dateien und Quellen
+
+Verwende `input/` für Dateien, die der Maintainer bereitstellt oder die aus
+externen Quellen stammen. Neue oder noch unklare Dateien beginnen unter
+`input/intake/`; bereits eindeutig klassifizierte Dateien können direkt nach
+`restricted/`, `local/` oder `versioned/` gelegt werden.
+
+- **`input/intake/`** enthält Dateien, deren Zugriffs-, Git- und
+  Weitergaberegeln noch nicht entschieden sind. Assistants dürfen sie
+  standardmäßig weder auflisten noch lesen.
+- **`input/restricted/`** enthält ignorierte lokale Dateien unter
+  Maintainer-kontrolliertem Zugriff.
+- **`input/local/`** enthält ignorierte lokale Dateien, die im dokumentierten
+  Umfang für Assistant-Zugriff, aber nicht für Git freigegeben sind.
+- **`input/versioned/`** enthält externe Dateien, die bewusst für Git und
+  Assistant-Zugriff freigegeben wurden.
+
+Dokumentiere unbedenkliche Metadaten, Provenienz und Handhabungsentscheidungen
+in `input/INVENTORY.md`. Verwende das ignorierte `input/INVENTORY.local.md`,
+wenn Dateinamen, Pfade oder Quellenangaben selbst sensibel sind. Externe Quellen,
+die außerhalb des Repositorys verbleiben, können ohne Kopie ihrer Inhalte als
+Verweise im Inventar stehen.
+
+Assistant-Zugriff, Git-Versionierung und Veröffentlichung oder externe
+Weitergabe bleiben getrennte Maintainer-Entscheidungen. Das Verschieben einer
+Datei autorisiert weder Lesen noch Staging, Commit, Push oder Weitergabe. Eine
+klassifizierte Datei kann später in einen spezifischeren Projektordner wechseln,
+wenn sie zu gepflegtem Projektinhalt wird.
 
 ## Empfohlener Workflow
 
@@ -106,7 +136,7 @@ Intention -> Roadmap -> Erzeugen -> Prüfen -> Harmonisieren -> Festhalten -> Fo
 1. Ermittle oder bestätige die Repository-Baseline.
 2. Prüfe Maintainer-Intention, gewünschten Endzustand und aktuelle Roadmap.
 3. Wähle den kleinsten sinnvollen Schritt, der Unsicherheit reduziert oder ein prüfbares Ergebnis erzeugt.
-4. Erzeuge oder überarbeite das Projektartefakt.
+4. Erzeuge oder überarbeite die relevante Projektdatei, das Ergebnis oder andere Projektinhalte.
 5. Prüfe oder validiere das Ergebnis und mache Einschränkungen sichtbar.
 6. Aktualisiere betroffenen Kontext, Dokumentation und Decision Records.
 7. Bereite einen regulären Arbeits-Commit mit passendem Conventional-Commit-Präfix vor.
@@ -163,12 +193,14 @@ Das generische Template verwendet standardmäßig PDRs und erklärt das Modell i
 - **`REPOSITORY.md`** definiert Repository-Organisation, Git-Konventionen, Quellen- und Output-Behandlung, Versionierung und repository-fertige Übergaben. Abgeleitete Projekte passen die Datei an ihren tatsächlichen Workflow an, statt sie als vorübergehendes Setup-Material zu behandeln.
 - **`DECISIONS.md` und `decisions/`** erklären Decision Records und speichern dauerhafte Entscheidungsbegründungen. Das Template bietet wiederverwendbare PDR-Leitlinien und gegenstandsbezogene Record-Vorlagen.
 
-### Optionale Arbeitsordner
+### Externe Dateien und Projektoutputs
 
-- **`input/`** enthält vom Maintainer bereitgestelltes Material, wenn das Projekt lokale Eingaben benötigt. Private, vertrauliche, lizenzierte oder personenbezogene Rohmaterialien benötigen vor Einsicht oder Git-Aufnahme eine Zugriffs- und Versionierungsentscheidung.
-- **`references/`** enthält Quellen, Referenzen oder geprüfte Quellnotizen. Projekte sollten Provenienz, Lizenzierung und Sensitivität dokumentieren, wenn diese die Nutzung beeinflussen.
-- **`notes/`** enthält Arbeitsnotizen und offene Fragen, die für das Projekt nützlich, aber noch keine dauerhaften Entscheidungen oder Deliverables sind.
-- **`output/`** enthält Projekt-Deliverables oder erzeugte Ergebnisse. Projekte legen fest, ob Outputs versionierte Milestones, Review-Artefakte oder reproduzierbare lokale Produkte sind, und prüfen sie vor der Weitergabe.
+- **`input/`** wendet die gemeinsamen Klassifikationen Intake, Restricted,
+  Local und Versioned auf externe Dateien und Quellen an. Die Inventare bewahren
+  unbedenkliche Provenienz- und Handhabungsentscheidungen.
+- **`output/`** enthält Projekt-Deliverables oder erzeugte Ergebnisse. Projekte
+  legen fest, ob Outputs versionierte Milestones, Review-Dateien oder
+  reproduzierbare lokale Produkte sind, und prüfen sie vor der Weitergabe.
 
 ## Template- und abgeleitete Projektdateien
 
@@ -179,7 +211,8 @@ In einem abgeleiteten Projekt:
 - behalte und passe `AGENTS.md`, `ChatGPT.md`, `CODEX.md` und `PHILOSOPHY.md` an, sofern kein dokumentierter Projektbedarf eine Änderung erfordert;
 - behalte `PROJECT_SETUP.md` und `INITIAL_PROMPT.md` als Initialisierungsprovenienz;
 - behalte die Prompts für Fortsetzung, Harmonisierung und Retrospektive zur wiederholbaren späteren Nutzung;
-- passe optionale Arbeitsordner nur an oder entferne sie nur, wenn ihre Rolle verstanden ist;
+- passe Input- und Output-Ordner an den konkreten Workflow an und bewahre ihre
+  dokumentierten Handhabungsregeln;
 - ersetze Template-Decision-Records nur dann durch echte Records, wenn folgenreiche Entscheidungen vorliegen.
 
 Halte Source-Template-Version und -Commit, Initialisierungsstatus, letzte Harmonisierungs-Baseline und beabsichtigte Abweichungen in `PROJECT_CONTEXT.md` fest. Ein abgeleitetes Projekt ist für seine eigene Intention und akzeptierten Entscheidungen maßgeblich; Template-Updates werden geprüft und angepasst statt blind kopiert.
@@ -190,7 +223,7 @@ Halte Source-Template-Version und -Commit, Initialisierungsstatus, letzte Harmon
 2. Beantworte die nummerierten Fragen des Agenten; der Agent liest und verwendet die übrigen Setup-Dateien automatisch.
 3. Prüfe den initialisierten Repository-Zustand, die Validierungsergebnisse und den vorgeschlagenen ersten Commit.
 4. Lasse den Agenten `PROJECT_CONTEXT.md` während der späteren Arbeit als kompakte Projektübergabe aktuell halten.
-5. Arbeite in kleinen Artefakten oder Änderungen, die aus der vom Maintainer definierten Intention, Grenzen und Erfolgskriterien abgeleitet sind.
+5. Arbeite in kleinen Dateien, Ergebnissen oder Änderungen, die aus der vom Maintainer definierten Intention, Grenzen und Erfolgskriterien abgeleitet sind.
 6. Unterscheide Rohinputs, geprüfte Derivate und erzeugte Outputs, bevor Zugriff, Versionierung oder Veröffentlichung freigegeben werden.
 7. Dokumentiere folgenreiche Entscheidungen in `decisions/` und validiere Ergebnisse, bevor sie als abgeschlossen dargestellt werden.
 8. Beginne spätere Sitzungen mit `CONTINUATION_PROMPT.md`; der Agent rekonstruiert den aktuellen Zustand, ohne die Initialisierung zu wiederholen.

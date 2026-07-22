@@ -36,13 +36,15 @@ Identify the starting point for the project:
 - uploaded materials
 - existing documents
 - external references
-- accepted output artifacts
+- accepted output files or results
 
 The baseline should be explicit enough that a future session can continue from the repository. When using AI assistance, begin the first session with `INITIAL_PROMPT.md` when practical.
 
-Before asking an assistant to inspect input files, classify potential sensitivity. For private, unpublished, confidential, licensed or personal material, start with a source inventory rather than raw content inspection. Decide whether the project needs anonymized or reviewed derivatives before raw inputs are read. Record assistant-access approval, Git-versioning approval and publication or sharing approval separately; none implies another. Treat automated checker results as warnings rather than proof that an artifact is safe.
+Before asking an assistant to inspect input files, classify potential sensitivity. For private, unpublished, confidential, licensed or personal material, start with a source inventory rather than raw content inspection. Decide whether the project needs anonymized or reviewed derivatives before raw inputs are read. Record assistant-access approval, Git-versioning approval and publication or sharing approval separately; none implies another. Treat automated checker results as warnings rather than proof that a file is safe.
 
-Document source handling in `PROJECT_CONTEXT.md`, a folder README, `input/SOURCES.md` or another project-specific source registry when useful.
+Document external files and sources in `input/INVENTORY.md`. Store sensitive
+local inventory details only in ignored `input/INVENTORY.local.md`, and reflect
+durable handling rules in `PROJECT_CONTEXT.md` or a Decision Record when useful.
 
 ---
 
@@ -67,7 +69,7 @@ Review and adapt:
 
 Every derived project README should include an AI Collaboration Note near the top of the file, directly below the title and badges or language link area.
 
-The note is a visible disclosure and orientation artifact. It should preserve the purpose, position and level of visibility of the template note while adapting the wording to the derived project.
+The note is a visible disclosure and orientation element. It should preserve the purpose, position and level of visibility of the template note while adapting the wording to the derived project.
 
 The derived note should state:
 
@@ -109,19 +111,22 @@ Keep only what is useful for the project.
 The template provides:
 
 - `input/`
-- `references/`
-- `notes/`
+- `input/intake/`
+- `input/restricted/`
+- `input/local/`
+- `input/versioned/`
+- `input/INVENTORY.md`
 - `output/`
 
-Use them when they help. Remove or adapt them when another structure is clearer.
+Keep the standard `input/` zones and adapt their guidance to the project. Add further project-specific structures only when they serve a clear purpose.
 
 Do not store private, confidential or unlicensed material in versioned folders unless the project intentionally tracks it.
 
 Use `decisions/` when the project has real decision records to store. PDRs are the default for generic project decisions, while ADRs or DDRs may be added when the decision subject is technical or documentation-specific.
 
-For data- or artifact-oriented projects, decide whether the project should distinguish raw inputs, reviewed derivatives and generated outputs. A project may remain based on the generic template while adopting selected development practices for scripts, validation and reproducible rebuild commands.
+For data- or file-oriented projects, decide whether the project should distinguish raw inputs, reviewed derivatives and generated outputs. A project may remain based on the generic template while adopting selected development practices for scripts, validation and reproducible rebuild commands.
 
-When a folder such as `input/`, `references/`, `notes/` or `output/` gets a project-specific role, add or update a short README in that folder.
+When a folder such as `input/` or `output/` gets a project-specific role, add or update a short README in that folder without weakening the input classifications.
 
 ---
 
@@ -191,14 +196,14 @@ The chosen scheme should be documented.
 
 # 9. Record Initialization Provenance
 
-Keep the two initialization artifacts under their original names:
+Keep the two initialization files under their original names:
 
 - `PROJECT_SETUP.md`
 - `INITIAL_PROMPT.md`
 
 In `PROJECT_CONTEXT.md`, record their lifecycle status, initialization date,
 source template version and commit, later harmonization baseline and intentional
-template deviations. Remove an initialization artifact only as a deliberate,
+template deviations. Remove an initialization file only as a deliberate,
 documented maintainer exception.
 
 Adapt `DOCUMENTATION.md` and `REPOSITORY.md` as ongoing project rules and keep
@@ -250,7 +255,7 @@ Keep `PROJECT_CONTEXT.md` current when:
 - a milestone completes, including after a commit or tag has been created
 - the roadmap changes
 - important decisions are made
-- new inputs or references become important
+- new external files or sources become important
 - the project is paused
 - a new session needs to resume work
 

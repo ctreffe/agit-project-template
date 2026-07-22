@@ -31,7 +31,7 @@ Begin with repository safety and state:
 4. Inspect branch, working tree, recent commits, relevant tags and staged or
    unstaged changes with read-only Git commands. Preserve all uncommitted work.
 5. Apply documented access, privacy, licensing and publication boundaries
-   before opening inputs, references, feedback or generated artifacts.
+   before opening external files, sources, feedback or generated outputs.
 
 If the repository role is a derived project, locate the exact recorded source
 template and establish both the last compared baseline and the latest

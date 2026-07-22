@@ -34,12 +34,15 @@ LICENSE
 .gitignore
 DECISIONS.md
 input/
-references/
-notes/
+  intake/
+  restricted/
+  local/
+  versioned/
+  INVENTORY.md
 output/
 ```
 
-Projects may adapt this structure. When a folder gains project-specific meaning, add a short README that explains its role, expected contents and privacy or artifact handling rules.
+Projects may adapt this structure. When a folder gains project-specific meaning, add a short README that explains its role, expected contents and privacy or file-handling rules.
 
 ---
 
@@ -63,15 +66,23 @@ German badge blocks remain identical when both languages are maintained.
 
 ---
 
-# Working Folders
+# External Files and Sources
 
-`input/` stores project input materials.
+`input/` stores external files and source references under four explicit
+handling classes:
 
-`references/` stores references, sources or source notes.
+- `intake/` for unclassified incoming files;
+- `restricted/` for ignored files unavailable to assistants;
+- `local/` for ignored files approved for assistant access;
+- `versioned/` for files deliberately approved for Git and assistant access.
 
-`notes/` stores working notes, open questions or draft thinking.
+Use `input/INVENTORY.md` for safe, versioned metadata and the ignored
+`input/INVENTORY.local.md` for sensitive filenames, paths or source details.
+Assistants do not enumerate or read `intake/` or `restricted/` by default.
+Moving a file does not itself authorize content access, Git actions or external
+sharing.
 
-`output/` stores deliverables.
+`output/` stores deliverables and generated results.
 
 `DECISIONS.md` explains Decision Records.
 
@@ -89,7 +100,7 @@ Raw inputs are maintainer-provided or external materials in their original form.
 
 Reviewed derivatives are project-specific representations that have been checked for the intended use, such as anonymized tables, extracted observations, redacted excerpts, normalized CSV files, summaries or review workbooks. They are often safer and more useful to version than raw inputs.
 
-Generated outputs are produced from sources, derivatives or scripts. The repository should make clear whether generated outputs are versioned review artifacts or regenerated locally. Review their visible content, embedded resources and file metadata for disclosure risk before versioning or sharing them.
+Generated outputs are produced from sources, derivatives or scripts. The repository should make clear whether generated outputs are versioned review files or regenerated locally. Review their visible content, embedded resources and file metadata for disclosure risk before versioning or sharing them.
 
 Assistant access, Git versioning and publication or other sharing are separate
 approval decisions. A reviewed derivative may be suitable for one of these

@@ -32,6 +32,8 @@ maintainer decision when it could materially affect the result.
   decisions and changelog entries coherent.
 - Treat assistant access, Git versioning and publication or external sharing as
   separate maintainer decisions.
+- Classify new external files through `input/`; presence in `input/intake/`
+  never authorizes assistant access.
 - Follow the authorization rules in `CODEX.md`; an edit request does not by
   itself authorize protected Git actions.
 

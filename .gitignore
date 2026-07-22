@@ -20,7 +20,7 @@ __pycache__/
 .mypy_cache/
 .npm/
 
-# Local AI/tool workspace artifacts
+# Local AI/tool workspace files
 .codex-input/
 .codex-cache/
 .codex-tmp/
@@ -40,6 +40,15 @@ logs/
 .env.*
 !.env.example
 
-# Local generated or private artifacts
-artifacts/
+# Local generated or private files
+/generated/
 deliverables/
+
+# External files and sources
+/input/intake/**
+!/input/intake/README.md
+/input/restricted/**
+!/input/restricted/README.md
+/input/local/**
+!/input/local/README.md
+/input/INVENTORY.local.md
