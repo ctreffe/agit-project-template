@@ -8,6 +8,8 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Remove the project copy of `CREATE_LOCAL_PROJECT_PROMPT.md` and its
+  template-only references after successful initialization.
 - Clarify that a generated file's project role, rather than its generation
   method, distinguishes retained materials from final outputs.
 
