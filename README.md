@@ -162,6 +162,13 @@ Do not use `materials/` for caches, disposable temporary files or final
 deliverables; outputs remain in `output/`. Never record credentials, private
 share tokens or device-specific absolute paths in versioned files.
 
+Generation method does not determine location. Keep a generated file in
+`materials/` when it is a durable working or source file consumed by later
+project steps. Place it in `output/` when it is a project result intended for
+use, review, handoff, publication or delivery. Disposable generation
+intermediates remain in `temp/`; domain-specific authoritative files keep their
+maintained locations.
+
 ## Recommended Workflow
 
 AGIT projects proceed from maintainer intent through small, reviewable project loops:

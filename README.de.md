@@ -167,6 +167,14 @@ finale Ergebnisse; Outputs bleiben in `output/`. Hinterlege keine Zugangsdaten,
 privaten Freigabe-Tokens oder gerätespezifischen absoluten Pfade in
 versionierten Dateien.
 
+Nicht die Erzeugungsweise, sondern die aktuelle Projektrolle bestimmt den
+Ablageort. Bewahre eine erzeugte Datei in `materials/` auf, wenn sie als
+dauerhafte Arbeits- oder Quelldatei in weitere Projektschritte eingeht. Lege sie
+in `output/` ab, wenn sie als Projektergebnis zur Nutzung, Prüfung, Übergabe,
+Veröffentlichung oder Auslieferung bestimmt ist. Wegwerfbare
+Erzeugungszwischenstände bleiben in `temp/`; domänenspezifische maßgebliche
+Dateien behalten ihre gepflegten Orte.
+
 ## Empfohlener Workflow
 
 AGIT-Projekte entwickeln sich von der Maintainer-Intention aus in kleinen, prüfbaren Projektschleifen:

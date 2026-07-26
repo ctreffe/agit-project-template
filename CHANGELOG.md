@@ -6,6 +6,11 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+### Changed
+
+- Clarify that a generated file's project role, rather than its generation
+  method, distinguishes retained materials from final outputs.
+
 ## [0.4.0] - 2026-07-26
 
 ### Added
