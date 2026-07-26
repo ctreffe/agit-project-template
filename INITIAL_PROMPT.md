@@ -80,9 +80,18 @@ router to authoritative guidance, including its safety and project boundaries.
 Establish the repository's external-file workflow during initialization. Use
 `input/intake/` for unclassified arrivals, classify them into
 `input/restricted/`, `input/local/` or `input/versioned/`, and maintain safe
-metadata in `input/INVENTORY.md`. Treat assistant access, Git versioning and
+metadata in `input/CATALOG.md`. Treat assistant access, Git versioning and
 external sharing as separate decisions. Do not inspect or move a file merely
 because it is present; ask for any missing authorization or classification.
+
+Keep `input/` content unchanged. Establish `materials/` and its catalog for
+retained created or transformed working files. Treat registered materials as
+assistant-readable and ask separately whether each uses local, versioned or
+external storage; create only local logical path mappings from the example.
+
+Establish ignored `temp/` for disposable intermediate files. All contents
+outside `temp/restricted/` are assistant-readable and never versionable; that
+directory is unavailable to assistants. Promote retained files to `materials/`.
 
 Retain the initialization files under their original names as provenance:
 

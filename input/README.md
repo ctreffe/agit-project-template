@@ -4,6 +4,9 @@ Use `input/` for files supplied by the maintainer or obtained from external
 sources. This includes documents, datasets, screenshots, exports, forms and
 other files that enter the project from outside its maintained project files.
 
+Keep their content unchanged. Any conversion, redaction, annotation or other
+content change creates a new file governed through `materials/`.
+
 New or uncertain files start in `intake/`. Files whose handling is already
 clear may be placed directly in the appropriate folder:
 
@@ -14,9 +17,12 @@ clear may be placed directly in the appropriate folder:
 - `versioned/` contains files deliberately approved for Git versioning and
   assistant access.
 
-Record safe source and handling information in `INVENTORY.md`. If filenames,
+Record safe source and handling information in `CATALOG.md`. Include unchanged
+external services, datasets and URLs even when their content remains outside
+the repository. If filenames,
 paths or other details are themselves sensitive, keep them in the ignored
-`INVENTORY.local.md` instead.
+`CATALOG.local.md` instead. Resolve logical external locations per device in
+ignored `PATHS.local.md`, copied from `PATHS.local.example.md`.
 
 Assistant access, Git versioning and publication or external sharing are
 separate maintainer decisions. Moving a file does not authorize reading,

@@ -27,6 +27,8 @@
 - [When to Use This Template](#when-to-use-this-template)
 - [Project Initialization](#project-initialization)
 - [External Files and Sources](#external-files-and-sources)
+- [Temporary Working Files](#temporary-working-files)
+- [Project Materials](#project-materials)
 - [Recommended Workflow](#recommended-workflow)
 - [Git Index and Protected Git Actions](#git-index-and-protected-git-actions)
 - [Decision Records](#decision-records)
@@ -118,15 +120,47 @@ known classification may go directly to `restricted/`, `local/` or
   and assistant access.
 
 Record safe metadata, provenance and handling decisions in
-`input/INVENTORY.md`. Use the ignored `input/INVENTORY.local.md` when filenames,
+`input/CATALOG.md`. Use the ignored `input/CATALOG.local.md` when filenames,
 paths or source details are themselves sensitive. External sources that remain
-outside the repository may be recorded as references in the inventory without
-copying their contents.
+outside the repository belong in the catalog without copying their contents.
+Use stable public URLs directly and resolve logical private or device-specific
+locations through ignored `input/PATHS.local.md`.
 
 Assistant access, Git versioning and publication or external sharing remain
 separate maintainer decisions. Moving a file does not authorize reading,
 staging, committing, pushing or sharing it. A classified file may later move to
 a more specific project folder when it becomes maintained project content.
+
+## Temporary Working Files
+
+Use `temp/` for disposable intermediate files. All contents outside
+`temp/restricted/` are assistant-readable; that restricted directory must not
+be enumerated or read.
+All temporary content is ignored and must never be versioned. It is not
+cataloged. Promote anything worth retaining to `materials/` and catalog it.
+
+## Project Materials
+
+Keep files in `input/` unchanged: they are original external files and fixed
+source references. Any content change—including conversion, OCR, redaction,
+cropping, annotation, normalization or combination—creates a new file under
+the project-material workflow rather than modifying the input.
+
+`materials/` holds durable working files created in the project or derived
+from input. Every registered material is approved for assistant access, while
+Git versioning and external sharing remain separate decisions. Record each file
+in `materials/CATALOG.md`, including purpose, creation or transformation,
+storage state and provenance through `Based on` input or material IDs.
+
+- **`local`** files live in ignored `materials/local/`.
+- **`versioned`** files live in `materials/versioned/` and may be committed.
+- **`external`** files remain outside the repository at a stable logical
+  location in the catalog. Resolve that location per machine in ignored
+  `materials/PATHS.local.md`, copied from the versioned example.
+
+Do not use `materials/` for caches, disposable temporary files or final
+deliverables; outputs remain in `output/`. Never record credentials, private
+share tokens or device-specific absolute paths in versioned files.
 
 ## Recommended Workflow
 
@@ -201,6 +235,10 @@ The generic template defaults to PDRs and explains the model in [DECISIONS.md](D
 - **`input/`** applies the shared intake, restricted, local and versioned
   classifications to external files and sources. Its inventories preserve safe
   provenance and handling decisions.
+- **`materials/`** catalogs retained assistant-readable working files and
+  separates local, versioned and external storage from access permission.
+- **`temp/`** holds ignored, never-versioned intermediates, with
+  `temp/restricted/` as the inaccessible exception.
 - **`output/`** holds project deliverables or generated results. Projects define
   whether outputs are versioned milestones, review files or reproducible local
   products and review them before sharing.

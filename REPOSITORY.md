@@ -38,7 +38,7 @@ input/
   restricted/
   local/
   versioned/
-  INVENTORY.md
+  CATALOG.md
 output/
 ```
 
@@ -76,8 +76,8 @@ handling classes:
 - `local/` for ignored files approved for assistant access;
 - `versioned/` for files deliberately approved for Git and assistant access.
 
-Use `input/INVENTORY.md` for safe, versioned metadata and the ignored
-`input/INVENTORY.local.md` for sensitive filenames, paths or source details.
+Use `input/CATALOG.md` for safe, versioned metadata and the ignored
+`input/CATALOG.local.md` for sensitive filenames, paths or source details.
 Assistants do not enumerate or read `intake/` or `restricted/` by default.
 Moving a file does not itself authorize content access, Git actions or external
 sharing.
@@ -91,6 +91,23 @@ Use `decisions/` when the project has real decision records to store.
 Do not store private, confidential or unlicensed material in versioned folders unless that is an intentional project decision.
 
 ---
+
+# Temporary Working Files
+
+`temp/` is fully ignored and never versioned. All contents outside
+`temp/restricted/` are assistant-readable disposable intermediates; assistants must not enumerate or
+read `temp/restricted/`. Promote retained files to `materials/` and catalog
+them rather than keeping durable work in `temp/`.
+
+# Project Materials
+
+Content under `input/` remains unchanged. Retain created or transformed working
+files in `materials/`, register them in `materials/CATALOG.md` and record their
+provenance through `Based on`. Every registered material is assistant-readable;
+choose `local`, `versioned` or `external` storage independently of access.
+Machine-specific external-path mappings belong only in ignored
+`materials/PATHS.local.md`. Caches, disposable files and final outputs are not
+project materials.
 
 # Raw Inputs, Reviewed Derivatives and Generated Outputs
 

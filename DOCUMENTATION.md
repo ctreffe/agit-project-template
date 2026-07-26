@@ -90,9 +90,9 @@ It explains when to create decision records, where to store them and which struc
 ## input/
 
 External files and sources classified as intake, restricted, local or
-versioned. `input/INVENTORY.md` contains only source metadata suitable for Git;
-sensitive local inventory details belong in ignored
-`input/INVENTORY.local.md`.
+versioned. `input/CATALOG.md` contains only source metadata suitable for Git;
+sensitive local catalog details belong in ignored
+`input/CATALOG.local.md`.
 
 ## output/
 

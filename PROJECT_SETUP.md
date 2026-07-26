@@ -42,8 +42,8 @@ The baseline should be explicit enough that a future session can continue from t
 
 Before asking an assistant to inspect input files, classify potential sensitivity. For private, unpublished, confidential, licensed or personal material, start with a source inventory rather than raw content inspection. Decide whether the project needs anonymized or reviewed derivatives before raw inputs are read. Record assistant-access approval, Git-versioning approval and publication or sharing approval separately; none implies another. Treat automated checker results as warnings rather than proof that a file is safe.
 
-Document external files and sources in `input/INVENTORY.md`. Store sensitive
-local inventory details only in ignored `input/INVENTORY.local.md`, and reflect
+Document external files and sources in `input/CATALOG.md`. Store sensitive
+local catalog details only in ignored `input/CATALOG.local.md`, and reflect
 durable handling rules in `PROJECT_CONTEXT.md` or a Decision Record when useful.
 
 ---
@@ -115,10 +115,27 @@ The template provides:
 - `input/restricted/`
 - `input/local/`
 - `input/versioned/`
-- `input/INVENTORY.md`
+- `input/CATALOG.md`
+- `input/PATHS.local.example.md`
+- `temp/`
+- `temp/restricted/`
+- `materials/`
+- `materials/local/`
+- `materials/versioned/`
+- `materials/CATALOG.md`
+- `materials/PATHS.local.example.md`
 - `output/`
 
-Keep the standard `input/` zones and adapt their guidance to the project. Add further project-specific structures only when they serve a clear purpose.
+Keep the standard `input/` zones and their content unchanged. Establish the
+standard `materials/` workflow for retained created or transformed files:
+registered materials are assistant-readable, while local, versioned or external
+storage and sharing remain separate decisions. Add further project-specific
+structures only when they serve a clear purpose.
+
+Use ignored `temp/` only for disposable, never-versioned intermediates. All
+contents outside `temp/restricted/` are assistant-readable; that directory is
+unavailable to assistants. Promote anything worth retaining to `materials/`
+and catalog it.
 
 Do not store private, confidential or unlicensed material in versioned folders unless the project intentionally tracks it.
 

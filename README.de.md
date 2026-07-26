@@ -27,6 +27,8 @@
 - [Wann dieses Template geeignet ist](#wann-dieses-template-geeignet-ist)
 - [Projektinitialisierung](#projektinitialisierung)
 - [Externe Dateien und Quellen](#externe-dateien-und-quellen)
+- [Temporäre Arbeitsdateien](#temporäre-arbeitsdateien)
+- [Projektmaterialien](#projektmaterialien)
 - [Empfohlener Workflow](#empfohlener-workflow)
 - [Git-Index und geschützte Git-Aktionen](#git-index-und-geschützte-git-aktionen)
 - [Decision Records](#decision-records)
@@ -119,16 +121,51 @@ externen Quellen stammen. Neue oder noch unklare Dateien beginnen unter
   Assistant-Zugriff freigegeben wurden.
 
 Dokumentiere unbedenkliche Metadaten, Provenienz und Handhabungsentscheidungen
-in `input/INVENTORY.md`. Verwende das ignorierte `input/INVENTORY.local.md`,
+in `input/CATALOG.md`. Verwende das ignorierte `input/CATALOG.local.md`,
 wenn Dateinamen, Pfade oder Quellenangaben selbst sensibel sind. Externe Quellen,
-die außerhalb des Repositorys verbleiben, können ohne Kopie ihrer Inhalte als
-Verweise im Inventar stehen.
+die außerhalb des Repositorys verbleiben, gehören ohne Kopie ihrer Inhalte in
+den Katalog. Nutze stabile öffentliche URLs direkt und löse logische private
+oder gerätespezifische Orte über die ignorierte `input/PATHS.local.md` auf.
 
 Assistant-Zugriff, Git-Versionierung und Veröffentlichung oder externe
 Weitergabe bleiben getrennte Maintainer-Entscheidungen. Das Verschieben einer
 Datei autorisiert weder Lesen noch Staging, Commit, Push oder Weitergabe. Eine
 klassifizierte Datei kann später in einen spezifischeren Projektordner wechseln,
 wenn sie zu gepflegtem Projektinhalt wird.
+
+## Temporäre Arbeitsdateien
+
+Verwende `temp/` für wegwerfbare Zwischendateien. Alle Inhalte außerhalb von
+`temp/restricted/` sind für den Assistant lesbar; dieses Restricted-Verzeichnis
+darf weder aufgelistet noch gelesen werden. Sämtliche temporären Inhalte werden ignoriert
+und dürfen niemals versioniert werden. Sie werden nicht katalogisiert. Überführe
+alles dauerhaft Benötigte nach `materials/` und katalogisiere es dort.
+
+## Projektmaterialien
+
+Dateien in `input/` bleiben inhaltlich unverändert: Sie sind ursprüngliche
+externe Dateien und feste Quellenverweise. Jede inhaltliche Änderung – etwa
+Konvertierung, OCR, Schwärzung, Zuschnitt, Annotation, Normalisierung oder
+Zusammenführung – erzeugt eine neue Datei im Projektmaterial-Workflow, statt
+den Input zu verändern.
+
+`materials/` enthält dauerhafte Arbeitsdateien, die im Projekt erzeugt oder aus
+Input abgeleitet wurden. Jedes registrierte Material ist für den Assistant
+freigegeben; Git-Versionierung und externe Weitergabe bleiben getrennte
+Entscheidungen. Erfasse jede Datei in `materials/CATALOG.md` mit Zweck,
+Erstellung oder Transformation, Speicherzustand und Provenienz über `Based on`
+mit Input- oder Material-IDs.
+
+- **`local`** liegt in dem ignorierten Ordner `materials/local/`.
+- **`versioned`** liegt in `materials/versioned/` und darf versioniert werden.
+- **`external`** bleibt außerhalb des Repositorys an einem stabilen logischen
+  Ort im Katalog. Löse ihn je Rechner in der ignorierten
+  `materials/PATHS.local.md` auf, ausgehend von der versionierten Beispieldatei.
+
+Verwende `materials/` nicht für Caches, wegwerfbare temporäre Dateien oder
+finale Ergebnisse; Outputs bleiben in `output/`. Hinterlege keine Zugangsdaten,
+privaten Freigabe-Tokens oder gerätespezifischen absoluten Pfade in
+versionierten Dateien.
 
 ## Empfohlener Workflow
 
@@ -201,8 +238,13 @@ Das generische Template verwendet standardmäßig PDRs und erklärt das Modell i
 ### Externe Dateien und Projektoutputs
 
 - **`input/`** wendet die gemeinsamen Klassifikationen Intake, Restricted,
-  Local und Versioned auf externe Dateien und Quellen an. Die Inventare bewahren
+  Local und Versioned auf externe Dateien und Quellen an. Die Kataloge bewahren
   unbedenkliche Provenienz- und Handhabungsentscheidungen.
+- **`materials/`** katalogisiert dauerhafte, für den Assistant lesbare
+  Arbeitsdateien und trennt lokale, versionierte und externe Speicherung von
+  der Zugriffsfreigabe.
+- **`temp/`** enthält ignorierte, niemals versionierte Zwischenstände;
+  `temp/restricted/` bildet die nicht zugängliche Ausnahme.
 - **`output/`** enthält Projekt-Deliverables oder erzeugte Ergebnisse. Projekte
   legen fest, ob Outputs versionierte Milestones, Review-Dateien oder
   reproduzierbare lokale Produkte sind, und prüfen sie vor der Weitergabe.

@@ -36,6 +36,10 @@ maintainer decision when it could materially affect the result.
   separate maintainer decisions.
 - Classify new external files through `input/`; presence in `input/intake/`
   never authorizes assistant access.
+- Keep `input/` content unchanged. Treat every registered file in `materials/`
+  as assistant-readable; its Git and sharing states remain separate decisions.
+- Treat all `temp/` content outside `temp/restricted/` as assistant-readable and
+  never versionable; never enumerate or read `temp/restricted/`.
 - Follow the authorization rules in `CODEX.md`; an edit request does not by
   itself authorize protected Git actions.
 
