@@ -96,6 +96,11 @@ Der Agent:
 und ein Provenienznachweis. `INITIAL_PROMPT.md` ist der einzige
 benutzerorientierte Einstiegspunkt, der diese Checkliste aktiviert.
 
+Soll ein Projekt lokal bleiben und keinen Remote erhalten, beginne in diesem
+ausgecheckten Template mit [CREATE_LOCAL_PROJECT_PROMPT.md](CREATE_LOCAL_PROJECT_PROMPT.md).
+Der Prompt prüft das Ziel, erzeugt einen unabhängigen lokalen Clone ohne Remote
+und ruft anschließend `INITIAL_PROMPT.md` auf; er ist keine zweite Initialisierung.
+
 ## Externe Dateien und Quellen
 
 Verwende `input/` für Dateien, die der Maintainer bereitstellt oder die aus

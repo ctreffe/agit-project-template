@@ -96,6 +96,11 @@ The agent then:
 provenance record. `INITIAL_PROMPT.md` is the single user-facing entry point
 that activates that checklist.
 
+For a project that should remain local and have no remote, begin in this
+checked-out template with [CREATE_LOCAL_PROJECT_PROMPT.md](CREATE_LOCAL_PROJECT_PROMPT.md).
+It verifies the destination, creates an independent local clone without a
+remote, then invokes `INITIAL_PROMPT.md`; it is not a second initialization.
+
 ## External Files and Sources
 
 Use `input/` for files supplied by the maintainer or obtained from external
