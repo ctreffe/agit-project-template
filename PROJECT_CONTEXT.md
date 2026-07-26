@@ -181,15 +181,17 @@ Roadmap entries should be small enough to review and validate.
 
 ---
 
-# Inputs and References
+# External Inputs and Project Materials
 
-Important input materials:
+Important unchanged external files and sources:
 
 - `<input file or source>`
 
-Important references:
+Input catalog and location mapping:
 
-- `<reference, source or link>`
+```text
+<input/CATALOG.md entries and any required input/PATHS.local.md mappings>
+```
 
 Source handling notes:
 
@@ -203,7 +205,7 @@ Source sensitivity and handling:
 <which raw inputs are private, confidential, licensed, unpublished or personal; what should be represented through reviewed derivatives>
 ```
 
-Assistant-access approval:
+Assistant-access approval for classified input:
 
 ```text
 <exact sources or reviewed derivatives, permitted task and limitations>
@@ -221,9 +223,21 @@ Publication or sharing approval:
 <exact files or outputs and audience, or none>
 ```
 
-Reviewed derivatives:
+Retained project materials:
 
-- `<derived file or result>` - `<relationship to raw source and review status>`
+- `<material>` - `<source relationship, purpose and materials/local | versioned | external storage state>`
+
+Materials catalog and external location mapping:
+
+```text
+<materials/CATALOG.md entries and any required materials/PATHS.local.md mappings>
+```
+
+Temporary-file state:
+
+```text
+<relevant temp/ work in progress; do not record sensitive details from temp/restricted/>
+```
 
 ---
 
@@ -284,6 +298,8 @@ Relevant decision records:
 - `DOCUMENTATION.md` - documentation standards
 - `REPOSITORY.md` - repository standards
 - `input/` - classified external files and sources
+- `temp/` - never-versioned intermediate files
+- `materials/` - retained assistant-readable project files and catalog
 - `output/` - deliverables
 
 Remove or adapt entries that do not apply.

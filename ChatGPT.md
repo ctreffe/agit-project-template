@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# AGIT Generic Collaboration Model v0.3.0
+# AGIT Generic Collaboration Model v0.4.0
 
 **Status:** Stable generic model
 **Applies to:** AGIT projects  

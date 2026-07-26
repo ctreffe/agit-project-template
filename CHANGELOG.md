@@ -6,6 +6,8 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-07-26
+
 ### Added
 
 - Replace the input inventory files with an external-file and source catalog,
@@ -14,9 +16,6 @@ This project follows Semantic Versioning.
 - Add a cataloged project-material workflow with local, versioned and external
   storage states for retained assistant-readable working files.
 - Add `CREATE_LOCAL_PROJECT_PROMPT.md` for independent local-only projects.
-
-### Added
-
 - Add a common catalog-based workflow for external files and sources with
   `intake`, `restricted`, `local` and `versioned` input zones.
 - Add `AGENTS.md` as the concise, automatically loaded entry point that routes
@@ -24,6 +23,9 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Upgrade the AGIT Generic Collaboration Model to v0.4.0.
+- Align the project-context template with input catalogs, temporary files and
+  retained project-material storage states.
 - Require external input content to remain unchanged and preserve provenance
   when project work creates or transforms files.
 - Clarify user-facing terminology for files, sources, records and outputs and
