@@ -134,6 +134,11 @@ separate maintainer decisions. Moving a file does not authorize reading,
 staging, committing, pushing or sharing it. A classified file may later move to
 a more specific project folder when it becomes maintained project content.
 
+For large non-Git files that must remain available across devices, use the
+provider-neutral workflow in [SYNCHRONIZED_STORAGE.md](SYNCHRONIZED_STORAGE.md).
+Synchronized files remain external storage; synchronization is not Git
+versioning, backup, assistant access or publication approval.
+
 ## Temporary Working Files
 
 Use `temp/` for disposable intermediate files. All contents outside

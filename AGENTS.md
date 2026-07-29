@@ -40,6 +40,8 @@ maintainer decision when it could materially affect the result.
   as assistant-readable; its Git and sharing states remain separate decisions.
 - Treat all `temp/` content outside `temp/restricted/` as assistant-readable and
   never versionable; never enumerate or read `temp/restricted/`.
+- Read `SYNCHRONIZED_STORAGE.md` before mapping or using synchronized external
+  project storage; synchronization grants no additional access.
 - Follow the authorization rules in `CODEX.md`; an edit request does not by
   itself authorize protected Git actions.
 

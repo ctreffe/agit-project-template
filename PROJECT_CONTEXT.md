@@ -193,6 +193,12 @@ Input catalog and location mapping:
 <input/CATALOG.md entries and any required input/PATHS.local.md mappings>
 ```
 
+Synchronized external storage:
+
+```text
+<not used | project ID, sync: roots, mapped input/material scope, availability, conflict and backup notes>
+```
+
 Source handling notes:
 
 ```text
@@ -290,6 +296,7 @@ Relevant decision records:
 - `ChatGPT.md` - collaboration model
 - `CODEX.md` - local Codex operating policy, if Codex is used
 - `CONTINUATION_PROMPT.md` - reproducible re-entry instruction for a new context window or assistant session
+- `SYNCHRONIZED_STORAGE.md` - provider-neutral external storage and per-device mapping workflow
 - `HARMONIZATION_PROMPT.md` - source-template, internal-consistency and roadmap harmonization
 - `RETROSPECTIVE_PROMPT.md` - structured Maintainer-Agent collaboration review
 - `DECISIONS.md` - Decision Record guidance

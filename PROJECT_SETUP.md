@@ -284,3 +284,12 @@ source-template, internal-consistency and roadmap alignment.
 
 `RETROSPECTIVE_PROMPT.md` should remain for maintainer-initiated, structured
 reviews of Maintainer-Agent collaboration.
+
+# 12. Configure Synchronized External Storage When Needed
+
+If large non-Git files must be available on several devices, apply
+`SYNCHRONIZED_STORAGE.md`. Decide provider transmission, stable project ID,
+input and material scope, optional external outputs, availability checks,
+conflict handling and backup separately. Create ignored `sync:` mappings on
+each device and record the durable decision in `PROJECT_CONTEXT.md` or a PDR.
+Do not synchronize `temp/`.

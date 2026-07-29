@@ -1,5 +1,9 @@
 # External Files and Sources
 
+For synchronized external input roots and their mirrored access boundaries,
+follow [SYNCHRONIZED_STORAGE.md](../SYNCHRONIZED_STORAGE.md). Mapping a root
+does not authorize its contents or unrelated synchronized folders.
+
 Use `input/` for files supplied by the maintainer or obtained from external
 sources. This includes documents, datasets, screenshots, exports, forms and
 other files that enter the project from outside its maintained project files.

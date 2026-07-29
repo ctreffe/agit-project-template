@@ -136,6 +136,12 @@ Datei autorisiert weder Lesen noch Staging, Commit, Push oder Weitergabe. Eine
 klassifizierte Datei kann später in einen spezifischeren Projektordner wechseln,
 wenn sie zu gepflegtem Projektinhalt wird.
 
+Für große, nicht in Git versionierte Dateien, die auf mehreren Rechnern
+verfügbar bleiben müssen, gilt der anbieterneutrale Workflow in
+[SYNCHRONIZED_STORAGE.md](SYNCHRONIZED_STORAGE.md). Synchronisierte Dateien
+bleiben externer Speicher; Synchronisierung ist weder Git-Versionierung,
+Backup, Assistant-Zugriff noch Publikationsfreigabe.
+
 ## Temporäre Arbeitsdateien
 
 Verwende `temp/` für wegwerfbare Zwischendateien. Alle Inhalte außerhalb von
