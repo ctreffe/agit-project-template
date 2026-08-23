@@ -38,7 +38,7 @@ Identify the starting point for the project:
 - external references
 - accepted output files or results
 
-The baseline should be explicit enough that a future session can continue from the repository. When using AI assistance, begin the first session with `INITIAL_PROMPT.md` when practical.
+The baseline should be explicit enough that a future session can continue from the repository. When using AI assistance, invoke `$start-project` for the one-time initialization.
 
 Before asking an assistant to inspect input files, classify potential sensitivity. For private, unpublished, confidential, licensed or personal material, start with a source inventory rather than raw content inspection. Decide whether the project needs anonymized or reviewed derivatives before raw inputs are read. Record assistant-access approval, Git-versioning approval and publication or sharing approval separately; none implies another. Treat automated checker results as warnings rather than proof that a file is safe.
 
@@ -216,7 +216,6 @@ The chosen scheme should be documented.
 Keep the two initialization files under their original names:
 
 - `PROJECT_SETUP.md`
-- `INITIAL_PROMPT.md`
 
 In `PROJECT_CONTEXT.md`, record their lifecycle status, initialization date,
 source template version and commit, later harmonization baseline and intentional
@@ -264,8 +263,9 @@ defined and reviewed versioned milestone.
 
 # 11. Continue the Project
 
-Continue according to `ChatGPT.md`. Begin work in a new context window or
-assistant session with `CONTINUATION_PROMPT.md`.
+Continue according to `ChatGPT.md`. Begin each bounded new task through the
+automatically discoverable `start-task` skill and use `TASK_HANDOFF.md` for a
+versioned checkpoint.
 
 Keep `PROJECT_CONTEXT.md` current when:
 
@@ -276,14 +276,11 @@ Keep `PROJECT_CONTEXT.md` current when:
 - the project is paused
 - a new session needs to resume work
 
-`CONTINUATION_PROMPT.md` should remain in the derived repository for repeatable
-re-entry after initialization.
-
-`HARMONIZATION_PROMPT.md` should also remain for maintainer-initiated
-source-template, internal-consistency and roadmap alignment.
-
-`RETROSPECTIVE_PROMPT.md` should remain for maintainer-initiated, structured
-reviews of Maintainer-Agent collaboration.
+The repository skills should remain available after initialization. Invoke
+`$review-project`, `$sync-template`, `$check-consistency` and
+`$perform-retrospective` explicitly only when their specialized outcome is
+needed. Remove the project copy of `$create-local-project` after successful
+initialization because it belongs only in the source template.
 
 # 12. Configure Synchronized External Storage When Needed
 

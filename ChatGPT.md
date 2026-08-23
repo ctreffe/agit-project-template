@@ -72,10 +72,10 @@ It should capture:
 
 When a session becomes long, when a substantial change is in progress or when work may continue on another computer or in another conversation, the project context should be updated before lower-priority work continues.
 
-Begin a new context window or assistant session with
-`CONTINUATION_PROMPT.md`. It defines the ordered re-entry check and requires the
-assistant to reconcile `PROJECT_CONTEXT.md` with current read-only Git evidence
-before substantive work continues.
+Begin an ordinary bounded task through the automatically discoverable
+`start-task` skill and use the versioned `TASK_HANDOFF.md` when available.
+Invoke `$review-project` explicitly when a comprehensive neutral inventory is
+needed rather than loading that broad context for every task.
 
 ---
 
@@ -291,11 +291,12 @@ When a change affects multiple documents, update them together so the repository
 
 Do not append isolated notes when an existing section should be updated.
 
-Use `HARMONIZATION_PROMPT.md` for a deliberate content harmonization. A
-harmonization compares a derived project with its recorded source template,
-reconciles internal project files and checks whether the roadmap still fits
-maintainer intent and the current state. The concrete project and its Decision
-Records remain authoritative; template changes are never copied blindly.
+Invoke `$sync-template` explicitly to compare a derived project with its
+recorded source template and steer selected adoption. Invoke
+`$check-consistency` separately to diagnose contradictions among project
+intent, roadmap, decisions, implementation and documentation. The concrete
+project and its Decision Records remain authoritative; template changes are
+never copied blindly.
 
 Harmonization concerns project content. It does not evaluate Maintainer-Agent
 collaboration or derive changes for the source template. Collaboration
@@ -309,7 +310,7 @@ Retrospectives evaluate Maintainer-Agent collaboration and the rules, feedback,
 decision, handoff and work rhythms that shape it. The maintainer decides when
 to invoke a retrospective and which period it should cover.
 
-Use `RETROSPECTIVE_PROMPT.md` for the structured collaboration review. Separate
+Use `$perform-retrospective` for the structured collaboration review. Separate
 practices to retain, project-level collaboration changes, content implications
 for later harmonization, abstracted template candidates and no-action findings.
 

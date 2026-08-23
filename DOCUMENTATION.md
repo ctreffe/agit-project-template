@@ -35,24 +35,14 @@ and update static badges together with the project metadata they represent.
 
 The current-state handoff document. It describes where the project stands now.
 
-## CONTINUATION_PROMPT.md
+## Repository Skills
 
-The reproducible re-entry instruction for a new context window or assistant
-session. It defines the reading order, Git-state reconciliation and numbered
-continuation handoff without repeating project initialization.
+`.agents/skills/` contains lean automatic task entry, handoff and commit
+preparation plus explicit initialization, neutral review, source-template
+synchronization, internal consistency and retrospective workflows.
 
-## HARMONIZATION_PROMPT.md
-
-The repeatable project-content alignment instruction. It compares a derived
-project with its recorded source template, checks internal consistency and
-reviews roadmap fit without evaluating collaboration or deriving template
-improvements.
-
-## RETROSPECTIVE_PROMPT.md
-
-The repeatable Maintainer-Agent collaboration review. It separates practices
-to retain, project collaboration changes, content implications for later
-harmonization and abstracted template candidates.
+`TASK_HANDOFF.md` is the compact versioned handoff between bounded tasks and
+devices. It does not duplicate project history or full session output.
 
 ## CHANGELOG.md
 
@@ -158,9 +148,9 @@ Review files belong in the location that fits the project, such as `docs/`,
 
 # Harmonization
 
-Use `HARMONIZATION_PROMPT.md` for a deliberate source-template comparison,
-internal consistency review and roadmap alignment. When a change affects
-multiple documents, update them together.
+Invoke `$sync-template` for a deliberate source-template comparison and
+`$check-consistency` for internal consistency and roadmap diagnosis. When a
+change affects multiple documents, update them together.
 
 Avoid adding isolated notes when existing sections should be revised.
 

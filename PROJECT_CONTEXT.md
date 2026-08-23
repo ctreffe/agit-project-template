@@ -60,8 +60,8 @@ Intentional template deviations and relevant Decision Records:
 <none | concise list>
 ```
 
-Keep `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` as initialization provenance.
-They describe the project's methodological roots; this section records their
+Keep `PROJECT_SETUP.md` as initialization provenance. It describes the
+project's methodological roots; this section records its
 lifecycle status and the baselines used over time.
 
 ---
@@ -291,14 +291,15 @@ Relevant decision records:
 
 - `README.md` - project overview
 - `PROJECT_SETUP.md` - retained initialization method and provenance
-- `INITIAL_PROMPT.md` - retained first-session initialization prompt
 - `CHANGELOG.md` - version or project-state history
 - `ChatGPT.md` - collaboration model
 - `CODEX.md` - local Codex operating policy, if Codex is used
-- `CONTINUATION_PROMPT.md` - reproducible re-entry instruction for a new context window or assistant session
+- `TASK_HANDOFF.md` - compact versioned checkpoint for task continuation
+- `.agents/skills/` - task lifecycle and explicit specialized workflows
 - `SYNCHRONIZED_STORAGE.md` - provider-neutral external storage and per-device mapping workflow
-- `HARMONIZATION_PROMPT.md` - source-template, internal-consistency and roadmap harmonization
-- `RETROSPECTIVE_PROMPT.md` - structured Maintainer-Agent collaboration review
+- `$sync-template` - source-template comparison and selected adoption
+- `$check-consistency` - internal consistency diagnosis and solution options
+- `$perform-retrospective` - structured Maintainer-Agent collaboration review
 - `DECISIONS.md` - Decision Record guidance
 - `decisions/` - Decision Record templates or project decisions, if used
 - `PHILOSOPHY.md` - project philosophy
@@ -311,7 +312,7 @@ Relevant decision records:
 
 Remove or adapt entries that do not apply.
 
-- `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` remain as initialization provenance unless the maintainer documents a deliberate exception.
+- `PROJECT_SETUP.md` remains as initialization provenance unless the maintainer documents a deliberate exception.
 - Active roadmap milestones should progress through small regular commits when
   meaningful project steps can be reviewed separately.
 - Maintainer decisions and clarification questions should be presented as
