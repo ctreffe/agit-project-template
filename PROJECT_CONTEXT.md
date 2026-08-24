@@ -292,8 +292,7 @@ Relevant decision records:
 - `README.md` - project overview
 - `PROJECT_SETUP.md` - retained initialization method and provenance
 - `CHANGELOG.md` - version or project-state history
-- `ChatGPT.md` - collaboration model
-- `CODEX.md` - local Codex operating policy, if Codex is used
+- `COLLABORATION.md` - provider-neutral collaboration contract, loaded when relevant
 - `TASK_HANDOFF.md` - compact versioned checkpoint for task continuation
 - `.agents/skills/` - task lifecycle and explicit specialized workflows
 - `SYNCHRONIZED_STORAGE.md` - provider-neutral external storage and per-device mapping workflow

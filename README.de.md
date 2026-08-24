@@ -11,7 +11,7 @@
 >
 > Das Template dokumentiert Praktiken für KI-gestützte Zusammenarbeit, Kontextübergaben, Decision Records und Repository-Konventionen für strukturierte Projektarbeit.
 >
-> Das Kollaborationsmodell wird in [ChatGPT.md](ChatGPT.md) gepflegt.
+> Der Kollaborationsvertrag wird in [COLLABORATION.md](COLLABORATION.md) gepflegt.
 
 <br>
 
@@ -236,9 +236,8 @@ Das generische Template verwendet standardmäßig PDRs und erklärt das Modell i
 
 ### Zusammenarbeit und Betriebsregeln
 
-- **`AGENTS.md`** ist der kompakte, automatisch geladene Einstiegspunkt für KI-Agenten. Die Datei verweist auf die vollständigen Kollaborations-, Betriebs-, Projekt- und Validierungsleitlinien, ohne sie zu duplizieren.
-- **`ChatGPT.md`** definiert das allgemeine Kollaborationsmodell, Autoritätsgrenzen und den Arbeitsrhythmus zwischen Maintainer und Agent. Es ist transparente Projektdokumentation und kein versteckter Prompt.
-- **`CODEX.md`** definiert lokale Ausführungs-, Netzwerk-, Offenlegungs- und Git-Regeln für Codex. Behalte die Datei bei lokaler Codex-Arbeit und passe sie nur für bewusste projektspezifische Anforderungen an.
+- **`AGENTS.md`** ist der kompakte, automatisch residente Sicherheitskern und Kontext-Router für KI-Agenten.
+- **`COLLABORATION.md`** definiert den anbieterneutralen Kollaborationsvertrag, Autoritätsgrenzen, das Evidenzmodell und Erfolgskriterien. Die Datei wird nur geladen, wenn ihr breiterer Kontext relevant ist.
 - **`PHILOSOPHY.md`** hält die Werte hinter der Projektmethode fest, darunter Intention vor Struktur, Nachvollziehbarkeit, leichtgewichtiger Prozess und Integrität vor Außendarstellung.
 
 ### Setup, Fortsetzung und Review
@@ -278,7 +277,7 @@ In einem abgeleiteten Projekt:
 
 - fülle `PROJECT_CONTEXT.md` aus und pflege sie als aktuellen Projektzustand;
 - passe beide README-Dateien, `DOCUMENTATION.md` und `REPOSITORY.md` an das konkrete Projekt an;
-- behalte und passe `AGENTS.md`, `ChatGPT.md`, `CODEX.md` und `PHILOSOPHY.md` an, sofern kein dokumentierter Projektbedarf eine Änderung erfordert;
+- behalte und passe `AGENTS.md`, `COLLABORATION.md` und `PHILOSOPHY.md` an, sofern kein dokumentierter Projektbedarf eine Änderung erfordert;
 - behalte `PROJECT_SETUP.md` als Initialisierungsprovenienz;
 - behalte die anwendbaren Repository-Skills für wiederholbare spätere Abläufe;
 - passe Input- und Output-Ordner an den konkreten Workflow an und bewahre ihre

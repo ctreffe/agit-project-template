@@ -48,20 +48,17 @@ devices. It does not duplicate project history or full session output.
 
 The history of completed project states or template versions.
 
-## ChatGPT.md
+## COLLABORATION.md
 
-The collaboration model.
+The provider-neutral collaboration contract. It is conditional context for
+initialization, comprehensive review, authority conflicts and collaboration-
+model changes.
 
 ## AGENTS.md
 
-The concise, automatically loaded agent entry point. It directs agents to the
-complete repository guidance and highlights the minimum working and validation
-contract without duplicating `ChatGPT.md` or `CODEX.md`.
-
-## CODEX.md
-
-Local Codex operating policy for repository access, tool use, Git usage and
-data-disclosure boundaries.
+The concise, automatically resident safety kernel and context router. It keeps
+protected-action, access, working-tree and minimum validation rules available
+without loading the full collaboration contract for every task.
 
 ## PHILOSOPHY.md
 

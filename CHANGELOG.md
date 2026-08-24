@@ -8,6 +8,7 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add a provider-neutral, conditionally loaded `COLLABORATION.md` contract.
 - Add repository-scoped collaboration skills and a tracked compact
   `TASK_HANDOFF.md` for task lifecycle, project review, synchronization,
   consistency checks, retrospectives, decisions and commit preparation.
@@ -16,6 +17,8 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Make `AGENTS.md` the sole resident safety kernel, retire provider-specific
+  collaboration files and require explicit `$commit-milestone` invocation.
 - Replace the root initialization, continuation, harmonization, retrospective
   and local-project creation prompts with `$start-project` and scoped skills;
   retain `PROJECT_SETUP.md` as initialization method and provenance.

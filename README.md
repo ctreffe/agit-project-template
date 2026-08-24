@@ -11,7 +11,7 @@
 >
 > The template documents AI-assisted collaboration practices, context handoff, decision records and repository conventions for structured project work.
 >
-> The collaboration model is maintained in [ChatGPT.md](ChatGPT.md).
+> The collaboration contract is maintained in [COLLABORATION.md](COLLABORATION.md).
 
 <br>
 
@@ -229,9 +229,8 @@ The generic template defaults to PDRs and explains the model in [DECISIONS.md](D
 
 ### Collaboration and Operating Rules
 
-- **`AGENTS.md`** is the concise, automatically loaded entry point for AI agents. It directs them to the complete collaboration, operating, project and validation guidance without duplicating those documents.
-- **`ChatGPT.md`** defines the general Maintainer-Agent collaboration model, authority boundaries and work rhythm. It is transparent project documentation, not a hidden prompt.
-- **`CODEX.md`** defines local execution, network, disclosure and Git rules for Codex. Keep it when Codex performs local repository work and adapt it only for deliberate project-specific needs.
+- **`AGENTS.md`** is the concise, automatically resident safety kernel and context router for AI agents.
+- **`COLLABORATION.md`** defines the provider-neutral Maintainer-Agent collaboration contract, authority boundaries, evidence model and success criteria. It is loaded only when its broader context is relevant.
 - **`PHILOSOPHY.md`** records the values behind the project method, including intent before structure, traceability, lightweight process and integrity over appearance.
 
 ### Setup, Continuation and Review
@@ -269,7 +268,7 @@ The template contains reusable rules and placeholders. In a derived project:
 
 - fill and maintain `PROJECT_CONTEXT.md` as the current project state;
 - adapt both README files, `DOCUMENTATION.md` and `REPOSITORY.md` to the concrete project;
-- keep and adapt `AGENTS.md`, `ChatGPT.md`, `CODEX.md` and `PHILOSOPHY.md` unless a documented project need requires a change;
+- keep and adapt `AGENTS.md`, `COLLABORATION.md` and `PHILOSOPHY.md` unless a documented project need requires a change;
 - retain `PROJECT_SETUP.md` as initialization provenance;
 - retain the applicable repository skills for repeatable later workflows;
 - adapt the input and output folders to the concrete workflow while preserving

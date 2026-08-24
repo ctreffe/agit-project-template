@@ -55,8 +55,7 @@ Review and adapt:
 - `README.md`
 - `PROJECT_CONTEXT.md`
 - `AGENTS.md`
-- `ChatGPT.md`
-- `CODEX.md`
+- `COLLABORATION.md`
 - `DECISIONS.md`
 - `PHILOSOPHY.md`
 - `DOCUMENTATION.md`
@@ -75,7 +74,7 @@ The derived note should state:
 
 - that the project is developed or maintained through collaboration between the repository maintainer and an AI assistant
 - what the collaboration model documents in that project, such as practices, workflows, handoff rules, decision records or repository conventions
-- that the collaboration model is maintained in `ChatGPT.md`
+- that the collaboration contract is maintained in `COLLABORATION.md`
 
 If `README.de.md` is kept, it should contain a structurally aligned German note.
 
@@ -263,9 +262,10 @@ defined and reviewed versioned milestone.
 
 # 11. Continue the Project
 
-Continue according to `ChatGPT.md`. Begin each bounded new task through the
-automatically discoverable `start-task` skill and use `TASK_HANDOFF.md` for a
-versioned checkpoint.
+Begin each bounded new task through the automatically discoverable `start-task`
+skill and use `TASK_HANDOFF.md` for a versioned checkpoint. Load
+`COLLABORATION.md` only when initialization, comprehensive review, authority or
+the collaboration model is in scope.
 
 Keep `PROJECT_CONTEXT.md` current when:
 
