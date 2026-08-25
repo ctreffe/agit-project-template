@@ -8,6 +8,8 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add a source-template `IDEAS.md` backlog for sanitized reusable
+  retrospective candidates.
 - Add a provider-neutral, conditionally loaded `COLLABORATION.md` contract.
 - Add repository-scoped collaboration skills and a tracked compact
   `TASK_HANDOFF.md` for task lifecycle, project review, synchronization,
@@ -17,6 +19,12 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Assign targeted checks to implementation and the complete applicable
+  repository gate to commit preparation, while reporting deferred gates
+  truthfully in handoffs.
+- Route retrospective findings explicitly to project, source-template or
+  governance destinations with a Pending Idea Transfer fallback, and remove
+  the template backlog during successful normal-project initialization.
 - Make `AGENTS.md` the sole resident safety kernel, retire provider-specific
   collaboration files and require explicit `$commit-milestone` invocation.
 - Replace the root initialization, continuation, harmonization, retrospective
