@@ -221,6 +221,14 @@ source template version and commit, later harmonization baseline and intentional
 template deviations. Remove an initialization file only as a deliberate,
 documented maintainer exception.
 
+After successful initialization, replace the inherited source-template
+maintenance history in `CHANGELOG.md` with a project-owned changelog beginning
+at `Unreleased`. Replace `TASK_HANDOFF.md` with a project-owned initialization
+handoff containing only current project state, decisions, checks and the next
+step. Preserve template lineage in `PROJECT_CONTEXT.md`, not in either active
+project-history file. If initialization is incomplete, leave both resets
+pending and identify the inherited content as non-authoritative.
+
 Adapt `DOCUMENTATION.md` and `REPOSITORY.md` as ongoing project rules and keep
 them current throughout the project lifecycle.
 
@@ -230,7 +238,10 @@ them current throughout the project lifecycle.
 
 The first project-specific commit should describe the initialization.
 
-Regular working commits must use Conventional Commit prefixes such as `feat:`, `fix:`, `docs:`, `refactor:`, `test:` or `chore:`. Milestone commits are the exception: they should be human-readable, omit the prefix and include the completed version number.
+Regular working commits use an exact direct prefix such as `feat:`, `fix:`,
+`docs:`, `refactor:`, `test:` or `chore:` and a meaningful body. Scoped forms
+such as `feat(scope):` are not used. Milestone commits are the exception: they
+are human-readable, omit the prefix and include the completed version number.
 
 Example summary:
 

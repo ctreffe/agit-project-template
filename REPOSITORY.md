@@ -168,7 +168,7 @@ Commits should be small enough to review and should represent one logical
 project step. A roadmap milestone should normally be built through multiple
 regular working commits when its work can be separated meaningfully.
 
-Regular working commits must use Conventional Commit prefixes such as:
+Regular working commits must use exact direct prefixes such as:
 
 ```text
 feat:
@@ -178,6 +178,10 @@ refactor:
 test:
 chore:
 ```
+
+Do not insert an optional scope between the type and colon; `feat(scope):` is
+not part of this repository-family convention. Use real line breaks in the
+meaningful description and never literal `\n` escape text.
 
 Milestone commits are the exception. A milestone commit should not use a
 Conventional Commit prefix. It should use a human-readable summary that
