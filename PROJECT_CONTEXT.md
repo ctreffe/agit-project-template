@@ -295,6 +295,7 @@ Relevant decision records:
 - `COLLABORATION.md` - provider-neutral collaboration contract, loaded when relevant
 - `TASK_HANDOFF.md` - compact versioned checkpoint for task continuation
 - `.agents/skills/` - task lifecycle and explicit specialized workflows
+- `TROUBLESHOOTING.md` - conditionally loaded portable environment recovery patterns
 - `SYNCHRONIZED_STORAGE.md` - provider-neutral external storage and per-device mapping workflow
 - `$sync-template` - source-template comparison and selected adoption
 - `$check-consistency` - internal consistency diagnosis and solution options

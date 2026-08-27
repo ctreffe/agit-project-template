@@ -61,6 +61,14 @@ template. Retrospective findings are candidates, not permission to modify the
 template. A transition toward a development-oriented template is a deliberate
 project decision.
 
+Retry a tool or environment failure once only when plausibly transient. On
+recurrence or a setup, policy or permission failure, pause the task and use the
+implicitly discoverable `troubleshoot-environment` workflow. Load portable and
+host-local known issues only after activation, require a verified signature and
+applicability match before reuse, and resume only after the original operation
+succeeds. Troubleshooting grants no input, material, privilege, installation,
+Git, external-operation or publication authority.
+
 ## Definition of Success
 
 A successful project has clear intent, reproducible evidence, useful current

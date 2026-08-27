@@ -8,6 +8,9 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add the bounded TVDR-0026 source-template pilot with an implicitly
+  discoverable environment-troubleshooting skill plus portable and ignored
+  host-local known-issue records.
 - Add a source-template `IDEAS.md` backlog for sanitized reusable
   retrospective candidates.
 - Add a provider-neutral, conditionally loaded `COLLABORATION.md` contract.
@@ -19,6 +22,8 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Route recurring, setup, policy and permission failures from the resident
+  trigger to signature-matched, authorized and verified recovery.
 - Interrupt recurring tool or environment failures for durable authorized
   diagnosis and verified recovery before resuming work.
 - Require successful project initialization to replace inherited template

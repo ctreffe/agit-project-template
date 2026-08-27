@@ -238,15 +238,19 @@ Das generische Template verwendet standardmäßig PDRs und erklärt das Modell i
 
 - **`AGENTS.md`** ist der kompakte, automatisch residente Sicherheitskern und Kontext-Router für KI-Agenten.
 - **`COLLABORATION.md`** definiert den anbieterneutralen Kollaborationsvertrag, Autoritätsgrenzen, das Evidenzmodell und Erfolgskriterien. Die Datei wird nur geladen, wenn ihr breiterer Kontext relevant ist.
+- **`TROUBLESHOOTING.md`** enthält portable, verifizierte Muster für
+  Umgebungsfehler. Die ignorierte `TROUBLESHOOTING.local.md` enthält
+  hostspezifische Fakten; beide werden erst nach dem residenten
+  Troubleshooting-Trigger geladen.
 - **`PHILOSOPHY.md`** hält die Werte hinter der Projektmethode fest, darunter Intention vor Struktur, Nachvollziehbarkeit, leichtgewichtiger Prozess und Integrität vor Außendarstellung.
 
 ### Setup, Fortsetzung und Review
 
 - **`PROJECT_SETUP.md`** leitet die erste Initialisierung an und bewahrt ihre methodische Provenienz. `$start-project` ist der explizite ausführbare Einstiegspunkt.
-- **`.agents/skills/`** enthält die abgegrenzten Zusammenarbeitsabläufe. Nur
-  Aufgabeneinstieg, Übergabe und Commit-Vorbereitung sind automatisch
-  auffindbar; Initialisierung, Review, Synchronisierung, Konsistenzprüfung und
-  Retrospektive werden ausdrücklich aufgerufen.
+- **`.agents/skills/`** enthält die abgegrenzten Zusammenarbeitsabläufe.
+  Aufgabeneinstieg, Übergabe, Commit-Vorbereitung und Umgebungs-Troubleshooting
+  sind automatisch auffindbar; Initialisierung, Review, Synchronisierung,
+  Konsistenzprüfung und Retrospektive werden ausdrücklich aufgerufen.
 - **`TASK_HANDOFF.md`** ist der kompakte versionierte Checkpoint für eine
   abgeschlossene, pausierte oder blockierte Aufgabe und unterstützt den
   Wechsel auf einen anderen Rechner.
