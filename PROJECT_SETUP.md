@@ -9,6 +9,30 @@ derived repository as a record of its initialization method. Record lifecycle
 status and template lineage in `PROJECT_CONTEXT.md` instead of rewriting this
 guide after setup.
 
+## Lean initialization contract
+
+`$start-project` begins with no more than six fundamental maintainer
+questions. Each numbered item is one coherent decision, not a container for a
+hidden questionnaire:
+
+1. What is the project's identity and purpose?
+2. Who is it for, and how should they use its result?
+3. What is the first useful outcome, and what minimum evidence will show that
+   it is useful?
+4. What is currently in scope, and what are the explicit non-goals?
+5. Which source, material or data classes may the assistant access now, and
+   which sensitivity boundary applies?
+6. Which operating constraint must be fixed before work begins?
+
+Use existing repository evidence for answers already established. The last
+question includes only a constraint that is actually consequential now; do not
+turn storage, versioning, publication, tooling and collaboration preferences
+into a bundled survey. Keep safe template defaults for nonessential choices or
+mark them explicitly undecided. Clarify document structure, detailed roadmap,
+links, feedback, rendering, validation depth and publication only when the
+first concrete task needs them. Later safety or protected-action questions may
+still be required by evidence; this limit does not weaken those gates.
+
 ---
 
 # 1. Establish Project Intent
@@ -258,12 +282,12 @@ Adapt the project context, README, repository metadata and working folders for
 the new project. Establish the initial project intent and roadmap.
 ```
 
-The initialization is complete only when repository identity, maintainer
-intent, desired end state, boundaries, roadmap, source-sensitivity rules,
-working folders, decision-record needs, versioning and retained template files
-have been reviewed and the resulting repository state is internally
-consistent. Do not begin substantive project work while required
-maintainer-owned setup decisions remain hidden behind placeholders.
+Initialization is complete when the six fundamentals are answered or already
+evidenced, the first useful next step and current access boundary are recorded,
+safe defaults are explicit and the retained template state is internally
+consistent. Nonessential setup fields may remain explicitly undecided. An
+unresolved safety or authority choice blocks only the work it governs; do not
+begin that work while the required decision remains a placeholder.
 
 The initialization commit is normally a regular `chore:` commit. Use an
 unprefixed milestone commit only when initialization also completes a genuinely

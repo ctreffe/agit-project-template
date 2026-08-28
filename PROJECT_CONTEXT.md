@@ -64,6 +64,11 @@ Keep `PROJECT_SETUP.md` as initialization provenance. It describes the
 project's methodological roots; this section records its
 lifecycle status and the baselines used over time.
 
+During initialization, replace only the placeholders needed to record the six
+fundamental answers, the first useful outcome and its current safety boundary.
+Keep nonessential later detail explicitly undecided until a concrete task needs
+it; do not invent precision merely to fill this template.
+
 ---
 
 # Project

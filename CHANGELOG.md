@@ -22,6 +22,9 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Make project initialization progressive: ask no more than six coherent
+  fundamental questions, reuse established answers and defer nonessential
+  setup details until a concrete task needs them.
 - Route recurring, setup, policy and permission failures from the resident
   trigger to signature-matched, authorized and verified recovery.
 - Interrupt recurring tool or environment failures for durable authorized
