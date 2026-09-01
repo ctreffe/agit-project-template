@@ -22,6 +22,10 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Adopt TVDR-0028's acceptable-change, good-commit and comprehensive-milestone
+  validation stages with bounded evidence and no default whitespace or full
+  suite before milestone closure.
+
 - Make project initialization progressive: ask no more than six coherent
   fundamental questions, reuse established answers and defer nonessential
   setup details until a concrete task needs them.

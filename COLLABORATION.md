@@ -69,6 +69,16 @@ applicability match before reuse, and resume only after the original operation
 succeeds. Troubleshooting grants no input, material, privilege, installation,
 Git, external-operation or publication authority.
 
+## Validation Stages
+
+A bounded change needs only enough review to be acceptable and aligned with
+project intent; an automated check is optional. An ordinary commit needs
+targeted evidence for a good, reviewable state, not a complete repository gate.
+A milestone commit owns comprehensive applicable validation and possible
+release assurance. Prefer changed hunks and bounded output, avoid automatic
+whitespace checks and broad renders, and repeat evidence only after relevant
+inputs change or a stated material risk requires it.
+
 ## Definition of Success
 
 A successful project has clear intent, reproducible evidence, useful current

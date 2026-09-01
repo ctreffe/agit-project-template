@@ -1,17 +1,18 @@
 # Task Handoff
 
-- Status: completed and validated
-- Outcome: TVDR-0027 makes generic project initialization progressive with no
-  more than six coherent fundamental questions.
-- Decisions: Reuse established answers, keep safe template defaults and defer
-  nonessential structure, roadmap, tooling and publication detail until a
-  concrete task needs it.
-- Changed files: `start-project`, `PROJECT_SETUP.md`, `PROJECT_CONTEXT.md`,
-  changelog and this handoff.
-- Checks: Production skill topology, 17 local Markdown links and
-  `git diff --check` pass.
-- Full gate: The complete Templateverse gate passes from Governance.
-- Preserved unrelated state: Input, material, temporary, Decision Record and Git
-  controls remain unchanged; staging, history and remotes are untouched.
-- Open points: Observe the contract in a real derived-project initialization.
-- Next step: Await repository-specific explicit ordinary-commit authorization.
+- Status: completed at the proportional-change stage
+- Outcome: The generic template adopts TVDR-0028's acceptable-change,
+  good-commit and comprehensive-milestone validation lifecycle.
+- Decisions: Automated tests, whitespace, broad renders and complete suites are
+  optional before milestones unless affected or required by a stated risk.
+- Changed files: AGENTS.md, COLLABORATION.md, CHANGELOG.md, four lifecycle
+  skills and this handoff.
+- Checks: Shared skill semantics and the coordinated diffs were reviewed;
+  conflicting ordinary-commit full-gate language is absent.
+- Deferred evidence: Complete repository validation belongs to milestone
+  closure; no full gate or whitespace scan was run for this change.
+- Preserved state: Inputs, staging, Git history, remote and releases are
+  unchanged.
+- Open points: None for the template rollout.
+- Next step: Review and, if accepted, authorize an ordinary commit in this
+  repository.
