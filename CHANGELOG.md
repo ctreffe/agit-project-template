@@ -8,6 +8,10 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add the pinned MIT-licensed `grill-me` and `grilling` skills to the
+  template and new derived projects, with explicit-only invocation and an
+  opt-in detailed path before the normal six-question initialization.
+
 - Add the bounded TVDR-0026 source-template pilot with an implicitly
   discoverable environment-troubleshooting skill plus portable and ignored
   host-local known-issue records.
@@ -21,6 +25,9 @@ This project follows Semantic Versioning.
   input and materials that must remain available across devices.
 
 ### Changed
+
+- Adopt TVDR-0030 so control-word requests include minimal copy-ready wording
+  while keeping access, Git, sharing and publication actions separate.
 
 - Adopt TVDR-0028's acceptable-change, good-commit and comprehensive-milestone
   validation stages with bounded evidence and no default whitespace or full

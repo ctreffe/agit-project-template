@@ -23,6 +23,13 @@ Assistant access, Git versioning, publication and external sharing are separate
 decisions. A file's presence, synchronization or successful automated check does
 not grant another form of approval.
 
+When an applicable repository rule requires a control word, accompany the
+request with one minimal copy-ready suggested instruction naming the exact
+action, repository or destination and material consequence. Only a matching
+user-originated instruction grants authority; the suggestion itself does not.
+Keep independent authorizations separate and do not request standing or blanket
+authority.
+
 ## Repository and Evidence
 
 Use current repository files and Git evidence rather than private chat history.

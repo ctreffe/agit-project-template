@@ -24,7 +24,9 @@ Restore a verified working path without broadening the suspended task.
    `input/`, registered materials or `temp/restricted/`. Ask before privilege,
    installation, credential or sensitive access, outside writes, transmission,
    global configuration, security relaxation, destructive recovery or another
-   protected action. A proposed authorization is not maintainer authorization.
+   protected action. When a repository control word is needed, propose one
+   minimal copy-ready instruction naming the exact recovery action, repository
+   and material consequence; the proposal is not maintainer authorization.
 5. Apply only the authorized recovery, then rerun the originally failing
    operation through its normal path. Recheck any access, security or trust
    assumption changed by the recovery. Do not infer success from a diagnostic
