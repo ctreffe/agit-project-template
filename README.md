@@ -43,7 +43,7 @@
 
 The AGIT Project Template is a generic starting point for projects that benefit from structured collaboration, explicit context, documented decisions and reliable handoff between work sessions. It is intentionally not limited to software development: it supports research, planning, concept work, process design, operational projects and mixed project types.
 
-The template provides a repository-first collaboration model, local Codex rules, reproducible setup and continuation prompts, a current-state project context, documentation and repository standards, decision-record guidance and optional working folders. It is a project method and repository foundation, not a domain-specific framework.
+The template provides a repository-first collaboration model, local Codex rules, scoped collaboration skills, retained setup guidance, a current-state project context, documentation and repository standards, decision-record guidance and optional working folders. It is a project method and repository foundation, not a domain-specific framework.
 
 ## Core Principle
 
@@ -81,17 +81,25 @@ The simplest instruction to the agent is:
 > `$start-project`
 
 There is no initialization prompt to open or copy into the conversation.
+Before the normal questionnaire, the agent offers one concise choice between
+the normal lean path and the explicit `$grill-me` path for detailed planning.
+Choosing the detailed path does not grant access or action authority.
 
 The agent then:
 
 1. reads the collaboration, setup, documentation, repository and decision rules;
 2. inspects the repository baseline without altering Git history;
-3. presents concise questions for the maintainer-owned purpose, desired end state, audience, boundaries, risks, roadmap, source handling and review model;
-4. asks for each consequential decision instead of inventing project direction;
+3. follows the selected initialization path and, on the lean path, asks no more
+   than six unanswered fundamentals covering identity and purpose, audience and
+   use, the first useful outcome and its evidence, current scope and non-goals,
+   source or material access and sensitivity, and only constraints that must be
+   fixed before work begins;
+4. asks for each consequential decision instead of inventing project direction
+   and allows nonessential choices to remain explicitly deferred;
 5. adapts the README files, project context, working folders and ongoing project rules after the maintainer answers;
 6. records the template baseline and initialization provenance in [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md);
-7. checks that required placeholders and unresolved setup decisions are visible; and
-8. hands back the initialized repository state with validation results, limitations and suggested commit metadata.
+7. applies safe defaults and keeps required placeholders and unresolved setup decisions visible; and
+8. hands back the initialized repository state with proportionate validation results, limitations and suggested commit metadata.
 
 `PROJECT_SETUP.md` remains the agent's detailed initialization checklist and
 method provenance. `$start-project` is the single executable entry point that
@@ -101,9 +109,11 @@ For a project that should remain local and have no remote, invoke
 `$create-local-project` explicitly in this checked-out template. The skill
 verifies the destination, creates an independent local clone without a remote,
 then invokes `$start-project`; it is not a second initialization.
-After successful initialization, the project's copy of the creation prompt and
-its template-only references are removed, while the initialization files remain
-as provenance.
+After successful initialization, the inherited template history in
+`CHANGELOG.md` and `TASK_HANDOFF.md` is replaced with project-owned state. The
+template-only `IDEAS.md`, the project's copy of `$create-local-project` and
+their references are removed unless the maintainer deliberately establishes a
+project-local idea backlog. The initialization files remain as provenance.
 
 ## External Files and Sources
 
@@ -181,7 +191,7 @@ maintained locations.
 AGIT projects proceed from maintainer intent through small, reviewable project loops:
 
 ```text
-Intent -> Roadmap -> Produce -> Review -> Harmonize -> Record -> Continue
+Intent -> Roadmap -> Produce -> Review -> Check -> Record -> Continue
 ```
 
 1. Establish or confirm the repository baseline.
@@ -206,6 +216,10 @@ The maintainer controls Git history. Assistants may inspect status, diffs and lo
 Staging and unstaging are index operations. They do not require a control word, but they may be performed only after a specific maintainer request or authorization of the corresponding commit. Existing staged selections and unrelated changes must be preserved.
 
 Protected actions include commits, amendments, tags, pushes, pulls, merges, rebases, resets, branch changes, stash manipulation and other Git history operations. An assistant may perform a specific protected action only when the instruction for that action contains `explicit` or `explicitly` in English, or the German word family `explizit`. File-edit approval does not authorize Git history changes, and approval for one protected action does not authorize another.
+
+When this rule requires authorization, the assistant proposes one minimum-scope,
+copy-ready instruction naming the exact action, repository and material
+consequence. The proposal itself is not authorization.
 
 Regular working commits use Conventional Commit prefixes such as `feat:`, `fix:`, `docs:` or `chore:`. Milestone commits omit the prefix, use a human-readable summary containing the completed version and close already reviewed work.
 
@@ -243,9 +257,13 @@ The generic template defaults to PDRs and explains the model in [DECISIONS.md](D
   entry, handoff, commit preparation and environment troubleshooting are
   automatically discoverable;
   initialization, review, synchronization, consistency and retrospective work
-  are invoked explicitly.
+  are invoked explicitly. The detailed `$grill-me` path and its `grilling`
+  primitive are explicit-only and never replace the normal lean initialization.
 - **`TASK_HANDOFF.md`** is the compact versioned checkpoint for a completed,
   paused or blocked task and supports continuation on another computer.
+- **`IDEAS.md`** is a source-template backlog for reusable candidates. Normal
+  derived projects remove it during successful initialization unless they
+  deliberately establish a project-local backlog.
 
 ### Repository Guidance and Decisions
 
@@ -284,7 +302,9 @@ Record the source-template version and commit, initialization status, last harmo
 ## How to Use This Template
 
 1. Create a repository from the template and invoke `$start-project`.
-2. Answer the numbered questions the agent presents; the agent reads and applies the remaining setup files automatically.
+2. Choose the normal lean path or explicitly opt into `$grill-me`; on the lean
+   path, answer no more than six unanswered fundamental questions while the
+   agent applies the remaining setup files automatically.
 3. Review the initialized repository state, validation results and proposed first commit.
 4. Let the agent keep `PROJECT_CONTEXT.md` current as the concise project handoff during later work.
 5. Work in small files, results or changes derived from maintainer-owned intent, boundaries and success criteria.
@@ -310,7 +330,7 @@ Prefer project-local environments such as `.venv/` or `node_modules/` over globa
 
 ## Continuous Improvement
 
-Use harmonization to keep a concrete project internally consistent and aligned with relevant template developments. Use retrospectives separately to evaluate collaboration practices, handoffs, decision-making and work rhythm. Mixed projects may reveal both generic improvements and evidence that a more specialized template would be the better long-term home.
+Use `$sync-template` to compare a concrete project with a verified source-template baseline and adopt selected developments. Use `$check-consistency` separately for internal contradictions, and `$perform-retrospective` for collaboration practices, handoffs, decision-making and work rhythm. Mixed projects may reveal both generic improvements and evidence that a more specialized template would be the better long-term home.
 
 Treat observations from a derived project as candidates rather than automatic template rules. Evaluate whether they recur, remain useful outside their original context and belong in the generic template or a domain specialization. Derived projects and their Decision Records remain authoritative for project-specific choices.
 

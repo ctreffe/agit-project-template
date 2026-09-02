@@ -43,7 +43,7 @@
 
 Das AGIT Project Template ist ein generischer Ausgangspunkt für Projekte, die von strukturierter Zusammenarbeit, explizitem Kontext, dokumentierten Entscheidungen und zuverlässiger Übergabe zwischen Arbeitssitzungen profitieren. Es ist bewusst nicht auf Softwareentwicklung beschränkt: Es unterstützt Forschung, Planung, Konzeptarbeit, Prozessgestaltung, operative Projekte und gemischte Projekttypen.
 
-Das Template stellt ein Repository-zentriertes Kollaborationsmodell, lokale Codex-Regeln, reproduzierbare Setup- und Fortsetzungs-Prompts, einen aktuellen Projektkontext, Dokumentations- und Repository-Standards, Leitlinien für Decision Records und optionale Arbeitsordner bereit. Es ist eine Projektmethode und Repository-Grundlage, kein domänenspezifisches Framework.
+Das Template stellt ein Repository-zentriertes Kollaborationsmodell, lokale Codex-Regeln, abgegrenzte Kollaborations-Skills, erhaltene Setup-Leitlinien, einen aktuellen Projektkontext, Dokumentations- und Repository-Standards, Leitlinien für Decision Records und optionale Arbeitsordner bereit. Es ist eine Projektmethode und Repository-Grundlage, kein domänenspezifisches Framework.
 
 ## Kernprinzip
 
@@ -81,17 +81,26 @@ Die einfachste Anweisung an den Agenten lautet:
 > `$start-project`
 
 Es muss kein Initialisierungs-Prompt geöffnet oder in die Unterhaltung kopiert werden.
+Vor dem normalen Frageblock bietet der Agent eine knappe Wahl zwischen dem
+üblichen schlanken Weg und dem expliziten `$grill-me`-Weg für detaillierte
+Planung an. Die Wahl des detaillierten Wegs erteilt keine Zugriffs- oder
+Aktionsbefugnis.
 
 Der Agent:
 
 1. liest die Kollaborations-, Setup-, Dokumentations-, Repository- und Entscheidungsregeln;
 2. prüft die Repository-Baseline, ohne die Git-Historie zu verändern;
-3. stellt kompakte Fragen zu vom Maintainer definiertem Zweck, gewünschtem Endzustand, Zielgruppe, Grenzen, Risiken, Roadmap, Quellenbehandlung und Review-Modell;
-4. fragt jede folgenreiche Entscheidung ab, statt Projektrichtung zu erfinden;
+3. folgt dem gewählten Initialisierungsweg und stellt auf dem schlanken Weg
+   höchstens sechs unbeantwortete Grundfragen zu Identität und Zweck, Zielgruppe
+   und Nutzung, erstem nützlichem Ergebnis und dessen Nachweis, aktuellem
+   Umfang und Nicht-Zielen, Quellen- oder Materialzugriff und Sensitivität sowie
+   nur den Bedingungen, die vor Arbeitsbeginn feststehen müssen;
+4. fragt jede folgenreiche Entscheidung ab, statt Projektrichtung zu erfinden,
+   und lässt nicht wesentliche Entscheidungen ausdrücklich offen;
 5. passt nach den Antworten README-Dateien, Projektkontext, Arbeitsordner und laufende Projektregeln an;
 6. dokumentiert Template-Baseline und Initialisierungsprovenienz in [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md);
-7. prüft, dass erforderliche Platzhalter und ungelöste Setup-Entscheidungen sichtbar sind; und
-8. übergibt den initialisierten Repository-Zustand mit Validierungsergebnissen, Einschränkungen und vorgeschlagenen Commit-Metadaten.
+7. wendet sichere Standardwerte an und hält erforderliche Platzhalter und ungelöste Setup-Entscheidungen sichtbar; und
+8. übergibt den initialisierten Repository-Zustand mit angemessenen Validierungsergebnissen, Einschränkungen und vorgeschlagenen Commit-Metadaten.
 
 `PROJECT_SETUP.md` bleibt die detaillierte Initialisierungscheckliste des Agenten
 und ein Provenienznachweis. `$start-project` ist der einzige ausführbare
@@ -101,9 +110,12 @@ Soll ein Projekt lokal bleiben und keinen Remote erhalten, rufe in diesem
 ausgecheckten Template ausdrücklich `$create-local-project` auf. Der Skill
 prüft das Ziel, erzeugt einen unabhängigen lokalen Clone ohne Remote und ruft
 anschließend `$start-project` auf; er ist keine zweite Initialisierung.
-Nach erfolgreicher Initialisierung werden die Projektkopie des Erstellungs-
-Prompts und ihre reinen Template-Verweise entfernt; die Initialisierungsdateien
-bleiben dagegen als Provenienz erhalten.
+Nach erfolgreicher Initialisierung wird die geerbte Template-Historie in
+`CHANGELOG.md` und `TASK_HANDOFF.md` durch projektspezifischen Zustand ersetzt.
+Das reine Template-`IDEAS.md`, die Projektkopie von `$create-local-project` und
+ihre Verweise werden entfernt, sofern der Maintainer nicht bewusst einen
+projekteigenen Ideenbestand einrichtet. Die Initialisierungsdateien bleiben als
+Provenienz erhalten.
 
 ## Externe Dateien und Quellen
 
@@ -188,7 +200,7 @@ Dateien behalten ihre gepflegten Orte.
 AGIT-Projekte entwickeln sich von der Maintainer-Intention aus in kleinen, prüfbaren Projektschleifen:
 
 ```text
-Intention -> Roadmap -> Erzeugen -> Prüfen -> Harmonisieren -> Festhalten -> Fortsetzen
+Intention -> Roadmap -> Erzeugen -> Prüfen -> Abgleichen -> Festhalten -> Fortsetzen
 ```
 
 1. Ermittle oder bestätige die Repository-Baseline.
@@ -213,6 +225,11 @@ Der Maintainer kontrolliert die Git-Historie. Assistants dürfen Status, Diffs u
 Staging und Unstaging sind Indexoperationen. Sie benötigen kein Kontrollwort, dürfen aber nur nach einer konkreten Maintainer-Anweisung oder Autorisierung des zugehörigen Commits erfolgen. Bestehende Staging-Auswahlen und nicht zusammenhängende Änderungen müssen erhalten bleiben.
 
 Geschützte Aktionen umfassen Commits, Amendments, Tags, Pushes, Pulls, Merges, Rebases, Resets, Branch-Wechsel, Stash-Manipulationen und andere Operationen an der Git-Historie. Ein Assistant darf eine bestimmte geschützte Aktion nur ausführen, wenn die Anweisung für genau diese Aktion `explicit` oder `explicitly` auf Englisch oder die deutsche Wortfamilie `explizit` enthält. Die Freigabe von Dateiänderungen autorisiert keine Änderung der Git-Historie; die Freigabe einer geschützten Aktion autorisiert keine andere.
+
+Wenn diese Regel eine Autorisierung verlangt, schlägt der Assistant eine
+minimal abgegrenzte, kopierfertige Anweisung vor, die genaue Aktion,
+Repository und wesentliche Konsequenz benennt. Der Vorschlag selbst ist keine
+Autorisierung.
 
 Reguläre Arbeits-Commits verwenden Conventional-Commit-Präfixe wie `feat:`, `fix:`, `docs:` oder `chore:`. Milestone-Commits verzichten auf das Präfix, verwenden eine lesbare Zusammenfassung mit abgeschlossener Version und schließen bereits geprüfte Arbeit ab.
 
@@ -250,10 +267,15 @@ Das generische Template verwendet standardmäßig PDRs und erklärt das Modell i
 - **`.agents/skills/`** enthält die abgegrenzten Zusammenarbeitsabläufe.
   Aufgabeneinstieg, Übergabe, Commit-Vorbereitung und Umgebungs-Troubleshooting
   sind automatisch auffindbar; Initialisierung, Review, Synchronisierung,
-  Konsistenzprüfung und Retrospektive werden ausdrücklich aufgerufen.
+  Konsistenzprüfung und Retrospektive werden ausdrücklich aufgerufen. Der
+  detaillierte `$grill-me`-Weg und sein `grilling`-Baustein sind ausschließlich
+  explizit nutzbar und ersetzen niemals die normale schlanke Initialisierung.
 - **`TASK_HANDOFF.md`** ist der kompakte versionierte Checkpoint für eine
   abgeschlossene, pausierte oder blockierte Aufgabe und unterstützt den
   Wechsel auf einen anderen Rechner.
+- **`IDEAS.md`** ist ein Source-Template-Backlog für wiederverwendbare
+  Kandidaten. Normale abgeleitete Projekte entfernen ihn bei erfolgreicher
+  Initialisierung, sofern sie nicht bewusst einen eigenen Ideenbestand führen.
 
 ### Repository-Leitlinien und Entscheidungen
 
@@ -293,7 +315,9 @@ Halte Source-Template-Version und -Commit, Initialisierungsstatus, letzte Harmon
 ## Verwendung dieses Templates
 
 1. Erzeuge ein Repository aus dem Template und rufe `$start-project` auf.
-2. Beantworte die nummerierten Fragen des Agenten; der Agent liest und verwendet die übrigen Setup-Dateien automatisch.
+2. Wähle den normalen schlanken Weg oder ausdrücklich `$grill-me`; beantworte
+   auf dem schlanken Weg höchstens sechs unbeantwortete Grundfragen, während
+   der Agent die übrigen Setup-Dateien automatisch anwendet.
 3. Prüfe den initialisierten Repository-Zustand, die Validierungsergebnisse und den vorgeschlagenen ersten Commit.
 4. Lasse den Agenten `PROJECT_CONTEXT.md` während der späteren Arbeit als kompakte Projektübergabe aktuell halten.
 5. Arbeite in kleinen Dateien, Ergebnissen oder Änderungen, die aus der vom Maintainer definierten Intention, Grenzen und Erfolgskriterien abgeleitet sind.
@@ -319,7 +343,7 @@ Bevorzuge projektlokale Umgebungen wie `.venv/` oder `node_modules/` gegenüber 
 
 ## Kontinuierliche Verbesserung
 
-Nutze Harmonisierung, um ein konkretes Projekt intern konsistent und mit relevanten Template-Entwicklungen abgestimmt zu halten. Nutze Retrospektiven separat, um Kollaborationspraktiken, Übergaben, Entscheidungsfindung und Arbeitsrhythmus zu bewerten. Gemischte Projekte können sowohl generische Verbesserungen als auch Hinweise darauf liefern, dass ein stärker spezialisiertes Template langfristig besser geeignet ist.
+Nutze `$sync-template`, um ein konkretes Projekt mit einer verifizierten Source-Template-Baseline zu vergleichen und ausgewählte Entwicklungen zu übernehmen. Verwende `$check-consistency` getrennt für interne Widersprüche und `$perform-retrospective` für Kollaborationspraktiken, Übergaben, Entscheidungsfindung und Arbeitsrhythmus. Gemischte Projekte können sowohl generische Verbesserungen als auch Hinweise darauf liefern, dass ein stärker spezialisiertes Template langfristig besser geeignet ist.
 
 Behandle Beobachtungen aus einem abgeleiteten Projekt als Kandidaten und nicht als automatische Template-Regeln. Prüfe, ob sie wiederholt auftreten, außerhalb ihres ursprünglichen Kontexts nützlich bleiben und in das generische Template oder eine Domänenspezialisierung gehören. Abgeleitete Projekte und ihre Decision Records bleiben für projektspezifische Entscheidungen maßgeblich.
 
